@@ -41,19 +41,34 @@ V-Shop is a modern e-commerce web application that allows users to browse produc
 ## Project Structure
 
 ```bash
-├── frontEnd
-|   ├── public                # Public directory for static files
-|   ├── src                   # Source code
+├── cient
+|   ├── public                 # Public directory for static files
+|   ├── src                    # Source code
 |   │   ├── components         # Reusable UI components
+|   │   ├── config             # Configuration variables
+|   │   ├── custom hooks       # Custom hooks
 |   │   ├── features           # Redux slices for managing application state
 |   │   ├── pages              # Main pages for the app
-|   │   ├── general            # General components (e.g., buttons, form elements)
-|   │   └── App.js             # Main App component
-|   ├── .env                   # Environment variables file
-|   ├── package.json           # Project metadata and dependencies
-|   └── README.md              # Project documentation
+|   │   ├── App.jsx            # Main App component
+|   │   ├── Index.css          # Css file
+|   │   ├── main.jsx           # root file
+|   │   └── store.jsx          # Redux store
+|   ├── index.html             # Html file
+|   ├── tailwind.config.js     # Tailwind configuration file
+|   └── package.json           # Project metadata and dependencies
+|
+|
 ├── backend
-
+|   ├── controllers            # Logic for handling requests and returning responses (business logic)
+|   ├── dev-data               # Sample or mock data for development and testing purposes
+|   ├── models                 # Mongoose models that define the structure of documents in MongoDB
+|   ├── routers                # API routes to define endpoints and link them to controllers
+|   ├── utils                  # Utility functions (e.g., error handling, helper functions)
+|   ├── app.js                 # Main Express application setup (middleware, route mounting)
+|   ├── server.js              # Entry point to start the server and connect to the database
+|   └── package.json           # Project metadata, scripts, and dependencies for the backend
+|
+├── readme.md                  # Project documentation, setup instructions, and overview
 ```
 
 ## Installation
