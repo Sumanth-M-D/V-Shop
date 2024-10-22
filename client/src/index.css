@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  box-sizing: border-box;
+}
+
+@layer components {
+  * {
+    /* @apply transition-all duration-75 ease-in-out; */
+  }
+
+  .badge {
+    @apply text-[10px] rounded-full w-4 h-4 absolute -top-2 -right-2 bg-primary  text-white flex items-center justify-center;
+  }
+
+  .activeCategory {
+    @apply text-primary font-bold;
+  }
+
+  .socialMedia {
+    @apply border-[1px] border-solid border-secondary--shade__1 rounded-full p-[3px] text-xl cursor-pointer hover:scale-125;
+  }
+
+  .authBtn {
+    @apply bg-secondary--shade__0 px-3 py-2  w-full rounded text-secondary--shade__2;
+  }
+
+  .authActive {
+    @apply bg-primary text-black font-semibold;
+  }
+
+  .slowTransition {
+    @apply transition-all duration-150 ease-in-out;
+  }
+
+  .borderPrimary {
+    @apply border-[1px] border-solid border-primary rounded-sm;
+  }
+
+  .borderSecondary {
+    @apply border-[1px] border-solid border-secondary--shade__1 rounded-sm;
+  }
+
+  .cta {
+    @apply text-xs sm:text-sm text-primary--shade__1 font-bold w-full  py-2 flex justify-center items-center gap-2 border-2  border-solid border-primary--shade__1 rounded-sm hover:text-black hover:bg-primary duration-200;
+  }
+  .cta-compare {
+    @apply text-xs sm:text-sm text-primary--shade__1 font-medium w-full  py-2 flex justify-center items-center gap-2  hover:shadow-sm duration-200;
+  }
+
+  .listItem__title {
+    @apply flex items-center;
+  }
+
+  .listItem__detail {
+    @apply w-8 xs:w-12 mx-1 xxs:mx-2 text-[10px] xxs:text-xs sm:text-sm;
+  }
+}
