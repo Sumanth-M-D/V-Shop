@@ -19,7 +19,6 @@ import AdditionalDetails from "../components/productDetails/additinalDetails/Add
 
 function ProductDetail() {
   let { id } = useParams(); // Get the product ID from the URL
-  id = Number(id);
 
   // Get product data and status from Redux store
   const {

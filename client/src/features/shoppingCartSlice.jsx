@@ -19,58 +19,58 @@ function loadCartFromLocalStorageHelper(userId) {
 const initialState = {
   cartProducts: [],
   shipping: 0,
-  // couponCode: "FIRSTORDER",
   userId: "",
+  cartId: "",
 };
+
+// Action to load cart products from localStorage based on user ID
+export async function loadCartFromLocalStorage(state, action) {
+  const userId = action.payload; // Pass userId as an argument
+  state.userId = userId;
+  state.cartProducts = loadCartFromLocalStorageHelper(userId);
+}
+
+// Action to add a product to the cart
+export async function addProductToCart(state, action) {
+  // Check if product already exists in the cart
+  const index = state.cartProducts.findIndex(
+    (product) => product.id === action.payload.id
+  );
+
+  // If product is not found, push it to the cart
+  if (index === -1) {
+    state.cartProducts.push(action.payload);
+  } else {
+    // If product is found, increase its quantity
+    state.cartProducts[index].quantity += action.payload.quantity;
+  }
+
+  updateCartInLocalStorage(state.userId, state.cartProducts);
+}
+
+// Action to remove a product from the cart
+export async function removeProduct(state, action) {
+  state.cartProducts = state.cartProducts.filter(
+    (product) => product.id !== action.payload
+  );
+  updateCartInLocalStorage(state.userId, state.cartProducts);
+}
+
+// Action to update the quantity of a specific product in the cart
+export async function updateProductQuantity(state, action) {
+  const { id, quantity } = action.payload;
+  if (quantity < 1) return;
+  state.cartProducts = state.cartProducts.map((ele) =>
+    ele.id === id ? { ...ele, quantity } : ele
+  );
+  updateCartInLocalStorage(state.userId, state.cartProducts);
+}
 
 // Create a slice for the shopping cart
 const shoppingCartSlice = createSlice({
   name: "shoppingCart",
   initialState,
   reducers: {
-    // Action to load cart products from localStorage based on user ID
-    loadCartFromLocalStorage(state, action) {
-      const userId = action.payload; // Pass userId as an argument
-      state.userId = userId;
-      state.cartProducts = loadCartFromLocalStorageHelper(userId);
-    },
-
-    // Action to add a product to the cart
-    addProductToCart(state, action) {
-      // Check if product already exists in the cart
-      const index = state.cartProducts.findIndex(
-        (product) => product.id === action.payload.id
-      );
-
-      // If product is not found, push it to the cart
-      if (index === -1) {
-        state.cartProducts.push(action.payload);
-      } else {
-        // If product is found, increase its quantity
-        state.cartProducts[index].quantity += action.payload.quantity;
-      }
-
-      updateCartInLocalStorage(state.userId, state.cartProducts);
-    },
-
-    // Action to remove a product from the cart
-    removeProduct(state, action) {
-      state.cartProducts = state.cartProducts.filter(
-        (product) => product.id !== action.payload
-      );
-      updateCartInLocalStorage(state.userId, state.cartProducts);
-    },
-
-    // Action to update the quantity of a specific product in the cart
-    updateProductQuantity(state, action) {
-      const { id, quantity } = action.payload;
-      if (quantity < 1) return;
-      state.cartProducts = state.cartProducts.map((ele) =>
-        ele.id === id ? { ...ele, quantity } : ele
-      );
-      updateCartInLocalStorage(state.userId, state.cartProducts);
-    },
-
     // Action to update the shipping cost
     updateShipping(state, action) {
       state.shipping = action.payload;

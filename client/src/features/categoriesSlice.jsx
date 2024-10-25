@@ -14,10 +14,10 @@ export const fetchCategories = createAsyncThunk(
   async () => {
     const response = await fetch(`${BASE_URL}/products/categories`);
     const data = await response.json();
-    console.log(data);
+    const categories = data.data.categories;
 
     // Return categories with "All products" added as the first category
-    return ["All products", ...data];
+    return ["All products", ...categories];
   }
 );
 
@@ -41,7 +41,7 @@ const categorySlice = createSlice({
         state.status = "success";
         state.categories = action.payload;
       })
-      .addCase(fetchCategories.rejected, (state, action) => {
+      .addCase(fetchCategories.rejected, (state) => {
         state.status = "fail";
         state.error = "Unable to load categories. Please try again later";
       });

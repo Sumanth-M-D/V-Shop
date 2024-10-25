@@ -23,9 +23,6 @@ async function connectToDatabase() {
 let products;
 try {
   products = JSON.parse(readFileSync("./dev-data/products.json", "UTF-8"));
-
-  // Sorting products array based on `id` property in ascending order
-  products.sort((a, b) => a.id - b.id);
 } catch (err) {
   console.error("Error reading products.json:", err);
   process.exit(1);
@@ -36,7 +33,6 @@ async function importData() {
   try {
     for (const product of products) {
       await Product.create(product); // Alternatively, use `new Product(product).save()`
-      console.log(`Product with ID: ${product.id} imported successfully.`);
     }
     console.log("Import successful");
   } catch (err) {

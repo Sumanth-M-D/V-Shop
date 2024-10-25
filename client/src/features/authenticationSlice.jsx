@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { loadCartFromLocalStorage } from "./shoppingCartSlice";
-import { loadWishlistFromLocalStorage } from "./wishlistSlice";
+import { BASE_URL } from "../config/config.js";
+import apiRequest from "../utils/apiRequset.js";
 
 const initialState = {
   authType: "login",
@@ -13,39 +13,54 @@ const initialState = {
 // Async action to create a user (for authentication using localStorage)
 export const createUser = createAsyncThunk(
   "authentication/createUser",
-  async ({ email, password }) => {
-    // Save user credentials (email and password) to localStorage
-    localStorage.setItem(email, password);
-    return email;
+  async ({ email, password }, { rejectWithValue }) => {
+    return await apiRequest(
+      `${BASE_URL}/user/signup`,
+      "POST",
+      { email, password },
+      false,
+      rejectWithValue
+    );
   }
 );
 
-// Async action to authenticate a user (checks localStorage for email and password)
+// Async action to authenticate a user
 export const authenticate = createAsyncThunk(
   "authentication/authenticate",
-  async ({ email, password }, { dispatch }) => {
-    // Retrieve password for the given email from localStorage
-    const storedPassword = localStorage.getItem(email);
-    let error = "";
+  async ({ email, password }, { rejectWithValue }) => {
+    return apiRequest(
+      `${BASE_URL}/user/login`,
+      "POST",
+      { email, password },
+      true,
+      rejectWithValue
+    );
+  }
+);
 
-    // Handle case when user does not exist
-    if (!storedPassword) {
-      error = "User does not exist. Please signup";
-      return { email, isPasswordCorrect: false, error };
-    }
+export const isLoggedin = createAsyncThunk(
+  "authentication/isLoggedin",
+  async (_, { rejectWithValue }) => {
+    return apiRequest(
+      `${BASE_URL}/user/isLoggedin`,
+      "GET",
+      null,
+      true,
+      rejectWithValue
+    );
+  }
+);
 
-    // Verify if the entered password matches the stored password
-    const isPasswordCorrect = storedPassword === password;
-
-    if (isPasswordCorrect) {
-      // Load cart and wishlist from localStorage if authentication is successful
-      dispatch(loadCartFromLocalStorage(email));
-      dispatch(loadWishlistFromLocalStorage(email));
-    } else {
-      error = "Invalid password. Please try again";
-    }
-
-    return { email, isPasswordCorrect, error };
+export const logout = createAsyncThunk(
+  "authentication/logout",
+  async (_, { rejectWithValue }) => {
+    return apiRequest(
+      `${BASE_URL}/user/logout`,
+      "POST",
+      null,
+      true,
+      rejectWithValue
+    );
   }
 );
 
@@ -56,53 +71,54 @@ const authenticationSlice = createSlice({
     setAuthType(state, action) {
       state.authType = action.payload;
     },
-    logout(state) {
-      state.isAuthenticated = false;
-      state.error = "";
-      state.status = "";
-    },
   },
 
   // Handle async actions related to creating a user and authenticating
   extraReducers: (builder) => {
     // Pending, Fulfilled & rejected state handling for createUser async action
     builder
-      .addCase(createUser.pending, (state) => {
-        state.status = "loading";
-      })
       .addCase(createUser.fulfilled, (state, action) => {
         state.status = "success";
         state.isAuthenticated = true;
-        state.userId = action.payload;
-      })
-      .addCase(createUser.rejected, (state) => {
-        state.error = "Cannot authenticate the user now. Try again later";
-        state.status = "fail";
-      })
-
-      // Pending, Fulfilled & rejected state handling for authenticate async action
-      .addCase(authenticate.pending, (state) => {
-        state.status = "loading";
+        state.userId = action.payload?.data?.user?._id;
       })
       .addCase(authenticate.fulfilled, (state, action) => {
-        state.status = "success";
-        const { email, isPasswordCorrect, error } = action.payload;
-        state.userId = email;
-        state.isAuthenticated = isPasswordCorrect;
-        if (error.length > 0) {
-          state.error = error;
-        }
+        state.status = action.payload?.status || "success";
+        state.isAuthenticated = true;
+        state.userId = action.payload?.data?.user?._id;
       })
-      .addCase(authenticate.rejected, (state, action) => {
-        state.error = "Cannot authenticate the user now. Try again later";
-        state.error = action.payload;
-        state.status = "fail";
-      });
+      .addCase(isLoggedin.fulfilled, (state, action) => {
+        state.status = action.payload?.status || "success";
+        state.isAuthenticated = true;
+        state.userId = action.payload?.data?.user?._id;
+      })
+      .addCase(logout.fulfilled, (state, action) => {
+        state.status = action.payload?.status || "success";
+        state.status = "success";
+        state.isAuthenticated = false;
+        state.userId = "";
+        state.error = "";
+        state.authType = "login"; // Reset to initial authType if needed
+      })
+      .addMatcher(
+        (action) => action.type.endsWith("/pending"),
+        (state) => {
+          state.status = "loading";
+          state.error = "";
+        }
+      )
+      .addMatcher(
+        (action) => action.type.endsWith("/rejected"),
+        (state, action) => {
+          state.status = "fail";
+          state.error = action.payload?.message || action.error.message;
+        }
+      );
   },
 });
 
 // Export actions for use in the application
-export const { setAuthType, logout } = authenticationSlice.actions;
+export const { setAuthType } = authenticationSlice.actions;
 
 // Export reducer for use in the Redux store
 export default authenticationSlice.reducer;

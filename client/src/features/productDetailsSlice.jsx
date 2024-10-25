@@ -15,7 +15,8 @@ export const fetchProductDetails = createAsyncThunk(
   async (id) => {
     const res = await fetch(`${BASE_URL}/products/${id}`);
     const data = await res.json();
-    return data;
+    console.log(data);
+    return data.data.product;
   }
 );
 

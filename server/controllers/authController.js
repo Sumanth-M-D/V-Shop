@@ -16,8 +16,9 @@ function signToken(id) {
 function createSendToken(user, statusCode, res) {
   const token = signToken(user._id);
   const cookieOptions = {
-    expires: new Date(JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000),
+    expires: new Date(Date.now() + JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000),
     httpOnly: true,
+    sameSite: "None",
   };
 
   if (NODE_ENV === "production") {
@@ -53,9 +54,6 @@ async function signup(req, res, next) {
       next
     );
 
-    // newUser.cartId = newCart._id;
-    // await newUser.save(); // Note:- causing an error in pre('save') middleware
-
     await User.findByIdAndUpdate(newUser._id, {
       cartId: newCart._id,
       wishlistId: newWishlist._id,
@@ -89,11 +87,12 @@ async function login(req, res, next) {
 
 async function logout(req, res, next) {
   try {
-    res.cookie("jwt", "dummyCookie", {
-      expires: new Date(Date.now() + 10 * 1000), // expires in 10 seconds
-      httpOnly: true,
-    });
+    // res.cookie("jwt", "dummyCookie", {
+    //   expires: new Date(Date.now() + 10 * 1000), // expires in 10 seconds
+    //   httpOnly: true,
+    // });
 
+    res.clearCookie("jwt"); // Clear the cookie
     res.status(200).json({ status: "success" });
   } catch (err) {
     next(err);
@@ -103,11 +102,12 @@ async function logout(req, res, next) {
 async function protect(req, res, next) {
   try {
     let token;
-    if (req.headers.authorization.startsWith("Bearer")) {
+    if (req.headers.authorization?.startsWith("Bearer")) {
       token = req.headers.authorization.split(" ")[1];
     } else if (req.cookies.jwt) {
       token = req.cookies.jwt;
     }
+    console.log(req.cookies);
 
     if (!token) {
       return next(
@@ -116,6 +116,11 @@ async function protect(req, res, next) {
     }
 
     const decoded = await jwt.verify(token, JWT_SECRET);
+
+    // Handle token expiration
+    if (Date.now() >= decoded.exp * 1000) {
+      return next(new AppError("Token has expired. Please log in again.", 401));
+    }
 
     const currentUser = await User.findById(decoded.id);
 
@@ -132,5 +137,15 @@ async function protect(req, res, next) {
   }
 }
 
-const authController = { signup, login, logout, protect };
+// If user is already logged send the user data w/o needing to reauthenticate
+function isLoggedin(req, res, next) {
+  const token = req.cookies.jwt;
+  res.status(200).json({
+    status: "success",
+    token,
+    data: { user: req.user },
+  });
+}
+
+const authController = { signup, login, logout, protect, isLoggedin };
 export default authController;

@@ -45,6 +45,20 @@ const productSchema = mongoose.Schema({
       required: true,
     },
   },
+
+  id: {
+    type: String,
+    unique: true,
+  },
+});
+
+// Pre-save middleware to set `id` as the string version of `_id`
+productSchema.pre("save", function (next) {
+  if (this.isNew) {
+    // Only set it on new documents
+    this.id = this._id.toString();
+  }
+  next();
 });
 
 const Product = mongoose.model("Product", productSchema);
