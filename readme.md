@@ -59,16 +59,16 @@ V-Shop is a modern e-commerce web application that allows users to browse produc
 |
 |
 ├── backend
-|   ├── controllers            # Logic for handling requests and returning responses (business logic)
-|   ├── dev-data               # Sample or mock data for development and testing purposes
-|   ├── models                 # Mongoose models that define the structure of documents in MongoDB
-|   ├── routers                # API routes to define endpoints and link them to controllers
-|   ├── utils                  # Utility functions (e.g., error handling, helper functions)
-|   ├── app.js                 # Main Express application setup (middleware, route mounting)
-|   ├── server.js              # Entry point to start the server and connect to the database
-|   └── package.json           # Project metadata, scripts, and dependencies for the backend
+|   ├── controllers            # Business logic -> handling requests & responses.
+|   ├── dev-data               # Sample data for development and testing.
+|   ├── models                 # Mongoose shema and models.
+|   ├── routers                # API routers
+|   ├── utils                  # Utility functions
+|   ├── app.js                 # Main Express application setup
+|   ├── server.js              # Entry point to start the server & connect to DB.
+|   └── package.json           # Project metadata, scripts, and dependencies.
 |
-├── readme.md                  # Project documentation, setup instructions, and overview
+├── readme.md                  # Project documentation & setup instructions
 ```
 
 ## Installation

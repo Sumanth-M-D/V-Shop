@@ -6,9 +6,7 @@ const router = express.Router();
 router.post("/signup", authController.signup);
 router.post("/login", authController.login);
 
-// router.use(); // authController.protect
-// router.route("/cart").get().post();
-
-// router.route("/wishlist").get().post();
+router.use(authController.protect);
+router.post("/logout", authController.logout);
 
 export default router;

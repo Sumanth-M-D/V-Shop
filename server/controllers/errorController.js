@@ -79,6 +79,16 @@ function getOperationalErrors(err) {
     return new AppError(`Invalid input data: ${message}`, 401);
   }
 
+  // JWT verification error
+  if (err.name === "JsonWebTokenError") {
+    return new AppError("Invalid token please login again.", 401);
+  }
+
+  // If JWT is expired
+  if (err.name === "TokenExpiredError") {
+    return new AppError("Your token has expired. Please login again");
+  }
+
   return err;
 }
 

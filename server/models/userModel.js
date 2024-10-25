@@ -19,8 +19,15 @@ const userSchema = mongoose.Schema({
     select: false,
   },
 
-  cart: [{ type: mongoose.Schema.ObjectId, ref: "Product" }],
-  wishlist: [{ type: mongoose.Schema.ObjectId, ref: "Product" }],
+  cartId: {
+    type: mongoose.Schema.ObjectId,
+    ref: "Cart",
+  },
+
+  wishlistId: {
+    type: mongoose.Schema.ObjectId,
+    ref: "Wishlist",
+  },
 });
 
 userSchema.pre("save", async function (next) {
