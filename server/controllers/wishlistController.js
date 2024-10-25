@@ -23,7 +23,7 @@ async function getWishlistItems(req, res, next) {
 
     res.status(200).json({
       status: "success",
-      data: userWishlist,
+      data: { wishlist: userWishlist },
     });
   } catch (err) {
     next(err);
@@ -71,7 +71,7 @@ async function addWishlistItem(req, res, next) {
 
     res.status(201).json({
       status: "success",
-      data: userWishlist,
+      data: { wishlist: userWishlist },
     });
   } catch (err) {
     next(err);

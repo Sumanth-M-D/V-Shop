@@ -14,6 +14,7 @@ export const fetchCategories = createAsyncThunk(
   async () => {
     const response = await fetch(`${BASE_URL}/products/categories`);
     const data = await response.json();
+    console.log(data);
 
     // Return categories with "All products" added as the first category
     return ["All products", ...data];

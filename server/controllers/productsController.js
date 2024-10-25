@@ -8,7 +8,7 @@ async function getAllProducts(req, res, next) {
 
     res.status(200).json({
       status: "success",
-      data: products,
+      data: { products: products },
     });
   } catch (err) {
     next(err);
@@ -20,7 +20,7 @@ async function getAllCategories(req, res, next) {
     const categories = await Product.distinct("category");
     res.status(200).json({
       status: "success",
-      data: categories,
+      data: { categories: categories },
     });
   } catch (err) {
     next(err);
@@ -36,7 +36,7 @@ async function getProduct(req, res, next) {
 
     res.status(200).json({
       status: "success",
-      data: product,
+      data: { product: product },
     });
   } catch (err) {
     next(err);
@@ -53,7 +53,9 @@ async function getProductsOfCategory(req, res, next) {
       return next(new AppError("No products found of that category", 404));
     }
 
-    res.status(200).json({ status: "success", data: productsOfCategory });
+    res
+      .status(200)
+      .json({ status: "success", data: { products: productsOfCategory } });
   } catch (err) {
     next(err);
   }
@@ -79,7 +81,7 @@ async function getProductsMatching(req, res, next) {
 
     res.status(200).json({
       status: "success",
-      data: products,
+      data: { products: products },
     });
   } catch (err) {
     next(err);

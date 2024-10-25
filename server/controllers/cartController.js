@@ -24,7 +24,7 @@ async function getCartItems(req, res, next) {
     console.log(userCart);
     res.status(200).json({
       status: "success",
-      data: userCart,
+      data: { cart: userCart },
     });
   } catch (err) {
     next(err);
@@ -76,7 +76,7 @@ async function addCartItem(req, res, next) {
 
     res.status(201).json({
       status: "success",
-      data: userCart,
+      data: { cart: userCart },
     });
   } catch (err) {
     next(err);
@@ -140,7 +140,7 @@ async function updateCartItem(req, res, next) {
 
     res.status(200).json({
       status: "success",
-      data: userCart,
+      data: { cart: userCart },
     });
   } catch (err) {
     next(err);
