@@ -5,15 +5,20 @@ import {
   updateProductQuantity,
 } from "../../features/shoppingCartSlice";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function CartListItem({ product }) {
-  const { id, title, image, price, quantity } = product;
+  const {
+    product: { id, title, image, price },
+    quantity,
+  } = product;
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   // Function to update the quantity of the product in the cart
   function updateQuantity(quantity) {
-    dispatch(updateProductQuantity({ id, quantity }));
+    dispatch(updateProductQuantity({ productId: id, quantity }));
   }
 
   // Function to remove the product from the cart

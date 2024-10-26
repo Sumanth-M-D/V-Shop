@@ -14,8 +14,8 @@ function ProductCard({ product }) {
   }
 
   // Prepare product data for cart and wishlist
-  const productToCart = { title, id, image, price, quantity: 1 };
-  const productToWishlist = { title, id, image, price };
+  const productToCart = { productId: id, quantity: 1 };
+  const productToWishlist = { productId: id };
 
   return (
     <div className="w-60 xxxs:w-40 xs:w-60 borderSecondary hover:scale-105 duration-200 ">

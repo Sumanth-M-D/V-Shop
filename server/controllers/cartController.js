@@ -12,10 +12,7 @@ async function createCart(userId, next) {
 
 async function getCartItems(req, res, next) {
   try {
-    const userCart = await Cart.findById(req.user.cartId).populate({
-      path: "cartItems.productId", // Specify the path to populate
-      select: "category id image price rating title", // Select specific fields to populate
-    });
+    const userCart = await Cart.findById(req.user.cartId);
 
     if (!userCart) {
       next(new AppError("Cart not found", 404));
@@ -62,21 +59,23 @@ async function addCartItem(req, res, next) {
     let productIndex = -1;
     if (userCart.cartItems.length > 0) {
       productIndex = userCart.cartItems.findIndex(
-        (item) => item?.productId.toString() === productId.toString()
+        (item) => item?.product.id.toString() === productId.toString()
       );
     }
 
     if (productIndex === -1) {
-      userCart.cartItems.push({ productId, quantity });
+      userCart.cartItems.push({ product: productId, quantity });
     } else {
       userCart.cartItems[productIndex].quantity += quantity;
     }
 
     await userCart.save();
 
+    const updatedCart = await Cart.findById(cartId);
+
     res.status(201).json({
       status: "success",
-      data: { cart: userCart },
+      data: { cart: updatedCart },
     });
   } catch (err) {
     next(err);
@@ -92,9 +91,9 @@ async function deleteCartItem(req, res, next) {
     const { cartId } = req.user;
 
     const userCart = await Cart.findById(cartId);
-
+    console.log(userCart, productId);
     const filteredCart = userCart.cartItems.filter(
-      (item) => item?.productId.toString() !== productId.toString()
+      (item) => item?.product._id.toString() !== productId.toString()
     );
 
     if (filteredCart.length === userCart.cartItems.length) {
@@ -104,9 +103,13 @@ async function deleteCartItem(req, res, next) {
     userCart.cartItems = filteredCart;
     await userCart.save();
 
-    res.status(204).json({
+    const updatedCart = await Cart.findById(cartId);
+
+    res.status(200).json({
       status: "success",
-      data: null,
+      data: {
+        cart: updatedCart,
+      },
     });
   } catch (err) {
     next(err);
@@ -119,7 +122,7 @@ async function updateCartItem(req, res, next) {
     const { cartId } = req.user;
 
     if (!productId || !quantity || quantity < 0) {
-      next(new AppError("Please enter productId and quantity", 400));
+      return next(new AppError("Please enter productId and quantity", 400));
     }
 
     const userCart = await Cart.findById(cartId);
@@ -130,17 +133,26 @@ async function updateCartItem(req, res, next) {
 
     console.log(userCart);
 
+    if (
+      userCart.cartItems.findIndex((item) => item.product.id === productId) ===
+      -1
+    ) {
+      return next(new AppError("Item is not found in the cart", 404));
+    }
+
     userCart.cartItems = userCart.cartItems.map((ele) => {
-      return ele?.productId.toString() === productId.toString()
-        ? { productId, quantity }
+      return ele?.product.id.toString() === productId.toString()
+        ? { product: productId, quantity }
         : ele;
     });
 
     await userCart.save();
 
+    const updatedCart = await Cart.findById(cartId);
+
     res.status(200).json({
       status: "success",
-      data: { cart: userCart },
+      data: { cart: updatedCart },
     });
   } catch (err) {
     next(err);

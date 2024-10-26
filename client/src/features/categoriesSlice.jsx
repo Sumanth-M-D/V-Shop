@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { BASE_URL } from "../config/config.js";
+import apiRequest from "../utils/apiRequest.js";
 
 const initialState = {
   categories: [],
@@ -11,13 +12,21 @@ const initialState = {
 // Async action to fetch categories from the API
 export const fetchCategories = createAsyncThunk(
   "categories/fetchCategories",
-  async () => {
-    const response = await fetch(`${BASE_URL}/products/categories`);
-    const data = await response.json();
-    const categories = data.data.categories;
+  async (_, { rejectWithValue }) => {
+    try {
+      const data = await apiRequest(
+        `${BASE_URL}/products/categories`,
+        "GET",
+        null,
+        true
+      );
+      const categories = data.data.categories;
 
-    // Return categories with "All products" added as the first category
-    return ["All products", ...categories];
+      // Return categories with "All products" added as the first category
+      return ["All products", ...categories];
+    } catch (err) {
+      return rejectWithValue(err.message);
+    }
   }
 );
 
@@ -41,9 +50,9 @@ const categorySlice = createSlice({
         state.status = "success";
         state.categories = action.payload;
       })
-      .addCase(fetchCategories.rejected, (state) => {
+      .addCase(fetchCategories.rejected, (state, action) => {
         state.status = "fail";
-        state.error = "Unable to load categories. Please try again later";
+        state.error = action.payload || action.error.message;
       });
   },
 });

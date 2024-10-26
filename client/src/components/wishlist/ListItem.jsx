@@ -4,12 +4,13 @@ import { removeProduct } from "../../features/wishlistSlice";
 import AddtoCartBtn from "../general/AddtoCartBtn";
 
 function ListItem({ product }) {
-  const { id, title, image, price } = product;
+  const { id, title, image, price } = product.product;
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   // Prepare product data to add to the cart with quantity set to 1
-  const cartProduct = { id, title, image, price, quantity: 1 };
+  const cartProduct = { productId: id, quantity: 1 };
 
   // Function to handle the removal of a product from the wishlist
   function handleRemove() {

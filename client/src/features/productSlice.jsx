@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { BASE_URL, ROWS_PER_PAGE } from "../config/config.js";
+import apiRequest from "../utils/apiRequest.js";
 
 // Initial state for products
 const initialState = {
@@ -10,27 +11,38 @@ const initialState = {
   productsPerRow: 1, // For adjusting products per page according to screen sizes
   totalPages: 0,
   currentPageProducts: [],
+  searchText: "",
 };
 
 // Async action to fetch products based on the active category from the API
 export const fetchProducts = createAsyncThunk(
   "products/fetchProducts",
-  async (_, { getState }) => {
-    // Get categories and active category index from state
-    const { categories, activeCategoryIndex } = getState().categories;
+  async (_, { getState, rejectWithValue }) => {
+    try {
+      // Get categories and active category index from state
+      const { categories, activeCategoryIndex } = getState().categories;
 
-    let activeCategory = categories[activeCategoryIndex];
-    let URL = `${BASE_URL}/products/category/${activeCategory}`;
+      const { searchText } = getState().products;
 
-    // If the active category is "All products", fetch all products
-    if (activeCategory === "All products") {
-      URL = `${BASE_URL}/products`;
+      let activeCategory = categories[activeCategoryIndex];
+      let URL = `${BASE_URL}/products/category/${activeCategory}`;
+
+      // If the active category is "All products", fetch all products
+      if (activeCategory === "All products") {
+        URL = `${BASE_URL}/products`;
+      }
+
+      if (searchText.length > 0) {
+        URL = `${BASE_URL}/products/search/${searchText}`;
+      }
+
+      const data = await apiRequest(URL, "GET", null, false);
+      console.log(data);
+
+      return data.data.products;
+    } catch (err) {
+      return rejectWithValue(err.message);
     }
-    const response = await fetch(URL);
-    const data = await response.json();
-    console.log(data);
-
-    return data.data.products;
   }
 );
 
@@ -89,6 +101,11 @@ const productSlice = createSlice({
       state.currentPage = 1;
       calculateCurrentPageProducts(state);
     },
+
+    // Setting the search text
+    setSearchText(state, action) {
+      state.searchText = action.payload;
+    },
   },
 
   // Handle async actions related to product fetching => handling Pending, fullFilled and rejected states
@@ -106,9 +123,10 @@ const productSlice = createSlice({
 
         calculateCurrentPageProducts(state);
       })
-      .addCase(fetchProducts.rejected, (state) => {
+      .addCase(fetchProducts.rejected, (state, action) => {
         state.status = "fail";
-        state.error = "Unable to load products. Please try again later";
+        console.log(action);
+        state.error = action.payload || action.error.message;
       });
   },
 });
@@ -120,6 +138,7 @@ export const {
   decrementCurrentPage,
   updateCurrentPage,
   resetCurrentPage,
+  setSearchText,
 } = productSlice.actions;
 
 // Export the reducer to be included in the Redux store

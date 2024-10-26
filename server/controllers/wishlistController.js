@@ -12,11 +12,7 @@ async function createWishlist(userId, next) {
 
 async function getWishlistItems(req, res, next) {
   try {
-    const userWishlist = await Wishlist.findById(req.user.wishlistId).populate({
-      path: "wishlistItems.productId", // Specify the path to populate
-      select: "category id image price rating title", // Select specific fields to populate
-    });
-
+    const userWishlist = await Wishlist.findById(req.user.wishlistId);
     if (!userWishlist) {
       next(new AppError("wishlist not found", 404));
     }
@@ -58,20 +54,22 @@ async function addWishlistItem(req, res, next) {
     let productIndex = -1;
     if (userWishlist.wishlistItems.length > 0) {
       productIndex = userWishlist.wishlistItems.findIndex(
-        (item) => item?.productId.toString() === productId.toString()
+        (item) => item?.product.id.toString() === productId.toString()
       );
     }
 
     if (productIndex !== -1) {
-      return next(new AppError("Item is already added to wishlist"));
+      return next(new AppError("Item is already in the wishlist"));
     }
 
-    userWishlist.wishlistItems.push({ productId });
+    userWishlist.wishlistItems.push({ product: productId });
     await userWishlist.save();
+
+    const updatedWishlist = await Wishlist.findById(wishlistId);
 
     res.status(201).json({
       status: "success",
-      data: { wishlist: userWishlist },
+      data: { wishlist: updatedWishlist },
     });
   } catch (err) {
     next(err);
@@ -89,7 +87,7 @@ async function deleteWishlistItem(req, res, next) {
     const userWishlist = await Wishlist.findById(wishlistId);
 
     const filteredwishlist = userWishlist.wishlistItems.filter(
-      (item) => item?.productId.toString() !== productId.toString()
+      (item) => item?.product._id.toString() !== productId.toString()
     );
 
     if (filteredwishlist.length === userWishlist.wishlistItems.length) {
@@ -99,9 +97,13 @@ async function deleteWishlistItem(req, res, next) {
     userWishlist.wishlistItems = filteredwishlist;
     await userWishlist.save();
 
-    res.status(204).json({
+    const updatedWishlist = await Wishlist.findById(wishlistId);
+
+    res.status(200).json({
       status: "success",
-      data: null,
+      data: {
+        wishlist: updatedWishlist,
+      },
     });
   } catch (err) {
     next(err);

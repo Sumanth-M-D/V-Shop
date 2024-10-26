@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { BASE_URL } from "../config/config";
+import apiRequest from "../utils/apiRequest";
 
 const initialState = {
   productId: null,
@@ -12,11 +13,18 @@ const initialState = {
 // Async action to fetch product details by product ID
 export const fetchProductDetails = createAsyncThunk(
   "productDetails/fetchData",
-  async (id) => {
-    const res = await fetch(`${BASE_URL}/products/${id}`);
-    const data = await res.json();
-    console.log(data);
-    return data.data.product;
+  async (id, { rejectWithValue }) => {
+    try {
+      const data = await apiRequest(
+        `${BASE_URL}/products/${id}`,
+        "GET",
+        null,
+        false
+      );
+      return data.data.product;
+    } catch (err) {
+      return rejectWithValue(err.message);
+    }
   }
 );
 
@@ -58,9 +66,9 @@ const productDetailsSlice = createSlice({
         state.status = "success";
         state.productData = action.payload;
       })
-      .addCase(fetchProductDetails.rejected, (state) => {
+      .addCase(fetchProductDetails.rejected, (state, action) => {
         state.status = "fail";
-        state.error = "Unable to load product data. Please try again later";
+        state.error = action.payload || action.error.message;
       });
   },
 });

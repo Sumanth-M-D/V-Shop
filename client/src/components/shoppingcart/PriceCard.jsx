@@ -12,7 +12,7 @@ function PriceCard() {
   const subtotal =
     Math.ceil(
       cartProducts.reduce(
-        (acc, product) => acc + product.price * product.quantity,
+        (acc, ele) => acc + ele.product.price * ele.quantity,
         0
       ) * 100
     ) / 100;

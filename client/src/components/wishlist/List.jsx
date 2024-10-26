@@ -9,11 +9,10 @@ function List() {
   return (
     <div className=" mt-10 ">
       <ListHeader />
-
       {/* Render the list of products in the wishlist */}
       <div className="flex flex-col gap-5">
-        {wishlistProducts.map((product) => (
-          <ListItem product={product} key={product.id} />
+        {wishlistProducts.map((ele) => (
+          <ListItem product={ele} key={ele.product.id} />
         ))}
       </div>
     </div>

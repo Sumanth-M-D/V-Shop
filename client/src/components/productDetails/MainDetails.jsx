@@ -23,8 +23,8 @@ function MainDetails() {
     category === "men's clothing" || category === "women's clothing";
 
   // Preparing product data for adding to cart and wishlist
-  const productToCart = { title, id, image, price, quantity };
-  const productToWishlist = { title, id, image, price };
+  const productToCart = { productId: id, quantity };
+  const productToWishlist = { productId: id };
 
   return (
     <div className="upperMd:grid upperMd:grid-cols-10  gap-3 py-6 text-black  ">

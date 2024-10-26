@@ -1,23 +1,59 @@
-import { createSlice } from "@reduxjs/toolkit";
-
-// Helper function to save the wishlist to localStorage
-function updateWishlistInLocalStorage(userId, wishlistProducts) {
-  localStorage.setItem(`${userId}/wishlist`, JSON.stringify(wishlistProducts));
-}
-
-// Helper function to load the wishlist from localStorage
-function loadWishlistFromLocalStorageHelper(userId) {
-  if (userId) {
-    const wishlist = localStorage.getItem(`${userId}/wishlist`);
-    return wishlist ? JSON.parse(wishlist) : [];
-  }
-  return [];
-}
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import apiRequest from "../utils/apiRequest";
+import { BASE_URL } from "../config/config";
 
 const initialState = {
   wishlistProducts: [],
-  userId: "",
+  wishlistId: "",
+  error: "",
+  status: "",
 };
+
+export const loadWishlist = createAsyncThunk(
+  "wishlist/loadWishlist",
+  async (_, { rejectWithValue }) => {
+    try {
+      return await apiRequest(`${BASE_URL}/wishlist/`, "GET", null, true);
+    } catch (err) {
+      return rejectWithValue(err.message);
+    }
+  }
+);
+
+// Action to add a product to the wishlist
+export const addProductToWishlist = createAsyncThunk(
+  "wishlist/addProductToWishlist",
+  async ({ productId }, { rejectWithValue }) => {
+    try {
+      return await apiRequest(
+        `${BASE_URL}/wishlist/`,
+        "POST",
+        { productId },
+        true
+      );
+    } catch (err) {
+      return rejectWithValue(err.message);
+    }
+  }
+);
+
+// Action to remove a product from the wishlist
+export const removeProduct = createAsyncThunk(
+  "wishlist/removeProduct",
+  async (productId, { rejectWithValue }) => {
+    try {
+      return await apiRequest(
+        `${BASE_URL}/wishlist/`,
+        "DELETE",
+        { productId },
+        true,
+        rejectWithValue
+      );
+    } catch (err) {
+      return rejectWithValue(err.message);
+    }
+  }
+);
 
 // Create a slice for the wishlist
 const wishlistSlice = createSlice({
@@ -25,43 +61,45 @@ const wishlistSlice = createSlice({
   initialState,
   reducers: {
     // Action to load wishlist products from localStorage based on user ID
-    loadWishlistFromLocalStorage(state, action) {
-      const userId = action.payload; // Pass userId as an argument
-      state.userId = userId;
-      state.wishlistProducts = loadWishlistFromLocalStorageHelper(userId);
+    resetWishlist(state) {
+      state.wishlistProducts = initialState.wishlistProducts;
+      state.wishlistId = initialState.wishlistId;
+      state.error = initialState.error;
+      state.status = initialState.status;
     },
-
-    // Action to add a product to the wishlist
-    addProductToWishlist(state, action) {
-      // Check if the product already exists in the wishlist
-      const index = state.wishlistProducts.findIndex(
-        (product) => product.id === action.payload.id
+  },
+  extraReducers: (builder) => {
+    // Pending, Fulfilled & rejected state handling for createUser async action
+    builder
+      .addCase(loadWishlist.fulfilled, (state, action) => {
+        state.status = "success";
+        state.wishlistId = action.payload?.data?.wishlist?._id;
+        state.wishlistProducts = action.payload?.data?.wishlist?.wishlistItems;
+      })
+      .addCase(addProductToWishlist.fulfilled, (state, action) => {
+        state.status = action.payload?.status || "success";
+        state.wishlistProducts = action.payload?.data?.wishlist?.wishlistItems;
+      })
+      .addCase(removeProduct.fulfilled, (state, action) => {
+        state.status = action.payload?.status || "success";
+        state.wishlistProducts = action.payload?.data?.wishlist?.wishlistItems;
+      })
+      .addMatcher(
+        (action) => action.type.endsWith("/pending"),
+        (state) => {
+          state.status = "loading";
+          state.error = "";
+        }
+      )
+      .addMatcher(
+        (action) => action.type.endsWith("/rejected"),
+        (state, action) => {
+          state.status = "fail";
+          state.error = action.payload || action.error.message;
+        }
       );
-
-      // If the product is not found, add it to the wishlist
-      if (index === -1) {
-        state.wishlistProducts.push(action.payload);
-      } else {
-        // If the product is found, increment its quantity
-        state.wishlistProducts[index].quantity += action.payload.quantity;
-      }
-
-      updateWishlistInLocalStorage(state.userId, state.wishlistProducts);
-    },
-
-    // Action to remove a product from the wishlist
-    removeProduct(state, action) {
-      state.wishlistProducts = state.wishlistProducts.filter(
-        (product) => product.id !== action.payload
-      );
-      updateWishlistInLocalStorage(state.userId, state.wishlistProducts);
-    },
   },
 });
 
-export const {
-  loadWishlistFromLocalStorage,
-  addProductToWishlist,
-  removeProduct,
-} = wishlistSlice.actions;
+export const { resetWishlist } = wishlistSlice.actions;
 export default wishlistSlice.reducer;
