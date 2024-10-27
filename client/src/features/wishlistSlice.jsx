@@ -2,13 +2,15 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import apiRequest from "../utils/apiRequest";
 import { BASE_URL } from "../config/config";
 
+// Initial state for the wishlist slice
 const initialState = {
-  wishlistProducts: [],
-  wishlistId: "",
-  error: "",
-  status: "",
+  wishlistProducts: [], // Array to store the products in the wishlist
+  wishlistId: "", // Unique identifier for the wishlist
+  error: "", // Stores any error message related to wishlist actions
+  status: "", // Tracks request status: "idle" | "loading" | "success" | "fail"
 };
 
+// Async action to load wishlist items for the current user from the API
 export const loadWishlist = createAsyncThunk(
   "wishlist/loadWishlist",
   async (_, { rejectWithValue }) => {
@@ -68,22 +70,30 @@ const wishlistSlice = createSlice({
       state.status = initialState.status;
     },
   },
+
+  // Handles async actions for wishlist operations
   extraReducers: (builder) => {
-    // Pending, Fulfilled & rejected state handling for createUser async action
     builder
+      // Sets wishlist data and ID when the loadWishlist action is fulfilled
       .addCase(loadWishlist.fulfilled, (state, action) => {
         state.status = "success";
         state.wishlistId = action.payload?.data?.wishlist?._id;
         state.wishlistProducts = action.payload?.data?.wishlist?.wishlistItems;
       })
+
+      // Updates wishlist products after successfully adding a product
       .addCase(addProductToWishlist.fulfilled, (state, action) => {
         state.status = action.payload?.status || "success";
         state.wishlistProducts = action.payload?.data?.wishlist?.wishlistItems;
       })
+
+      // Updates wishlist products after successfully removing a product
       .addCase(removeProduct.fulfilled, (state, action) => {
         state.status = action.payload?.status || "success";
         state.wishlistProducts = action.payload?.data?.wishlist?.wishlistItems;
       })
+
+      // Sets loading status and clears error message when the loadWishlist action is pending or rejected
       .addMatcher(
         (action) => action.type.endsWith("/pending"),
         (state) => {
@@ -91,6 +101,8 @@ const wishlistSlice = createSlice({
           state.error = "";
         }
       )
+
+      // Sets error message when the loadWishlist action is rejected or failed
       .addMatcher(
         (action) => action.type.endsWith("/rejected"),
         (state, action) => {
@@ -101,5 +113,8 @@ const wishlistSlice = createSlice({
   },
 });
 
+// Export the resetWishlist action to allow resetting wishlist data in the app
 export const { resetWishlist } = wishlistSlice.actions;
+
+// Export the actions and reducer for the wishlist slice
 export default wishlistSlice.reducer;

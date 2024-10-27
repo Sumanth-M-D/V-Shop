@@ -4,7 +4,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import {
   setAuthType, // Action to toggle between 'login' and 'signup'
-  authenticate, // Action to authenticate existing user
+  login, // Action to login existing user
   createUser,
 } from "../features/authenticationSlice";
 import { useNavigate } from "react-router-dom";
@@ -31,7 +31,7 @@ function AuthRoutes() {
     const { email, password } = data;
 
     if (authType === "login") {
-      dispatch(authenticate({ email, password }));
+      dispatch(login({ email, password }));
     } else if (authType === "signup") {
       dispatch(createUser({ email, password }));
     }

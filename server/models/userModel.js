@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import validator from "validator";
 import bcrypt from "bcrypt";
 
+// Defining the schema for the User model
 const userSchema = mongoose.Schema({
   email: {
     type: String,
@@ -30,12 +31,17 @@ const userSchema = mongoose.Schema({
   },
 });
 
+// Pre-save middleware to hash the password before saving the user
 userSchema.pre("save", async function (next) {
+  // Check if the password is modified (either newly created or updated)
   if (!this.isModified("password")) return next();
+
+  // Hash the password with the specified number of salt rounds
   this.password = await bcrypt.hash(this.password, +process.env.SALT_ROUNDS);
   next();
 });
 
+// Method to check if the provided password matches the actual password
 userSchema.methods.checkPassword = async function (
   inputPassword,
   actualPassword
@@ -43,5 +49,6 @@ userSchema.methods.checkPassword = async function (
   return await bcrypt.compare(inputPassword, actualPassword);
 };
 
+// Export the User model
 const User = mongoose.model("User", userSchema);
 export default User;

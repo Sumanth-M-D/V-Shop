@@ -1,10 +1,13 @@
 import AppError from "../utils/appError.js";
+import getOperationalErrors from "../utils/getOperationalErrors.js";
 
-// ------------------ GLOBAL ERROR HANDLER ----------------------------
+// Middleware function to handle errors globally throughout the application
 function globalErrorHandler(err, req, res, next) {
+  // Setting default status code and status message if not provided
   err.statusCode = err.statusCode || 500; // Default status code
   err.status = err.status || "error"; // Default status
 
+  // Determine the environment and send appropriate error response
   if (process.env.NODE_ENV === "development") {
     sendErrorForDev(err, req, res);
   } else if (process.env.NODE_ENV === "production") {
@@ -12,13 +15,13 @@ function globalErrorHandler(err, req, res, next) {
   }
 }
 
-/*
-
-
-*/
 // ------------------ HELPER FUNCTIONS ----------------------------
 
 // For Development => send complete error details
+/*
+  In development mode, we provide complete details about the error,
+  including the error object and stack trace to help with debugging.
+*/
 function sendErrorForDev(err, req, res) {
   res.status(err.statusCode || 500).json({
     status: err.status || "error",
@@ -27,12 +30,12 @@ function sendErrorForDev(err, req, res) {
     stack: err.stack,
   });
 }
-/*
-
-
-*/
 
 // For Production => send only status and message
+/*
+  In production mode, we send limited information to the client,
+  focusing on user-friendly messages while avoiding leaking sensitive details. 
+*/
 function sendErrorForProd(err, req, res) {
   // Identifying operational errors
   const error = getOperationalErrors(err);
@@ -50,46 +53,6 @@ function sendErrorForProd(err, req, res) {
     status: "error",
     message: "something went wrong",
   });
-}
-/*
-
-
-*/
-
-// Identifying operational errors
-function getOperationalErrors(err) {
-  // invalid "id" field for getProduct
-  if (err.name === "CastError") {
-    return new AppError(`Invalid ${err.path}: ${err.value}`, 400);
-  }
-
-  // duplicate email
-  if (err.code === 11000) {
-    return new AppError(
-      `Duplicate field : ${err.keyValue.email}. Please use another value`,
-      400
-    );
-  }
-
-  //DB validation error
-  if (err.name === "ValidationError") {
-    const message = Object.values(err.errors)
-      .map((error) => error.message)
-      .join(". ");
-    return new AppError(`Invalid input data: ${message}`, 401);
-  }
-
-  // JWT verification error
-  if (err.name === "JsonWebTokenError") {
-    return new AppError("Invalid token please login again.", 401);
-  }
-
-  // If JWT is expired
-  if (err.name === "TokenExpiredError") {
-    return new AppError("Your token has expired. Please login again");
-  }
-
-  return err;
 }
 
 export default globalErrorHandler;

@@ -11,6 +11,7 @@ function Searchbar() {
 
   const dispatch = useDispatch();
 
+  // Function to handle input change and update the search text in Redux store
   function handleChange(e) {
     dispatch(setSearchText(e.target.value));
   }

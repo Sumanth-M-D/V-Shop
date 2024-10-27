@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+// Sample product object structure for reference (commented out)
 // const sample = {
 //   id: 1,
 //   title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
@@ -14,6 +15,7 @@ import mongoose from "mongoose";
 //   },
 // };
 
+// Defining the schema for the Product model
 const productSchema = mongoose.Schema({
   title: {
     type: String,
@@ -61,5 +63,6 @@ productSchema.pre("save", function (next) {
   next();
 });
 
+// Exporting the Product model
 const Product = mongoose.model("Product", productSchema);
 export default Product;

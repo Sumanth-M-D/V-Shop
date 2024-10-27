@@ -6,9 +6,12 @@ import { addProductToWishlist } from "../../features/wishlistSlice";
 import { toast } from "react-toastify";
 
 function AddToWishlistBtn({ product }) {
-  const { isAuthenticated } = useSelector((state) => state.authentication);
+  // Redux state and dispatch hook
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  // Get the isAuthenticated state from the Redux store
+  const { isAuthenticated } = useSelector((state) => state.authentication);
 
   // Function to handle adding the product to the wishlist
   function handleAddtoWishlist() {

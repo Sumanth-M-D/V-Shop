@@ -8,11 +8,13 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 function CartListItem({ product }) {
+  // Destructure product properties from the passed props
   const {
     product: { id, title, image, price },
     quantity,
   } = product;
 
+  // Dispatch actions to Redux store using the useDispatch hook
   const dispatch = useDispatch();
   const navigate = useNavigate();
 

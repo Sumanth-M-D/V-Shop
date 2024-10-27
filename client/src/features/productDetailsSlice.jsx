@@ -2,12 +2,13 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { BASE_URL } from "../config/config";
 import apiRequest from "../utils/apiRequest";
 
+// Initial state for the product details slice
 const initialState = {
-  productId: null,
-  productData: {},
-  status: "idle", // idle | loading | success | fail
-  error: "",
-  quantity: 1,
+  productId: null, // Holds the currently selected product ID
+  productData: {}, // Stores detailed information of the selected product
+  status: "idle", // Tracks request status: "idle" | "loading" | "success" | "fail"
+  error: "", // Holds any error message if fetching fails
+  quantity: 1, // Default quantity for the product in the cart
 };
 
 // Async action to fetch product details by product ID
@@ -15,6 +16,7 @@ export const fetchProductDetails = createAsyncThunk(
   "productDetails/fetchData",
   async (id, { rejectWithValue }) => {
     try {
+      // Make an API request to fetch product details
       const data = await apiRequest(
         `${BASE_URL}/products/${id}`,
         "GET",
@@ -28,6 +30,7 @@ export const fetchProductDetails = createAsyncThunk(
   }
 );
 
+// Create a slice for product details management with initial state, reducers, and extra reducers
 const productDetailsSlice = createSlice({
   name: "productDetails",
   initialState,
@@ -73,10 +76,13 @@ const productDetailsSlice = createSlice({
   },
 });
 
+// Export actions to be used in components
 export const {
   setProductId,
   setProductData,
   updateProductQuantity,
   resetProductDetails,
 } = productDetailsSlice.actions;
+
+// Export the reducer for the product details slice
 export default productDetailsSlice.reducer;

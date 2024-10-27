@@ -8,7 +8,7 @@ dotenv.config();
 const db = process.env.DATABASE;
 const port = process.env.PORT || 3000;
 
-// Handling uncaught exceptions
+// Handling uncaught exceptions globally
 process.on("uncaughtException", (err) => {
   console.log("UNCAUGHT EXCEPTION!!! 💥💥 SHutting Down....");
   console.log(err);
