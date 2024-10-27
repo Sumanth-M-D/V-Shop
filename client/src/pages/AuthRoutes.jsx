@@ -10,7 +10,6 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Input from "../components/authRoutes/Input";
-import Loading from "../components/general/Laoding";
 
 function AuthRoutes() {
   // Get state variables from redux store
@@ -113,10 +112,10 @@ function AuthRoutes() {
               <button
                 type="submit"
                 className="flex items-center gap-2 px-4 py-2 rounded border-[1px] border-solid border-secondary--shade__1 hover:bg-white slowTransition"
+                disabled={status === "loading"}
               >
-                {" "}
                 {status === "loading" ? (
-                  <Loading />
+                  "Loading..."
                 ) : (
                   <span>{authType === "login" ? "Login" : "Register"}</span>
                 )}
