@@ -87,25 +87,38 @@ git clone https://github.com/your-username/v-shop.git
 ### 2. Install dependencies:
 
 ```bash
-cd v-shop
+cd v-shop/client
+npm install
+
+cd ../server
 npm install
 ```
 
 ### 3. Configure environment variables:
 
-Create a .env file in the root directory.
+Create a .env file in the server directory.
 Add the following variables to the .env file:
 
 ```bash
 DATABASE=<Your MongoDB connection string>
 DATABASE_PASSWORD=<Your MongoDB password>
 PORT=3000
+
+CLIENT_URL="http://localhost:5173"
+NODE_ENV=development
+
+JWT_SECRET='Your secret String'
+JWT_EXPIRES_IN=10d
+JWT_COOKIE_EXPIRES_IN=10
+
+SALT_ROUNDS=12
 ```
 
-### 3. Start the development server:
+### 3. Start clent and server:
 
 ```bash
-npm start
+npm start:prod //server
+npm reun dev //client
 ```
 
-### 4. Navigate to http://localhost:3000 in your browser to access the application.
+### 4. Navigate to http://localhost:5173 in your browser to access the application.
