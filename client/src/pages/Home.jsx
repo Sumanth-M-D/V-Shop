@@ -10,15 +10,12 @@ import useProductsPerRow from "../custom_hooks/useProductsPerRow";
 import Error from "../components/general/Error";
 import WhatWeProvide from "../components/home/WhatWeProvide";
 import { updateActiveCategory } from "../features/categoriesSlice";
-import useDebounce from "../custom_hooks/useDebounce";
 
 function Home() {
   // Get products state variables from redux store
-  const {
-    status: productStatus,
-    error: productError,
-    searchText,
-  } = useSelector((state) => state.products);
+  const { status: productStatus, error: productError } = useSelector(
+    (state) => state.products
+  );
 
   // Get category state variables from Redux store
   const {
@@ -31,9 +28,6 @@ function Home() {
   // Use custom hook to handle products per row update based on screen size
   useProductsPerRow();
 
-  // Debounced searchText to avoid frequent API calls
-  const debouncedSearchText = useDebounce(searchText, 500); // 500ms delay
-
   useEffect(() => {
     if (categoryStatus === "success") {
       // If no active category is selected, set the default to the first category
@@ -43,7 +37,7 @@ function Home() {
       // Fetch products after category is set
       dispatch(fetchProducts());
     }
-  }, [dispatch, activeCategoryIndex, categoryStatus, debouncedSearchText]);
+  }, [dispatch, activeCategoryIndex, categoryStatus]);
 
   // Display loading spinner while products are being fetched
   if (productStatus === "loading") {

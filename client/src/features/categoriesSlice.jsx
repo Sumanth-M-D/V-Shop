@@ -5,9 +5,10 @@ import apiRequest from "../utils/apiRequest.js";
 // Initial state for the category slice
 const initialState = {
   categories: [], // Array to hold fetched categories
-  activeCategoryIndex: "", // Tracks the currently active category (by index)
+  activeCategoryIndex: 0, // Tracks the currently active category (by index)
   status: "idle", // idle | loading | success | fail
   error: "",
+  searchText: "",
 };
 
 // Async action to fetch product categories from the API
@@ -39,6 +40,14 @@ const categorySlice = createSlice({
     // Reducer to update the active category based on user selection
     updateActiveCategory(state, action) {
       state.activeCategoryIndex = action.payload;
+      if (action.payload !== "" && Number(action.payload) !== 0) {
+        state.searchText = "";
+      }
+    },
+    // Setting the search text
+    setSearchText(state, action) {
+      state.searchText = action.payload;
+      state.activeCategoryIndex = "";
     },
   },
 
@@ -63,7 +72,7 @@ const categorySlice = createSlice({
 });
 
 // Export the action to update active category for use in components
-export const { updateActiveCategory } = categorySlice.actions;
+export const { updateActiveCategory, setSearchText } = categorySlice.actions;
 
 // Export the category reducer to integrate with the Redux store
 export default categorySlice.reducer;

@@ -1,11 +1,13 @@
 import { FaRegHeart } from "react-icons/fa";
 import Badge from "./Badge";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
+import { updateActiveCategory } from "../../../features/categoriesSlice";
 
 function WishlistBtn() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   // Access authentication status and wishlist products from Redux store
   const { isAuthenticated } = useSelector((state) => state.authentication);
@@ -13,6 +15,7 @@ function WishlistBtn() {
 
   // Function to handle click events for the wishlist button
   function handleClick() {
+    dispatch(updateActiveCategory(""));
     if (isAuthenticated) {
       navigate("/wishlist"); // Navigate to wishlist page if the user is authenticated
     } else {

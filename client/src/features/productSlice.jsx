@@ -11,7 +11,6 @@ const initialState = {
   productsPerRow: 1, // For adjusting products per page according to screen sizes
   totalPages: 0,
   currentPageProducts: [],
-  searchText: "",
 };
 
 // Async action to fetch products based on the active category from the API
@@ -20,20 +19,20 @@ export const fetchProducts = createAsyncThunk(
   async (_, { getState, rejectWithValue }) => {
     try {
       // Get categories and active category index from state
-      const { categories, activeCategoryIndex } = getState().categories;
-
-      const { searchText } = getState().products;
-
-      let activeCategory = categories[activeCategoryIndex];
-      let URL = `${BASE_URL}/products/category/${activeCategory}`;
-
-      // If the active category is "All products", fetch all products
-      if (activeCategory === "All products") {
-        URL = `${BASE_URL}/products`;
-      }
-
+      const { categories, activeCategoryIndex, searchText } =
+        getState().categories;
+      let URL;
+      let activeCategory;
       if (searchText.length > 0) {
         URL = `${BASE_URL}/products/search/${searchText}`;
+      } else {
+        activeCategory = categories[activeCategoryIndex];
+        URL = `${BASE_URL}/products/category/${activeCategory}`;
+
+        // If the active category is "All products", fetch all products
+        if (activeCategory === "All products") {
+          URL = `${BASE_URL}/products`;
+        }
       }
 
       const data = await apiRequest(URL, "GET", null, false);
@@ -100,11 +99,6 @@ const productSlice = createSlice({
       state.currentPage = 1;
       calculateCurrentPageProducts(state);
     },
-
-    // Setting the search text
-    setSearchText(state, action) {
-      state.searchText = action.payload;
-    },
   },
 
   // Handle async actions related to product fetching => handling Pending, fullFilled and rejected states
@@ -119,7 +113,6 @@ const productSlice = createSlice({
 
         // Calculate total pages and update the products displayed on the current page
         calculateTotalPages(state);
-
         calculateCurrentPageProducts(state);
       })
       .addCase(fetchProducts.rejected, (state, action) => {
@@ -136,7 +129,6 @@ export const {
   decrementCurrentPage,
   updateCurrentPage,
   resetCurrentPage,
-  setSearchText,
 } = productSlice.actions;
 
 // Export the reducer to be included in the Redux store
