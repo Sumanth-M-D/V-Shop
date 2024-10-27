@@ -10,6 +10,7 @@ import wishlistRouter from "./routers/wishlistRoutes.js";
 import AppError from "./utils/appError.js";
 import globalErrorHandler from "./controllers/errorController.js";
 import dotenv from "dotenv";
+import morgan from "morgan";
 
 // Load environment variables from .env file
 dotenv.config();
@@ -17,6 +18,10 @@ const { CLIENT_URL } = process.env;
 
 // Creating an Express application instance
 const app = express();
+
+// Use morgan middleware for logging
+// 'dev' format outputs concise colored logs with response time and status
+app.use(morgan("dev"));
 
 // Global Middlewares
 app.use(express.json()); // for parsing JSON payloads
