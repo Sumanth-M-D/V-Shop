@@ -54,13 +54,13 @@ function AuthRoutes() {
             className={`authBtn ${authType === "login" ? "authActive" : ""} `}
             onClick={() => dispatch(setAuthType("login"))}
           >
-            {status === "loading" ? <Loading /> : "Login"}
+            Login
           </button>
           <button
             className={`authBtn ${authType === "signup" ? "authActive" : ""}`}
             onClick={() => dispatch(setAuthType("signup"))}
           >
-            {status === "loading" ? <Loading /> : "Signup"}
+            Signup
           </button>
         </div>
 
@@ -114,7 +114,12 @@ function AuthRoutes() {
                 type="submit"
                 className="flex items-center gap-2 px-4 py-2 rounded border-[1px] border-solid border-secondary--shade__1 hover:bg-white slowTransition"
               >
-                <span>{authType === "login" ? "Login" : "Register"}</span>
+                {" "}
+                {status === "loading" ? (
+                  <Loading />
+                ) : (
+                  <span>{authType === "login" ? "Login" : "Register"}</span>
+                )}
                 <FaLongArrowAltRight />
               </button>
             </div>
