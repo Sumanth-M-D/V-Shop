@@ -157,7 +157,6 @@ const authenticationSlice = createSlice({
         (action) => action.type.endsWith("/rejected"),
         (state, action) => {
           state.status = "fail";
-          console.log(action.payload);
           if (action.payload.startsWith("You are not logged in.")) {
             state.error = "";
           } else {

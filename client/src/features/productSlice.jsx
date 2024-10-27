@@ -37,7 +37,6 @@ export const fetchProducts = createAsyncThunk(
       }
 
       const data = await apiRequest(URL, "GET", null, false);
-      console.log(data);
 
       return data.data.products;
     } catch (err) {
@@ -125,7 +124,6 @@ const productSlice = createSlice({
       })
       .addCase(fetchProducts.rejected, (state, action) => {
         state.status = "fail";
-        console.log(action);
         state.error = action.payload || action.error.message;
       });
   },
