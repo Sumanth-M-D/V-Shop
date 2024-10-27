@@ -10,10 +10,11 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Input from "../components/authRoutes/Input";
+import Loading from "../components/general/Laoding";
 
 function AuthRoutes() {
   // Get state variables from redux store
-  const { authType, isAuthenticated, error } = useSelector(
+  const { authType, isAuthenticated, error, status } = useSelector(
     (state) => state.authentication
   );
   const dispatch = useDispatch();
@@ -53,13 +54,13 @@ function AuthRoutes() {
             className={`authBtn ${authType === "login" ? "authActive" : ""} `}
             onClick={() => dispatch(setAuthType("login"))}
           >
-            Login
+            {status === "loading" ? <Loading /> : "Login"}
           </button>
           <button
             className={`authBtn ${authType === "signup" ? "authActive" : ""}`}
             onClick={() => dispatch(setAuthType("signup"))}
           >
-            Signup
+            {status === "loading" ? <Loading /> : "Signup"}
           </button>
         </div>
 
