@@ -10,12 +10,14 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Input from "../components/authRoutes/Input";
+import { toast } from "react-toastify";
 
 function AuthRoutes() {
   // Get state variables from redux store
   const { authType, isAuthenticated, error, status } = useSelector(
     (state) => state.authentication
   );
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -28,8 +30,10 @@ function AuthRoutes() {
 
   // Handle form submission for login/signup
   const onSubmit = (data) => {
+    toast(
+      `User is being ${authType === "login" ? "logged in..." : "created..."}`
+    );
     const { email, password } = data;
-
     if (authType === "login") {
       dispatch(login({ email, password }));
     } else if (authType === "signup") {
@@ -112,13 +116,8 @@ function AuthRoutes() {
               <button
                 type="submit"
                 className="flex items-center gap-2 px-4 py-2 rounded border-[1px] border-solid border-secondary--shade__1 hover:bg-white slowTransition"
-                disabled={status === "loading"}
               >
-                {status === "loading" ? (
-                  "Loading..."
-                ) : (
-                  <span>{authType === "login" ? "Login" : "Register"}</span>
-                )}
+                <span>{authType === "login" ? "Login" : "Register"}</span>
                 <FaLongArrowAltRight />
               </button>
             </div>
