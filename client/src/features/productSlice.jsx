@@ -23,9 +23,12 @@ export const fetchProducts = createAsyncThunk(
         getState().categories;
       let URL;
       let activeCategory;
+
+      // If there is a search text then fetch products based on search text
       if (searchText.length > 0) {
         URL = `${BASE_URL}/products/search/${searchText}`;
       } else {
+        // Fetch products based on the active category
         activeCategory = categories[activeCategoryIndex];
         URL = `${BASE_URL}/products/category/${activeCategory}`;
 
@@ -35,7 +38,7 @@ export const fetchProducts = createAsyncThunk(
         }
       }
 
-      const data = await apiRequest(URL, "GET", null, false);
+      const data = await apiRequest(URL, "GET");
 
       return data.data.products;
     } catch (err) {

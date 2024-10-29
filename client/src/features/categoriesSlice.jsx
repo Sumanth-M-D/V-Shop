@@ -16,12 +16,7 @@ export const fetchCategories = createAsyncThunk(
   "categories/fetchCategories",
   async (_, { rejectWithValue }) => {
     try {
-      const data = await apiRequest(
-        `${BASE_URL}/products/categories`,
-        "GET",
-        null,
-        true
-      );
+      const data = await apiRequest(`${BASE_URL}/products/categories`, "GET");
       const categories = data.data.categories;
 
       // Return categories with "All products" added as the first category

@@ -17,7 +17,7 @@ export const loadCart = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       // Request to load user's cart data
-      return await apiRequest(`${BASE_URL}/cart/`, "GET", null, true);
+      return await apiRequest(`${BASE_URL}/cart`, "GET");
     } catch (err) {
       return rejectWithValue(err.message);
     }
@@ -30,12 +30,10 @@ export const addProductToCart = createAsyncThunk(
   async ({ productId, quantity }, { rejectWithValue }) => {
     try {
       // API request to add a product with specified quantity
-      return await apiRequest(
-        `${BASE_URL}/cart/`,
-        "POST",
-        { productId, quantity },
-        true
-      );
+      return await apiRequest(`${BASE_URL}/cart/`, "POST", {
+        productId,
+        quantity,
+      });
     } catch (err) {
       return rejectWithValue(err.message);
     }
@@ -48,12 +46,7 @@ export const removeProduct = createAsyncThunk(
   async (productId, { rejectWithValue }) => {
     try {
       // API request to delete a product from the cart
-      return await apiRequest(
-        `${BASE_URL}/cart/`,
-        "DELETE",
-        { productId },
-        true
-      );
+      return await apiRequest(`${BASE_URL}/cart/`, "DELETE", { productId });
     } catch (err) {
       return rejectWithValue(err.message);
     }
@@ -66,13 +59,10 @@ export const updateProductQuantity = createAsyncThunk(
   async ({ productId, quantity }, { rejectWithValue }) => {
     try {
       // API request to change the quantity of a product in the cart
-      return await apiRequest(
-        `${BASE_URL}/cart/`,
-        "PATCH",
-        { productId, quantity },
-        true,
-        rejectWithValue
-      );
+      return await apiRequest(`${BASE_URL}/cart/`, "PATCH", {
+        productId,
+        quantity,
+      });
     } catch (err) {
       return rejectWithValue(err.message);
     }

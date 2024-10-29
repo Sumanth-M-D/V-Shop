@@ -17,12 +17,10 @@ export const createUser = createAsyncThunk(
   "authentication/createUser",
   async ({ email, password }, { rejectWithValue, dispatch }) => {
     try {
-      const data = await apiRequest(
-        `${BASE_URL}/user/signup`,
-        "POST",
-        { email, password },
-        false
-      );
+      const data = await apiRequest(`${BASE_URL}/user/signup`, "POST", {
+        email,
+        password,
+      });
 
       // Load cart and wishlist after successful sign-up
       await dispatch(loadCart());
@@ -39,12 +37,10 @@ export const login = createAsyncThunk(
   "authentication/login",
   async ({ email, password }, { rejectWithValue, dispatch }) => {
     try {
-      const data = await apiRequest(
-        `${BASE_URL}/user/login`,
-        "POST",
-        { email, password },
-        true
-      );
+      const data = await apiRequest(`${BASE_URL}/user/login`, "POST", {
+        email,
+        password,
+      });
       // Load cart and wishlist after successful login
       await dispatch(loadCart());
       await dispatch(loadWishlist());
@@ -60,12 +56,7 @@ export const isLoggedin = createAsyncThunk(
   "authentication/isLoggedin",
   async (_, { rejectWithValue, dispatch }) => {
     try {
-      const data = await apiRequest(
-        `${BASE_URL}/user/isLoggedin`,
-        "GET",
-        null,
-        true
-      );
+      const data = await apiRequest(`${BASE_URL}/user/isLoggedin`, "GET");
 
       // Load cart and wishlist if user is logged in
       await dispatch(loadCart());
@@ -81,12 +72,7 @@ export const logout = createAsyncThunk(
   "authentication/logout",
   async (_, { rejectWithValue, dispatch }) => {
     try {
-      const data = await apiRequest(
-        `${BASE_URL}/user/logout`,
-        "POST",
-        null,
-        true
-      );
+      const data = await apiRequest(`${BASE_URL}/user/logout`, "POST");
 
       // Reset cart and wishlist after successful logout
       dispatch(resetCart());

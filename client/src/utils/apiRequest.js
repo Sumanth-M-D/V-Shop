@@ -1,8 +1,7 @@
 export default async function apiRequest(
   url, // URL of the API endpoint
   method, // HTTP method (GET, POST, etc.)
-  body = null, // Optional body of the request for methods like POST or PUT
-  withCredentials = false // Whether to include credentials (like cookies)
+  body = null // Optional body of the request for methods like POST or PUT
 ) {
   // Define options for the fetch request
   const options = {
@@ -11,7 +10,7 @@ export default async function apiRequest(
       "Content-Type": "application/json",
     },
     body: body ? JSON.stringify(body) : undefined,
-    credentials: withCredentials ? "include" : undefined,
+    credentials: "include",
   };
 
   // Make the fetch request and store the response

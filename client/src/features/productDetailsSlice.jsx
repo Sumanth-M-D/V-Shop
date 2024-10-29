@@ -17,12 +17,7 @@ export const fetchProductDetails = createAsyncThunk(
   async (id, { rejectWithValue }) => {
     try {
       // Make an API request to fetch product details
-      const data = await apiRequest(
-        `${BASE_URL}/products/${id}`,
-        "GET",
-        null,
-        false
-      );
+      const data = await apiRequest(`${BASE_URL}/products/${id}`, "GET");
       return data.data.product;
     } catch (err) {
       return rejectWithValue(err.message);
