@@ -22,12 +22,8 @@ function createSendToken(user, statusCode, res) {
     expires: new Date(Date.now() + JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000), // Set cookie expiration
     httpOnly: true, // Cookie is not accessible via JavaScript
     sameSite: "None", // Allow cross-site cookie usage
+    secure: true, // Cookie should only be sent over HTTPS
   };
-
-  // Secure cookie if in production
-  if (NODE_ENV === "production") {
-    cookieOptions.secure = true; // Only send cookie over HTTPS
-  }
 
   // Set the JWT as a cookie
   res.cookie("jwt", token, cookieOptions);
@@ -116,7 +112,6 @@ async function logout(req, res, next) {
 async function protect(req, res, next) {
   try {
     let token;
-
     // Check for token in Authorization header / cookies
     if (req.headers.authorization?.startsWith("Bearer")) {
       token = req.headers.authorization.split(" ")[1];
@@ -140,10 +135,9 @@ async function protect(req, res, next) {
 
     // Fetch the current user based on the decoded ID
     const currentUser = await User.findById(decoded.id);
-
     if (!currentUser) {
       return next(
-        new AppError("The user belonging to the token no longer exist.", 404)
+        new AppError("The user belonging to the token does not exist.", 404)
       );
     }
 

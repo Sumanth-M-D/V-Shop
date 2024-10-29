@@ -10,7 +10,7 @@ const port = process.env.PORT || 3000;
 
 // Handling uncaught exceptions globally
 process.on("uncaughtException", (err) => {
-  console.log("UNCAUGHT EXCEPTION!!! 💥💥 SHutting Down....");
+  console.log("UNCAUGHT EXCEPTION!!! 💥💥 Shutting Down....");
   console.log(err);
   // End the app
   process.exit();
