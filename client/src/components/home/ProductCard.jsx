@@ -20,10 +20,10 @@ function ProductCard({ product }) {
   return (
     <div className="w-60 xxxs:w-40 xs:w-60 borderSecondary hover:scale-105 duration-200 ">
       <div
-        className="w-full h-60  flex items-end mb-4 bg-secondary cursor-pointer hover:shadow-md duration-200 "
+        className="w-full h-60  flex items-end mb-2 border-b-2 border-secondary cursor-pointer shadow-sm duration-200 "
         onClick={navigateTOProductDetail}
       >
-        <img src={image} className="object-contain h-5/6 mx-auto px-3 py-3" />
+        <img src={image} className="object-contain h-full mx-auto px-3 py-8" />
       </div>
 
       <div className="text-center xs:h-72 h-80 flex flex-col justify-around px-4 pb-4 text-secondary--shade__2 ">
