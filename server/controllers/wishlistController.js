@@ -15,7 +15,7 @@ async function createWishlist(userId, next) {
 async function getWishlistItems(req, res, next) {
   try {
     // Find the user's wishlist using the stored wishlist ID
-    const userWishlist = await Wishlist.findById(req.user.wishlistId);
+    const userWishlist = await Wishlist.findById(req.user.wishlistId).lean();
     if (!userWishlist) {
       next(new AppError("wishlist not found", 404));
     }
@@ -43,7 +43,7 @@ async function addWishlistItem(req, res, next) {
     }
 
     // Checking if the product exist wiith that id
-    const product = await Product.findById(productId);
+    const product = await Product.findById(productId).lean();
 
     if (!product) {
       return next(
@@ -74,12 +74,14 @@ async function addWishlistItem(req, res, next) {
     userWishlist.wishlistItems.push({ product: productId });
     await userWishlist.save();
 
-    // Retrieve the updated wishlist from the database
-    const updatedWishlist = await Wishlist.findById(wishlistId);
+    await userWishlist.populate({
+      path: "wishlistItems.product", // Specify the path to populate
+      select: "id image price title", // Select specific fields to populate
+    });
 
     res.status(201).json({
       status: "success",
-      data: { wishlist: updatedWishlist },
+      data: { wishlist: userWishlist },
     });
   } catch (err) {
     next(err);
@@ -112,14 +114,11 @@ async function deleteWishlistItem(req, res, next) {
     userWishlist.wishlistItems = filteredwishlist;
     await userWishlist.save();
 
-    // Retrieve the updated wishlist from the database
-    const updatedWishlist = await Wishlist.findById(wishlistId);
-
     // Respond with a success status and the updated wishlist
     res.status(200).json({
       status: "success",
       data: {
-        wishlist: updatedWishlist,
+        wishlist: userWishlist,
       },
     });
   } catch (err) {

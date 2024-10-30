@@ -14,8 +14,8 @@ async function createCart(userId, next) {
 // Function to retrieve items in the user's cart
 async function getCartItems(req, res, next) {
   try {
-    // Find the user's cart by the cart ID stored in the user object
-    const userCart = await Cart.findById(req.user.cartId);
+    // Find the user's cart by the cart ID (lean() => returns plain javascript object )
+    const userCart = await Cart.findById(req.user.cartId).lean();
 
     if (!userCart) {
       next(new AppError("Cart not found", 404));
@@ -42,14 +42,14 @@ async function addCartItem(req, res, next) {
     if (!productId || !quantity || quantity < 1) {
       return next(
         new AppError(
-          "Product Id and quantity are needed to add the product to cart",
+          "Product Id and quantity are needed to add a product to cart",
           400
         )
       );
     }
 
     // Check if the product exists in the database
-    const product = await Product.findById(productId);
+    const product = await Product.findById(productId).lean();
     if (!product) {
       return next(
         new AppError("Invalid product Id. Enter a valid product Id", 400)
@@ -62,29 +62,26 @@ async function addCartItem(req, res, next) {
       return next(new AppError("Cart not found", 400));
     }
 
-    // Check if the product already exists in the cart
-    let productIndex = -1;
-    if (userCart.cartItems.length > 0) {
-      productIndex = userCart.cartItems.findIndex(
-        (item) => item?.product.id.toString() === productId.toString()
-      );
-    }
-
-    // Add new product or update quantity if it already exists in the cart
-    if (productIndex === -1) {
-      userCart.cartItems.push({ product: productId, quantity });
+    const existingItem = userCart.cartItems.find(
+      (item) => item?.product.id.toString() === productId.toString()
+    );
+    if (existingItem) {
+      existingItem.quantity += quantity;
     } else {
-      userCart.cartItems[productIndex].quantity += quantity;
+      userCart.cartItems.push({ product: productId, quantity });
     }
     await userCart.save();
 
-    // Retrieve the updated cart
-    const updatedCart = await Cart.findById(cartId);
+    // Populate the product details for each item in the cart
+    await userCart.populate({
+      path: "cartItems.product", // Specify the path to populate
+      select: "id image price title", // Select specific fields to populate
+    });
 
     // Respond with the updated cart data
     res.status(201).json({
       status: "success",
-      data: { cart: updatedCart },
+      data: { cart: userCart },
     });
   } catch (err) {
     next(err);
@@ -118,14 +115,11 @@ async function deleteCartItem(req, res, next) {
     userCart.cartItems = filteredCart;
     await userCart.save();
 
-    // Retrieve the updated cart, populated with product details
-    const updatedCart = await Cart.findById(cartId);
-
     // Respond with the updated cart data
     res.status(200).json({
       status: "success",
       data: {
-        cart: updatedCart,
+        cart: userCart,
       },
     });
   } catch (err) {
@@ -151,30 +145,22 @@ async function updateCartItem(req, res, next) {
       return next(new AppError("Cart not found", 404));
     }
 
-    // Check if the item to update exists in the cart
-    if (
-      userCart.cartItems.findIndex((item) => item.product.id === productId) ===
-      -1
-    ) {
-      return next(new AppError("Item is not found in the cart", 404));
+    // Update the item quantity in the cart if the item exists in the cart
+    const existingItem = userCart.cartItems.find(
+      (item) => item.product.id.toString() === productId
+    );
+    if (!existingItem) {
+      return next(new AppError("Item not found in the cart", 404));
     }
 
-    // Update the item quantity in the cart
-    userCart.cartItems = userCart.cartItems.map((ele) => {
-      return ele?.product.id.toString() === productId.toString()
-        ? { product: productId, quantity }
-        : ele;
-    });
+    existingItem.quantity = quantity;
 
     await userCart.save();
-
-    // Retrieve the updated cart
-    const updatedCart = await Cart.findById(cartId);
 
     // Respond with the updated cart data
     res.status(200).json({
       status: "success",
-      data: { cart: updatedCart },
+      data: { cart: userCart },
     });
   } catch (err) {
     next(err);

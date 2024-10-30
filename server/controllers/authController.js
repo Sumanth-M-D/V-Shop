@@ -22,7 +22,7 @@ function createSendToken(user, statusCode, res) {
     expires: new Date(Date.now() + JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000), // Set cookie expiration
     httpOnly: true, // Cookie is not accessible via JavaScript
     sameSite: "None", // Allow cross-site cookie usage
-    secure: true, // Cookie should only be sent over HTTPS
+    secure: NODE_ENV === "production", // Cookie should only be sent over HTTPS
   };
 
   // Set the JWT as a cookie
@@ -126,7 +126,7 @@ async function protect(req, res, next) {
     }
 
     // Verify the token
-    const decoded = await jwt.verify(token, JWT_SECRET);
+    const decoded = jwt.verify(token, JWT_SECRET);
 
     // Handle token expiration
     if (Date.now() >= decoded.exp * 1000) {

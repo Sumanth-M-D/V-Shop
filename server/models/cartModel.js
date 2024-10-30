@@ -25,6 +25,9 @@ cartSchema.pre(/^find/, function (next) {
   next();
 });
 
+// Create an index for userId to optimize queries
+cartSchema.index({ userId: 1 });
+
 // Create the Cart model based on the defined schema
 const Cart = mongoose.model("Cart", cartSchema);
 

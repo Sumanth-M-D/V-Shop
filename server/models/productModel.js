@@ -63,6 +63,9 @@ productSchema.pre("save", function (next) {
   next();
 });
 
+// Creating indexes to optimize query performance
+productSchema.index({ title: "text", category: 1 });
+
 // Exporting the Product model
 const Product = mongoose.model("Product", productSchema);
 export default Product;

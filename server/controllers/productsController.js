@@ -5,7 +5,7 @@ import sanitizeText from "../utils/sanitizeText.js";
 // Fetch all products from the database
 async function getAllProducts(req, res, next) {
   try {
-    const products = await Product.find();
+    const products = await Product.find().lean();
 
     res.status(200).json({
       status: "success",
@@ -35,7 +35,7 @@ async function getProduct(req, res, next) {
   try {
     // Get the product ID from the request parameters & Query the product by ID
     const id = req.params.id;
-    const product = await Product.findById(id);
+    const product = await Product.findById(id).lean();
 
     if (!product) next(new AppError("No product found", 404));
 
@@ -53,7 +53,7 @@ async function getProductsOfCategory(req, res, next) {
   try {
     const { category } = req.params;
 
-    const productsOfCategory = await Product.find({ category });
+    const productsOfCategory = await Product.find({ category }).lean();
 
     if (productsOfCategory.length === 0) {
       return next(new AppError("No products found of that category", 404));
@@ -80,7 +80,7 @@ async function getProductsMatching(req, res, next) {
     // Query for products whose titles match the search term (case insensitive)
     const products = await Product.find({
       title: { $regex: searchTitle, $options: "i" },
-    });
+    }).lean();
 
     // If no matching products are found, trigger an error
     if (products.length === 0) {

@@ -23,6 +23,9 @@ wishlistSchema.pre(/^find/, function (next) {
   next();
 });
 
+// Creating indexes to optimize query performance
+wishlistSchema.index({ userId: 1 });
+
 // Exporting the Wishlist model
 const Wishlist = mongoose.model("Wishlist", wishlistSchema);
 export default Wishlist;
