@@ -6,7 +6,7 @@ import authenticationReducer from "./features/authenticationSlice";
 import shoppingCartReducer from "./features/shoppingCartSlice";
 import wishlistReducer from "./features/wishlistSlice";
 
-// Redux store 
+// Redux store
 const store = configureStore({
   reducer: {
     products: productReducer,

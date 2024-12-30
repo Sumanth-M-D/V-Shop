@@ -25,7 +25,7 @@ export const fetchCategories = createAsyncThunk(
       return rejectWithValue(err.message);
     }
   }
-);
+); 
 
 // Slice to manage categories, including reducers and extra reducers for async actions
 const categorySlice = createSlice({
