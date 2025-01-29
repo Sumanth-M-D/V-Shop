@@ -30,7 +30,7 @@ app.use(cookieParser()); // for parsing cookies from client
 // CORS configuration to allow requests only from specified origin
 app.use(
   cors({
-    origin: CLIENT_URL, // Allow only the specific origin
+    origin: true, // Allow only the specific origin
     credentials: true, // Allow credentials (cookies, headers)
   })
 );
