@@ -4,5 +4,8 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  build: {
+    cssCodeSplit: false, // Ensures CSS is bundled in the output
+  },
   base: "/",
 });
