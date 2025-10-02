@@ -5,10 +5,8 @@ import Product from "../models/productModel.js";
 
 dotenv.config();
 
-// Getting required environment variables
 const db = process.env.DATABASE;
 
-// Connecting to Mongodb Atlas database
 async function connectToDatabase() {
   try {
     await mongoose.connect(db);
@@ -19,7 +17,6 @@ async function connectToDatabase() {
   }
 }
 
-// Getting products data from json file
 let products;
 try {
   products = JSON.parse(readFileSync("./dev-data/products.json", "UTF-8"));
@@ -28,11 +25,10 @@ try {
   process.exit(1);
 }
 
-// function to importdata to database
 async function importData() {
   try {
     for (const product of products) {
-      await Product.create(product); // Alternatively, use `new Product(product).save()`
+      await Product.create(product);
     }
     console.log("Import successful");
   } catch (err) {
@@ -41,7 +37,6 @@ async function importData() {
   }
 }
 
-//function to delete data from datatbase
 async function deleteData() {
   try {
     await Product.deleteMany();
@@ -52,10 +47,7 @@ async function deleteData() {
   }
 }
 
-// First connect to the database, then import data
 (async function () {
   await connectToDatabase();
   importData();
-  // or uncomment the following line to delete data instead of importing
-  // deleteData();
 })();

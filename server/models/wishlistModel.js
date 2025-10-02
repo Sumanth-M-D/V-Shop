@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 
-// Defining the schema for the Wishlist model
 const wishlistSchema = mongoose.Schema({
   wishlistItems: [
     {
@@ -14,18 +13,15 @@ const wishlistSchema = mongoose.Schema({
   },
 });
 
-// Middleware to automatically populate product details when querying wishlists
 wishlistSchema.pre(/^find/, function (next) {
   this.populate({
-    path: "wishlistItems.product", // Specify the path to populate
-    select: "id image price title", // Select specific fields to populate
+    path: "wishlistItems.product",
+    select: "id image price title",
   });
   next();
 });
 
-// Creating indexes to optimize query performance
 wishlistSchema.index({ userId: 1 });
 
-// Exporting the Wishlist model
 const Wishlist = mongoose.model("Wishlist", wishlistSchema);
 export default Wishlist;

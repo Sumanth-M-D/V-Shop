@@ -12,43 +12,34 @@ import globalErrorHandler from "./controllers/errorController.js";
 import dotenv from "dotenv";
 import morgan from "morgan";
 
-// Load environment variables from .env file
 dotenv.config();
 const { CLIENT_URL } = process.env;
 
-// Creating an Express application instance
 const app = express();
 
-// Use morgan middleware for logging
-// 'dev' format outputs concise colored logs with response time and status
 app.use(morgan("dev"));
 
-// Global Middlewares
-app.use(express.json()); // for parsing JSON payloads
-app.use(cookieParser()); // for parsing cookies from client
+app.use(express.json());
+app.use(cookieParser());
 
-// CORS configuration to allow requests only from specified origin
 app.use(
   cors({
-    origin: true, // Allow only the specific origin
-    credentials: true, // Allow credentials (cookies, headers)
+    origin: true,
+    credentials: true,
   })
 );
-app.use(compression()); // for compressing the API responses
-app.use(ExpressMongoSanitize()); // for prevention of noSql query injection
+app.use(compression());
+app.use(ExpressMongoSanitize());
 
-// Mounting Routers for handling API routes
-app.use("/api/user", userRouter); // Routes for user-related actions
-app.use("/api/products", productRouter); // Routes for product-related actions
-app.use("/api/cart", cartRouter); // Routes for cart-related actions
-app.use("/api/wishlist", wishlistRouter); // Routes for wishlist-related actions
+app.use("/api/user", userRouter);
+app.use("/api/products", productRouter);
+app.use("/api/cart", cartRouter);
+app.use("/api/wishlist", wishlistRouter);
 
-// Route handler for undefined routes (404 Not Found)
 app.use("*", (req, res, next) => {
   next(new AppError("Cannot find this route on this server", 404));
 });
 
-// Global error handling middleware
 app.use(globalErrorHandler);
 
 export default app;
