@@ -1,14 +1,46 @@
-import Product from "../models/productModel.js";
+import { Product } from "../models/index.js";
 import AppError from "../utils/appError.js";
-import sanitizeText from "../utils/sanitizeText.js";
 
-async function getAllProducts(req, res, next) {
+async function getProducts(req, res, next) {
   try {
-    const products = await Product.find().lean();
+    const { category, search } = req.query;
+    const page = Number(req.query.page) || 1;
+    const limit = Number(req.query.limit) || 5;
+    const skip = (page - 1) * limit;
+    let products;
+
+    let query = {};
+    let projection = {};
+    let sort = {};
+    if (category) {
+      query.category = category;
+    }
+    if (search) {
+      query.$text = { $search: search };
+      projection.score = { $meta: "textScore" };
+      sort = { score: { $meta: "textScore" } };
+    }
+
+    // Get total count for pagination
+    const total = await Product.countDocuments(query);
+    products = await Product.find(query, projection)
+      .sort(sort)
+      .skip(skip)
+      .limit(limit)
+      .lean();
+
+    if (products.length === 0) {
+      return next(new AppError(`No products found${ category && " of that category"}.`, 404));
+    }
 
     res.status(200).json({
       status: "success",
-      data: { products: products },
+      data: { products },
+      pagination: {
+        total,
+        page,
+        limit,
+      }
     });
   } catch (err) {
     next(err);
@@ -29,8 +61,8 @@ async function getAllCategories(req, res, next) {
 
 async function getProduct(req, res, next) {
   try {
-    const id = req.params.id;
-    const product = await Product.findById(id).lean();
+    const productId = req.params.id;
+    const product = await Product.find({ productId }).lean();
 
     if (!product) next(new AppError("No product found", 404));
 
@@ -43,54 +75,10 @@ async function getProduct(req, res, next) {
   }
 }
 
-async function getProductsOfCategory(req, res, next) {
-  try {
-    const { category } = req.params;
-    const productsOfCategory = await Product.find({ category }).lean();
-
-    if (productsOfCategory.length === 0) {
-      return next(new AppError("No products found of that category", 404));
-    }
-
-    res
-      .status(200)
-      .json({ status: "success", data: { products: productsOfCategory } });
-  } catch (err) {
-    next(err);
-  }
-}
-
-async function getProductsMatching(req, res, next) {
-  try {
-    let { searchTitle } = req.params;
-
-    if (!searchTitle) {
-      return next(new AppError("Search text is required", 400));
-    }
-
-    const products = await Product.find({
-      title: { $regex: searchTitle, $options: "i" },
-    }).lean();
-
-    if (products.length === 0) {
-      return next(new AppError("No matching products found", 404));
-    }
-
-    res.status(200).json({
-      status: "success",
-      data: { products: products },
-    });
-  } catch (err) {
-    next(err);
-  }
-}
-
 const productsController = {
-  getAllProducts,
-  getAllCategories,
+  getProducts,
   getProduct,
-  getProductsOfCategory,
-  getProductsMatching,
+  getAllCategories,
 };
 
 export default productsController;

@@ -1,7 +1,8 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import { readFileSync } from "node:fs";
-import Product from "../models/productModel.js";
+import {Product} from "../models/index.js";
+import IdGenerator from "../utils/idGenerator.js";
 
 dotenv.config();
 
@@ -28,7 +29,8 @@ try {
 async function importData() {
   try {
     for (const product of products) {
-      await Product.create(product);
+      const productId = IdGenerator.getProductId();
+      await Product.create({...product, productId});
     }
     console.log("Import successful");
   } catch (err) {

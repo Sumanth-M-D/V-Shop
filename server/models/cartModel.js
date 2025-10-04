@@ -3,26 +3,21 @@ import mongoose from "mongoose";
 const cartSchema = mongoose.Schema({
   cartItems: [
     {
-      product: { type: mongoose.Schema.ObjectId, ref: "Product" },
+      productId: { type: String, required: true },
       quantity: { type: Number, min: 1 },
     },
   ],
   userId: {
-    type: mongoose.Schema.ObjectId,
-    ref: "User",
+    type: String,
     required: [true, "A cart must belong to a user"],
   },
-});
-
-cartSchema.pre(/^find/, function (next) {
-  this.populate({
-    path: "cartItems.product",
-    select: "id image price title",
-  });
-  next();
-});
+  cartId: {
+    type: String,
+    unique: true,
+    index: true,
+  },
+}, { timestamps: true });
 
 cartSchema.index({ userId: 1 });
 
-const Cart = mongoose.model("Cart", cartSchema);
-export default Cart;
+export const Cart = mongoose.model("Cart", cartSchema);

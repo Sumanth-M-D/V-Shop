@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import IdGenerator from "../utils/idGenerator.js";
 
 
 const productSchema = mongoose.Schema({
@@ -18,6 +19,12 @@ const productSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  type: {
+    type: String,
+  },
+  tags: {
+    type: [String],
+  },
   image: {
     type: String,
     required: true,
@@ -32,20 +39,16 @@ const productSchema = mongoose.Schema({
       required: true,
     },
   },
-
-  id: {
+  productId: {
     type: String,
     unique: true,
+    index: true,
   },
-});
+}, { timestamps: true });
 
-productSchema.pre("save", function (next) {
-  if (this.isNew) {
-    this.id = this._id.toString();
-  }
-  next();
-});
+productSchema.index(
+  { title: "text", description: "text", type: "text", category: "text", tags: "text" },
+  { weights: { title: 5, category: 3, type: 3, tags: 2, description: 1 } }
+);
+export const Product = mongoose.model("Product", productSchema);
 
-productSchema.index({ title: "text", category: 1 });
-const Product = mongoose.model("Product", productSchema);
-export default Product;
