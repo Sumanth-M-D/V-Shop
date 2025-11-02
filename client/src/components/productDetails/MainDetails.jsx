@@ -9,35 +9,30 @@ import AddToCompareBtn from "../general/AddToCompareBtn";
 import SocialMedia from "../general/SocialMedia";
 
 function MainDetails() {
-  // Retrieving product data and quantity from Redux store
   const { productData, quantity } = useSelector(
     (state) => state.productDetails
   );
 
   const dispatch = useDispatch();
-  const { title, price, description, category, image, rating, id } =
+  const { title, price, description, category, image, rating, productId } =
     productData;
 
-  // Determine if the product category is clothing to show size selection
   const showSize =
     category === "men's clothing" || category === "women's clothing";
 
-  // Preparing product data for adding to cart and wishlist
-  const productToCart = { productId: id, quantity };
-  const productToWishlist = { productId: id };
+  const productToCart = { productId, quantity };
+  const productToWishlist = { productId };
 
   return (
     <div className="upperMd:grid upperMd:grid-cols-10  gap-3 py-6 text-black  ">
       <div className="upperMd:col-span-5 lg:col-span-4 h-[500px] upperMd:h-[725px] lg:h-[650px] xl:h-[550px] upperMd:mr-4">
-        {/* Product image section */}
         <img
-          src={image}
+          src={image?.[0]}
           alt={title}
           className="bg-secondary w-full h-full object-contain py-4 px-3"
         />
       </div>
 
-      {/* Product details section */}
       <div className="upperMd:col-span-5 lg:col-span-6 upperMd:h-full flex flex-col justify-between py-10 upperMd:py-0">
         <div className=" flex flex-col gap-4">
           <h1 className="text-2xl font-semibold">{title}</h1>

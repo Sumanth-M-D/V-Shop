@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Men's clothing",
+    "formattedName": "menClothing",
+    "categoryId": "CAT-fd117c70f77f57ac383a103b",
+    "subCategories": [
+      {
+        "name": "T-shirts",
+        "formattedName": "tShirt"
+      },
+      {
+        "name": "Pants",
+        "formattedName": "pant"
+      },
+      {
+        "name": "Shirts",
+        "formattedName": "shirt"
+      }
+    ]
+  },
+  {
+    "name": "Women's clothing",
+    "formattedName": "womenClothing",
+    "categoryId": "CAT-b0531d6e59cfbc3fcea2bcc5",
+    "subCategories": [
+      {
+        "name": "T-shirts",
+        "formattedName": "tShirt"
+      },
+      {
+        "name": "Pants",
+        "formattedName": "pant"
+      },
+      {
+        "name": "Sarees",
+        "formattedName": "saree"
+      }
+    ]
+  },
+  {
+    "name": "Men's footware",
+    "formattedName": "menFootware",
+    "categoryId": "CAT-32a3fd81fb258caa7d0716c9",
+    "subCategories": [
+      {
+        "name": "Shoes",
+        "formattedName": "shoes"
+      },
+      {
+        "name": "Sandals",
+        "formattedName": "sandals"
+      },
+      {
+        "name": "Flipflops",
+        "formattedName": "flipflops"
+      }
+    ]
+  },
+  {
+    "name": "Women's footware",
+    "formattedName": "womenFootware",
+    "categoryId": "CAT-5d3e641ac41db15ab8efb406",
+    "subCategories": [
+      {
+        "name": "Shoes",
+        "formattedName": "shoes"
+      },
+      {
+        "name": "Sandals",
+        "formattedName": "sandals"
+      },
+      {
+        "name": "Flipflops",
+        "formattedName": "flipflops"
+      }
+    ]
+  },
+  {
+    "name": "Furniture",
+    "formattedName": "furniture",
+    "categoryId": "CAT-8abb3336fd9fb0d61bebbc06",
+    "subCategories": [
+      {
+        "name": "Bed",
+        "formattedName": "bed"
+      },
+      {
+        "name": "Chair",
+        "formattedName": "chair"
+      },
+      {
+        "name": "Table",
+        "formattedName": "table"
+      }
+    ]
+  }
+]

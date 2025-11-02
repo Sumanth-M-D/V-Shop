@@ -1,83 +1,104 @@
 import { useDispatch, useSelector } from "react-redux";
-import {
-  decrementCurrentPage,
-  incrementCurrentPage,
-  updateCurrentPage,
-} from "../../features/productSlice";
+import { setCurrentPage, fetchProducts } from "../../features/productSlice";
+import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 
 function Pagination() {
-  // Get current page and total pages from the Redux store
   const { currentPage, totalPages } = useSelector((state) => state.products);
   const dispatch = useDispatch();
 
-  // Calculate the minimum and maximum page numbers to display
-  const min = Math.floor((currentPage - 1) / 3) * 3 + 1;
-  const max = Math.min(min + 2, totalPages);
-  const pageNumbers = [];
+  if (totalPages <= 1) return null;
 
-  // Flags to determine if the current page is the first or last
-  const noPrev = currentPage === 1;
-  const noNext = currentPage === totalPages;
+  const handlePageChange = (newPage) => {
+    if (newPage >= 1 && newPage <= totalPages) {
+      dispatch(setCurrentPage(newPage));
+      dispatch(fetchProducts());
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
-  // Populate the pageNumbers array with the range of page numbers to display
-  for (let i = min; i <= max; i++) {
-    pageNumbers.push(i);
-  }
+  const getPageNumbers = () => {
+    const pages = [];
+    const maxVisible = 5;
 
-  // Handler to decrement the current page
-  function handlePrev() {
-    dispatch(decrementCurrentPage());
-  }
+    if (totalPages <= maxVisible) {
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      if (currentPage <= 3) {
+        for (let i = 1; i <= 4; i++) pages.push(i);
+        pages.push("...");
+        pages.push(totalPages);
+      } else if (currentPage >= totalPages - 2) {
+        pages.push(1);
+        pages.push("...");
+        for (let i = totalPages - 3; i <= totalPages; i++) pages.push(i);
+      } else {
+        pages.push(1);
+        pages.push("...");
+        pages.push(currentPage - 1);
+        pages.push(currentPage);
+        pages.push(currentPage + 1);
+        pages.push("...");
+        pages.push(totalPages);
+      }
+    }
+    return pages;
+  };
 
-  // Handler to increment the current page
-  function handleNext() {
-    dispatch(incrementCurrentPage());
-  }
-
-  // Handler to jump to a specific page
-  function handleJump(num) {
-    dispatch(updateCurrentPage(num));
-  }
+  const pageNumbers = getPageNumbers();
 
   return (
-    <div className="flex justify-center py-8 mb-14 text-base">
-      <div className="flex gap-8 text-black">
-        {/* Prev button */}
+    <div className="flex justify-center py-8 mb-14">
+      <div className="flex items-center gap-2 sm:gap-4">
         <button
-          className={
-            noPrev ? "text-secondary--shade__0" : "hover:font-semibold"
-          }
-          onClick={handlePrev}
+          className={`p-2 rounded hover:bg-secondary ${
+            currentPage === 1 ? "text-secondary--shade__0 cursor-not-allowed" : "text-secondary--shade__2"
+          }`}
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+          aria-label="Previous page"
         >
-          &larr; Prev
+          <MdChevronLeft className="text-xl sm:text-2xl" />
         </button>
 
-        {/* Page numbers */}
-        <div className="flex gap-6">
-          <div className="flex gap-4">
-            {pageNumbers.map((num) => (
+        <div className="hidden sm:flex items-center gap-2">
+          {pageNumbers.map((num, idx) =>
+            num === "..." ? (
+              <span key={`ellipsis-${idx}`} className="px-2 text-secondary--shade__1">
+                ...
+              </span>
+            ) : (
               <button
-                className={`hover:font-semibold ${
-                  num === currentPage ? "text-primary--shade__1 font-bold" : ""
-                }`}
                 key={num}
-                onClick={() => handleJump(num)}
+                className={`px-3 py-1 rounded min-w-[2.5rem] ${
+                  num === currentPage
+                    ? "bg-primary text-white font-semibold"
+                    : "hover:bg-secondary text-secondary--shade__2"
+                }`}
+                onClick={() => handlePageChange(num)}
               >
                 {num}
               </button>
-            ))}
-          </div>
-          <p className="text-secondary--shade__0">of {totalPages}</p>
+            )
+          )}
         </div>
 
-        {/* Nextbutton */}
+        <div className="sm:hidden flex items-center gap-2 text-sm">
+          <span className="text-secondary--shade__2">
+            Page {currentPage} of {totalPages}
+          </span>
+        </div>
+
         <button
-          className={
-            noNext ? "text-secondary--shade__0 " : "hover:font-semibold"
-          }
-          onClick={handleNext}
+          className={`p-2 rounded hover:bg-secondary ${
+            currentPage === totalPages ? "text-secondary--shade__0 cursor-not-allowed" : "text-secondary--shade__2"
+          }`}
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          aria-label="Next page"
         >
-          Next &rarr;
+          <MdChevronRight className="text-xl sm:text-2xl" />
         </button>
       </div>
     </div>

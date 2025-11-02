@@ -5,6 +5,7 @@ import cors from "cors";
 import compression from "compression";
 import userRouter from "./routers/userRoute.js";
 import productRouter from "./routers/productsRoute.js";
+import categoryRouter from "./routers/categoriesRoute.js";
 import cartRouter from "./routers/cartRoutes.js";
 import wishlistRouter from "./routers/wishlistRoutes.js";
 import AppError from "./utils/appError.js";
@@ -42,6 +43,7 @@ app.use((req, res, next) => {
 
 app.use("/api/user", userRouter);
 app.use("/api/products", productRouter);
+app.use("/api/categories", categoryRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/wishlist", wishlistRouter);
 

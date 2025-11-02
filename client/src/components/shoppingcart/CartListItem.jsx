@@ -5,38 +5,32 @@ import {
   updateProductQuantity,
 } from "../../features/shoppingCartSlice";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 
 function CartListItem({ product }) {
-  // Destructure product properties from the passed props
   const {
-    product: { id, title, image, price },
+    product: { productId, title, image, price },
     quantity,
   } = product;
 
-  // Dispatch actions to Redux store using the useDispatch hook
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // Function to update the quantity of the product in the cart
   function updateQuantity(quantity) {
-    dispatch(updateProductQuantity({ productId: id, quantity }));
+    dispatch(updateProductQuantity({ productId, quantity }));
   }
 
-  // Function to remove the product from the cart
   function handleRemove() {
-    dispatch(removeProduct(id));
+    dispatch(removeProduct(productId));
   }
 
   return (
     <div className="flex gap-2 justify-between pb-3 mb-3 border-b border-secondary--shade__0">
-      {/* Product image and title with responsive sizes */}
       <div
         className="listItem__title cursor-pointer"
-        onClick={() => navigate(`/products/${id}`)}
+        onClick={() => navigate(`/products/${productId}`)}
       >
         <div className="w-8 h-8 xs:w-14 xs:h-14 mr-3 bg-secondary flex-0">
-          <img src={image} className="w-full h-full p-1 object-contain" />
+          <img src={image?.[0]} className="w-full h-full p-1 object-contain" />
         </div>
         <h2 className="text-xs xs:text-sm flex-1">{title}</h2>
       </div>

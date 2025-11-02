@@ -2,28 +2,26 @@ import { useNavigate } from "react-router-dom";
 import Ratings from "../general/Ratings";
 import AddtoCartBtn from "../general/AddtoCartBtn";
 import AddToWishlistBtn from "../general/AddToWishlistBtn";
+import { useCallback } from "react";
 
 function ProductCard({ product }) {
-  // Destructure product properties for easier access
-  const { category, id, image, price, rating, title } = product;
+  const { category, productId, image, price, rating, title } = product;
   const navigate = useNavigate();
 
-  // Function to navigate to the product details page
-  function navigateTOProductDetail() {
-    navigate(`/products/${id}`);
-  }
+  const navigateToProductDetail = useCallback(() => {
+    navigate(`/products/${productId}`);
+  }, [productId, navigate]);
 
-  // Prepare product data for cart and wishlist
-  const productToCart = { productId: id, quantity: 1 };
-  const productToWishlist = { productId: id };
+  const productToCart = { productId, quantity: 1 };
+  const productToWishlist = { productId };
 
   return (
     <div className="w-60 xxxs:w-40 xs:w-60 borderSecondary hover:scale-105 duration-200 ">
       <div
         className="w-full h-60  flex items-end mb-2 border-b-2 border-secondary cursor-pointer shadow-sm duration-200 "
-        onClick={navigateTOProductDetail}
+        onClick={navigateToProductDetail}
       >
-        <img src={image} className="object-contain h-full mx-auto px-3 py-8" />
+        <img src={image[0]} className="object-contain h-full mx-auto px-3 py-8" />
       </div>
 
       <div className="text-center xs:h-72 h-80 flex flex-col justify-around px-4 pb-4 text-secondary--shade__2 ">
@@ -32,7 +30,7 @@ function ProductCard({ product }) {
         </p>
         <p
           className="text-sm  hover:text-primary--shade__1 hover:font-bold cursor-pointer duration-200"
-          onClick={navigateTOProductDetail}
+          onClick={navigateToProductDetail}
         >
           {title}
         </p>

@@ -17,9 +17,13 @@ class IdGenerator {
       return this.getId('WSL');
    }
 
-   static getProductId() {
-      return this.getId('PRD');
-   }
+  static getProductId() {
+     return this.getId('PRD');
+  }
+
+  static getCategoryId() {
+     return this.getId('CAT');
+  }
 }
 
 export default IdGenerator;

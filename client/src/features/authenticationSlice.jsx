@@ -9,10 +9,9 @@ const initialState = {
   isAuthenticated: false,
   userId: "",
   error: "",
-  status: "", // loading | success | fail
+  status: "",
 };
 
-// Async action to create a user (for authentication using localStorage)
 export const createUser = createAsyncThunk(
   "authentication/createUser",
   async ({ email, password }, { rejectWithValue, dispatch }) => {
@@ -21,8 +20,6 @@ export const createUser = createAsyncThunk(
         email,
         password,
       });
-
-      // Load cart and wishlist after successful sign-up
       await dispatch(loadCart());
       await dispatch(loadWishlist());
       return data;
@@ -32,7 +29,6 @@ export const createUser = createAsyncThunk(
   }
 );
 
-// Async action to login a user
 export const login = createAsyncThunk(
   "authentication/login",
   async ({ email, password }, { rejectWithValue, dispatch }) => {
@@ -41,7 +37,6 @@ export const login = createAsyncThunk(
         email,
         password,
       });
-      // Load cart and wishlist after successful login
       await dispatch(loadCart());
       await dispatch(loadWishlist());
       return data;
@@ -51,14 +46,11 @@ export const login = createAsyncThunk(
   }
 );
 
-// Check if user is logged in (e.g., on page load and reload)
 export const isLoggedin = createAsyncThunk(
   "authentication/isLoggedin",
   async (_, { rejectWithValue, dispatch }) => {
     try {
       const data = await apiRequest(`${BASE_URL}/user/isLoggedin`, "GET");
-
-      // Load cart and wishlist if user is logged in
       await dispatch(loadCart());
       await dispatch(loadWishlist());
       return data;
@@ -73,8 +65,6 @@ export const logout = createAsyncThunk(
   async (_, { rejectWithValue, dispatch }) => {
     try {
       const data = await apiRequest(`${BASE_URL}/user/logout`, "POST");
-
-      // Reset cart and wishlist after successful logout
       dispatch(resetCart());
       dispatch(resetWishlist());
       return data;
@@ -84,52 +74,39 @@ export const logout = createAsyncThunk(
   }
 );
 
-// Create a slice for authentication with initial state, reducers, and extra reducers for async actions
 const authenticationSlice = createSlice({
   name: "authentication",
   initialState,
   reducers: {
-    // Reducer to set the auth type (e.g., "login" or "signup")
     setAuthType(state, action) {
       state.authType = action.payload;
     },
   },
-
-  // Handle async actions related to creating a user and authenticating
   extraReducers: (builder) => {
     builder
-      // Handles the fulfilled state for the createUser action
       .addCase(createUser.fulfilled, (state, action) => {
         state.status = "success";
         state.isAuthenticated = true;
         state.userId = action.payload?.data?.user?._id;
       })
-
-      // Handles the fulfilled state for the login action
       .addCase(login.fulfilled, (state, action) => {
         state.status = action.payload?.status || "success";
         state.isAuthenticated = true;
         state.userId = action.payload?.data?.user?._id;
       })
-
-      // Handles the fulfilled state for the isLoggedin action
       .addCase(isLoggedin.fulfilled, (state, action) => {
         state.status = action.payload?.status || "success";
         state.isAuthenticated = true;
         state.userId = action.payload?.data?.user?._id;
       })
-
-      // Handles the fulfilled state for the logout action
       .addCase(logout.fulfilled, (state, action) => {
         state.status = action.payload?.status || "success";
         state.status = "success";
         state.isAuthenticated = false;
         state.userId = "";
         state.error = "";
-        state.authType = "login"; // Reset to initial authType if needed
+        state.authType = "login";
       })
-
-      // General matcher for pending state of any async action (sets status to loading)
       .addMatcher(
         (action) => action.type.endsWith("/pending"),
         (state) => {
@@ -137,8 +114,6 @@ const authenticationSlice = createSlice({
           state.error = "";
         }
       )
-
-      // General matcher for rejected state of any async action (sets status to fail)
       .addMatcher(
         (action) => action.type.endsWith("/rejected"),
         (state, action) => {
@@ -153,8 +128,6 @@ const authenticationSlice = createSlice({
   },
 });
 
-// Export actions for use in the application
 export const { setAuthType } = authenticationSlice.actions;
 
-// Export reducer for use in the Redux store
 export default authenticationSlice.reducer;
