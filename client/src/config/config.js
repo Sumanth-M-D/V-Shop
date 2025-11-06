@@ -1,12 +1,4 @@
-// export const BASE_URL = "http://localhost:3000/api";
+const BASE_URL = import.meta.env.VITE_SERVER_URL;
+const PRODUCTS_PER_PAGE = 12;
 
-// Sumanth-M-D
-// export const BASE_URL = "https://v-shop-j48d.onrender.com/api";
-
-// Sumanth-M-D2
-export const BASE_URL = "https://v-shop-7rvi.onrender.com/api";
-
-// Sumanth-M-D3
-// export const BASE_URL = "https://v-shop-aiob.onrender.com/api";
-
-export const ROWS_PER_PAGE = 1;
+export { BASE_URL, PRODUCTS_PER_PAGE };

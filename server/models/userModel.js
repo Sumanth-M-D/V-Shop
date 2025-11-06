@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import validator from "validator";
 import bcrypt from "bcrypt";
+import IdGenerator from "../utils/idGenerator.js";
 
 const userSchema = mongoose.Schema({
   email: {
@@ -10,31 +11,25 @@ const userSchema = mongoose.Schema({
     required: [true, "A user must have an email"],
     validate: [validator.isEmail, "Please provide a valid email"],
   },
-
   password: {
     type: String,
-    minlength: 8,
-    maxlength: 15,
     required: [true, "Please provide a password"],
     select: false,
   },
-
-  cartId: {
-    type: mongoose.Schema.ObjectId,
-    ref: "Cart",
+  userId: {
+    type: String,
+    unique: true,
+    index: true,
   },
+  cartId: String,
+  wishlistId: String,
+}, { timestamps: true });
 
-  wishlistId: {
-    type: mongoose.Schema.ObjectId,
-    ref: "Wishlist",
-  },
-});
-
-userSchema.pre("save", async function (next) {
-  if (!this.isModified("password")) return next();
-  this.password = await bcrypt.hash(this.password, +process.env.SALT_ROUNDS);
-  next();
-});
+// userSchema.pre("save", async function (next) {
+//   if (!this.isModified("password")) return next();
+//   this.password = await bcrypt.hash(this.password, +process.env.SALT_ROUNDS);
+//   next();
+// });
 
 userSchema.methods.checkPassword = async function (
   inputPassword,
@@ -43,5 +38,4 @@ userSchema.methods.checkPassword = async function (
   return await bcrypt.compare(inputPassword, actualPassword);
 };
 
-const User = mongoose.model("User", userSchema);
-export default User;
+export const User = mongoose.model("User", userSchema);

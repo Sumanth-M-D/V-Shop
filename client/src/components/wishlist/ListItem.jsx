@@ -4,28 +4,25 @@ import { removeProduct } from "../../features/wishlistSlice";
 import AddtoCartBtn from "../general/AddtoCartBtn";
 
 function ListItem({ product }) {
-  const { id, title, image, price } = product.product;
+  const { productId, title, image, price } = product.product;
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // Prepare product data to add to the cart with quantity set to 1
-  const cartProduct = { productId: id, quantity: 1 };
+  const cartProduct = { productId, quantity: 1 };
 
-  // Function to handle the removal of a product from the wishlist
   function handleRemove() {
-    dispatch(removeProduct(id));
+    dispatch(removeProduct(productId));
   }
 
   return (
     <div className="flex gap-2 justify-between pb-3 mb-3 border-b border-secondary--shade__0 ">
-      {/* Navigate to product details page when clicking on the product title or image */}
       <div
         className="listItem__title cursor-pointer"
-        onClick={() => navigate(`/products/${id}`)}
+        onClick={() => navigate(`/products/${productId}`)}
       >
         <div className="w-8 h-8 xs:w-14 xs:h-14 mr-3 bg-secondary flex-0">
-          <img src={image} className="w-full h-full p-1 object-contain" />
+          <img src={image?.[0]} className="w-full h-full p-1 object-contain" />
         </div>
         <h2 className=" flex-1 text-[10px] [435px]:text-xs sm:text-sm">
           {title}

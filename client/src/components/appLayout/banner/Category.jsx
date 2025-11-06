@@ -5,14 +5,11 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import { updateActiveCategory } from "../../../features/categoriesSlice";
 
 function Category({ category, categoryIndex }) {
-  // Access the activeCategoryIndex from the Redux store
   const { activeCategoryIndex } = useSelector((state) => state.categories);
-  const navigate = useNavigate(); // Initialize the navigation hook
-
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const isActive = categoryIndex === activeCategoryIndex;
 
-  // Function to handle category selection
   function handleClick() {
     dispatch(updateActiveCategory(categoryIndex));
     dispatch(resetCurrentPage());

@@ -1,27 +1,23 @@
 import { useState } from "react";
 import { VscSearch } from "react-icons/vsc";
 import { useDispatch } from "react-redux";
-import { fetchProducts } from "../../../features/productSlice";
+import { fetchProducts, resetCurrentPage } from "../../../features/productSlice";
 import { setSearchText } from "../../../features/categoriesSlice";
 import { useNavigate } from "react-router-dom";
 
 function Searchbar() {
-  // State to show and hide search bar
-  // const [showSearch, setShowSearch] = useState(false);
   const [inputText, setInputText] = useState("");
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  // Function to handle input change and update the search text in Redux store
   function handleChange(e) {
     setInputText(e.target.value);
   }
 
-  //Function to handle search button click and update the search text in Redux store
   function handleSubmit(e) {
     e.preventDefault();
     dispatch(setSearchText(inputText));
+    dispatch(resetCurrentPage());
     dispatch(fetchProducts());
     navigate("/");
   }

@@ -1,222 +1,2450 @@
 [
   {
-    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-    "price": 109.95,
-    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
-    "category": "men's clothing",
-    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+    "title": "Classic Round Neck T-Shirt",
+    "price": 14.99,
+    "description": "A versatile and comfortable round neck t-shirt made from soft, breathable fabric. Perfect for everyday wear, this classic design offers a relaxed fit that works for casual occasions. The fabric is durable and maintains its shape after multiple washes. Ideal for layering or wearing on its own.",
+    "category": "menClothing",
+    "subCategory": "tShirt",
+    "productId": "PRD-fcc9826755496c5592924f71",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/1a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/1b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/1c.jpg"
+    ],
     "rating": {
-      "rate": 3.9,
-      "count": 120
+      "rate": 4.2,
+      "count": 156
     }
   },
   {
-    "title": "Mens Casual Premium Slim Fit T-Shirts ",
-    "price": 22.3,
-    "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
-    "category": "men's clothing",
-    "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+    "title": "Regular Fit Casual T-Shirt",
+    "price": 16.99,
+    "description": "A well-fitting casual t-shirt with a comfortable regular fit. Made from quality cotton blend material that offers both comfort and durability. The design features a standard cut that suits most body types. Great for everyday casual wear, whether at home or out and about.",
+    "category": "menClothing",
+    "subCategory": "tShirt",
+    "productId": "PRD-a9d83e7fece0c1d68369e4d3",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/2a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/2b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/2c.jpg"
+    ],
     "rating": {
-      "rate": 4.1,
-      "count": 259
-    }
-  },
-  {
-    "title": "Mens Cotton Jacket",
-    "price": 55.99,
-    "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
-    "category": "men's clothing",
-    "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
-    "rating": {
-      "rate": 4.7,
-      "count": 500
-    }
-  },
-  {
-    "title": "Mens Casual Slim Fit",
-    "price": 15.99,
-    "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
-    "category": "men's clothing",
-    "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
-    "rating": {
-      "rate": 2.1,
-      "count": 430
-    }
-  },
-  {
-    "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
-    "price": 695,
-    "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
-    "category": "jewelery",
-    "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
-    "rating": {
-      "rate": 4.6,
-      "count": 400
-    }
-  },
-  {
-    "title": "Solid Gold Petite Micropave ",
-    "price": 168,
-    "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
-    "category": "jewelery",
-    "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
-    "rating": {
-      "rate": 3.9,
-      "count": 70
-    }
-  },
-  {
-    "title": "White Gold Plated Princess",
-    "price": 9.99,
-    "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
-    "category": "jewelery",
-    "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
-    "rating": {
-      "rate": 3,
-      "count": 400
-    }
-  },
-  {
-    "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
-    "price": 10.99,
-    "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
-    "category": "jewelery",
-    "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
-    "rating": {
-      "rate": 1.9,
-      "count": 100
-    }
-  },
-  {
-    "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
-    "price": 64,
-    "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
-    "category": "electronics",
-    "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
-    "rating": {
-      "rate": 3.3,
+      "rate": 4.5,
       "count": 203
     }
   },
   {
-    "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
-    "price": 109,
-    "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
-    "category": "electronics",
-    "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+    "title": "Slim Fit Cotton T-Shirt",
+    "price": 18.99,
+    "description": "A modern slim fit t-shirt crafted from premium cotton. This style offers a closer fit while maintaining comfort. The fabric is soft against the skin and provides good breathability. Perfect for those who prefer a more fitted silhouette without compromising on comfort.",
+    "category": "menClothing",
+    "subCategory": "tShirt",
+    "productId": "PRD-baec98bb22e4a5ba67ea79d4",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/3a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/3b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/3c.jpg"
+    ],
     "rating": {
-      "rate": 2.9,
-      "count": 470
+      "rate": 4,
+      "count": 187
     }
   },
   {
-    "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
-    "price": 109,
-    "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
-    "category": "electronics",
-    "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
-    "rating": {
-      "rate": 4.8,
-      "count": 319
-    }
-  },
-  {
-    "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
-    "price": 114,
-    "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
-    "category": "electronics",
-    "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
-    "rating": {
-      "rate": 4.8,
-      "count": 400
-    }
-  },
-  {
-    "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
-    "price": 599,
-    "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz",
-    "category": "electronics",
-    "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
-    "rating": {
-      "rate": 2.9,
-      "count": 250
-    }
-  },
-  {
-    "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
-    "price": 999.99,
-    "description": "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag",
-    "category": "electronics",
-    "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
-    "rating": {
-      "rate": 2.2,
-      "count": 140
-    }
-  },
-  {
-    "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
-    "price": 56.99,
-    "description": "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
-    "category": "women's clothing",
-    "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
-    "rating": {
-      "rate": 2.6,
-      "count": 235
-    }
-  },
-  {
-    "title": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
-    "price": 29.95,
-    "description": "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
-    "category": "women's clothing",
-    "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
-    "rating": {
-      "rate": 2.9,
-      "count": 340
-    }
-  },
-  {
-    "title": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
-    "price": 39.99,
-    "description": "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
-    "category": "women's clothing",
-    "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
+    "title": "Basic Crew Neck T-Shirt",
+    "price": 12.99,
+    "description": "An essential basic t-shirt with a classic crew neck design. Made from comfortable, easy-care fabric that's perfect for daily wear. This timeless style works well on its own or as an underlayer. The simple design makes it a wardrobe staple that pairs with anything.",
+    "category": "menClothing",
+    "subCategory": "tShirt",
+    "productId": "PRD-ddf57e2737460f4d8876264b",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/4a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/4b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/4c.jpg"
+    ],
     "rating": {
       "rate": 3.8,
-      "count": 679
+      "count": 142
     }
   },
   {
-    "title": "MBJ Women's Solid Short Sleeve Boat Neck V ",
-    "price": 9.85,
-    "description": "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
-    "category": "women's clothing",
-    "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
+    "title": "Premium Cotton Blend T-Shirt",
+    "price": 22.99,
+    "description": "A high-quality t-shirt made from a premium cotton blend that offers superior softness and durability. The fabric maintains its color and shape over time. Features a well-proportioned fit and comfortable feel. Suitable for both casual and semi-casual occasions.",
+    "category": "menClothing",
+    "subCategory": "tShirt",
+    "productId": "PRD-8b3d77e1b9e5290a333d9fa3",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/5a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/5b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/5c.jpg"
+    ],
     "rating": {
-      "rate": 4.7,
-      "count": 130
+      "rate": 4.6,
+      "count": 234
     }
   },
   {
-    "title": "Opna Women's Short Sleeve Moisture",
-    "price": 7.95,
-    "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
-    "category": "women's clothing",
-    "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
+    "title": "Relaxed Fit Comfort T-Shirt",
+    "price": 15.99,
+    "description": "A comfortable relaxed fit t-shirt that offers plenty of room for easy movement. Made from soft, breathable material that feels great throughout the day. The loose-fitting design provides maximum comfort for lounging or casual outings. Easy to care for and maintains its softness.",
+    "category": "menClothing",
+    "subCategory": "tShirt",
+    "productId": "PRD-2dcae95d30423c8c988cf532",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/6a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/6b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/6c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 178
+    }
+  },
+  {
+    "title": "Standard Fit Everyday T-Shirt",
+    "price": 13.99,
+    "description": "A dependable everyday t-shirt with a standard fit that works for most occasions. Crafted from quality materials that provide comfort and longevity. The balanced fit offers a versatile look that's neither too loose nor too tight. A practical choice for regular wear.",
+    "category": "menClothing",
+    "subCategory": "tShirt",
+    "productId": "PRD-489f1b49ac5dce110dd9cd0f",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/7a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/7b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/7c.jpg"
+    ],
+    "rating": {
+      "rate": 3.9,
+      "count": 165
+    }
+  },
+  {
+    "title": "Soft Touch Cotton T-Shirt",
+    "price": 19.99,
+    "description": "An exceptionally soft t-shirt made from premium cotton fabric. The material feels smooth and comfortable against the skin. Features a well-designed fit that flatters without being restrictive. Great for days when comfort is a priority without sacrificing style.",
+    "category": "menClothing",
+    "subCategory": "tShirt",
+    "productId": "PRD-a0bb6bd55d0288610bb0ec5b",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/8a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/8b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/8c.jpg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 198
+    }
+  },
+  {
+    "title": "Classic Fit Comfortable T-Shirt",
+    "price": 17.99,
+    "description": "A classic fit t-shirt that combines traditional styling with modern comfort. Made from durable, comfortable fabric that holds up well to regular wear and washing. The timeless design ensures it stays in style. Perfect for building a versatile casual wardrobe.",
+    "category": "menClothing",
+    "subCategory": "tShirt",
+    "productId": "PRD-1a0bd7c4c1a5ceabbe333f3a",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/9a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/9b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/tShirt/9c.jpg"
+    ],
+    "rating": {
+      "rate": 4.1,
+      "count": 189
+    }
+  },
+  {
+    "title": "Classic Fit Comfortable Pants",
+    "price": 34.99,
+    "description": "A versatile pair of pants with a classic fit that offers comfort and style. Made from quality fabric that provides durability and a professional appearance. The traditional cut ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless design.",
+    "category": "menClothing",
+    "subCategory": "pant",
+    "productId": "PRD-2923e4c6876676124176f820",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/1a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/1b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/1c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 178
+    }
+  },
+  {
+    "title": "Regular Fit Casual Pants",
+    "price": 39.99,
+    "description": "Comfortable casual pants with a regular fit that provides freedom of movement. Crafted from durable materials that maintain their shape throughout the day. The balanced design works well for various activities and occasions. Ideal for those seeking comfort without compromising on style.",
+    "category": "menClothing",
+    "subCategory": "pant",
+    "productId": "PRD-d4aafd04cee39e32157a3391",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/2a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/2b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/2c.jpg"
+    ],
     "rating": {
       "rate": 4.5,
-      "count": 146
+      "count": 203
     }
   },
   {
-    "title": "DANVOUY Womens T Shirt Casual Cotton Short",
-    "price": 12.99,
-    "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
-    "category": "women's clothing",
-    "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+    "title": "Slim Fit Modern Pants",
+    "price": 42.99,
+    "description": "Modern pants featuring a slim fit design that offers a contemporary silhouette. Made from quality fabric that drapes well and maintains its appearance. The streamlined cut provides a stylish look while ensuring comfort throughout wear. Perfect for those who prefer a more tailored fit.",
+    "category": "menClothing",
+    "subCategory": "pant",
+    "productId": "PRD-530f8a5275af97dae1983e28",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/3a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/3b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/3c.jpg"
+    ],
     "rating": {
-      "rate": 3.6,
-      "count": 145
+      "rate": 4.2,
+      "count": 195
+    }
+  },
+  {
+    "title": "Relaxed Fit Comfort Pants",
+    "price": 36.99,
+    "description": "Comfortable pants with a relaxed fit that offers plenty of room for ease of movement. Constructed from soft, breathable fabric that feels comfortable all day long. The loose-fitting design provides maximum comfort for various activities. Easy to care for and maintains its softness after washing.",
+    "category": "menClothing",
+    "subCategory": "pant",
+    "productId": "PRD-7bc76554244d132351459e22",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/4a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/4b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/4c.jpg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 167
+    }
+  },
+  {
+    "title": "Standard Fit Everyday Pants",
+    "price": 32.99,
+    "description": "Dependable everyday pants with a standard fit that works for most occasions. Made from quality materials that provide both comfort and durability. The balanced fit offers versatility for various settings. A practical choice for regular wear that combines functionality with style.",
+    "category": "menClothing",
+    "subCategory": "pant",
+    "productId": "PRD-3e3d989fc4f574ab9c92b58f",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/5a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/5b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/5c.jpg"
+    ],
+    "rating": {
+      "rate": 4,
+      "count": 182
+    }
+  },
+  {
+    "title": "Premium Quality Dress Pants",
+    "price": 49.99,
+    "description": "High-quality pants made from premium fabric that offers superior comfort and durability. The fabric maintains its professional appearance and shape over time. Features a well-proportioned fit suitable for both business and casual occasions. A versatile addition to any wardrobe.",
+    "category": "menClothing",
+    "subCategory": "pant",
+    "productId": "PRD-2b9cb95fc799da2404f26e46",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/6a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/6b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/6c.jpg"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 224
+    }
+  },
+  {
+    "title": "Straight Fit Classic Pants",
+    "price": 37.99,
+    "description": "Classic pants featuring a straight fit that provides a timeless appearance. Made from durable fabric that holds up well to regular use. The straight-leg design offers a traditional look that never goes out of style. Perfect for building a versatile and reliable wardrobe.",
+    "category": "menClothing",
+    "subCategory": "pant",
+    "productId": "PRD-b8f4f33c36311f758a25aef6",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/7a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/7b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/7c.jpg"
+    ],
+    "rating": {
+      "rate": 4.1,
+      "count": 158
+    }
+  },
+  {
+    "title": "Comfortable Fit Casual Pants",
+    "price": 35.99,
+    "description": "Casual pants designed with comfort in mind, featuring a comfortable fit that allows for easy movement. Constructed from quality materials that feel soft against the skin. The relaxed design works well for everyday activities and casual outings. Easy maintenance and long-lasting construction.",
+    "category": "menClothing",
+    "subCategory": "pant",
+    "productId": "PRD-5cbd4b307b32e47964e54c61",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/8a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/8b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/8c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 191
+    }
+  },
+  {
+    "title": "Versatile Fit Traditional Pants",
+    "price": 38.99,
+    "description": "Traditional pants with a versatile fit that works for multiple occasions. Made from reliable fabric that combines comfort with durability. The classic design ensures they remain stylish while providing practical functionality. Suitable for various settings and activities throughout the day.",
+    "category": "menClothing",
+    "subCategory": "pant",
+    "productId": "PRD-7e6bb6baa486b15af65b9eff",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/9a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/9b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/pant/9c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 176
+    }
+  },
+  {
+    "title": "Classic Formal Shirt",
+    "price": 29.99,
+    "description": "A versatile formal shirt with a classic fit that offers professional appearance. Made from quality fabric that provides both comfort and durability. The traditional design ensures it works well for business and formal occasions. Perfect for everyday wear with a timeless style.",
+    "category": "menClothing",
+    "subCategory": "shirt",
+    "productId": "PRD-2b4f4b9fe09af187811e8f60",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/1a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/1b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/1c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 187
+    }
+  },
+  {
+    "title": "Regular Fit Casual Shirt",
+    "price": 27.99,
+    "description": "Comfortable casual shirt with a regular fit that provides freedom of movement. Crafted from durable materials that maintain their shape throughout the day. The balanced design works well for various activities and occasions. Ideal for those seeking comfort without compromising on style.",
+    "category": "menClothing",
+    "subCategory": "shirt",
+    "productId": "PRD-9823b0321e05c96e68dbba1e",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/2a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/2b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/2c.jpg"
+    ],
+    "rating": {
+      "rate": 4.5,
+      "count": 203
+    }
+  },
+  {
+    "title": "Slim Fit Modern Shirt",
+    "price": 31.99,
+    "description": "Modern shirt featuring a slim fit design that offers a contemporary silhouette. Made from quality fabric that drapes well and maintains its appearance. The streamlined cut provides a stylish look while ensuring comfort throughout wear. Perfect for those who prefer a more tailored fit.",
+    "category": "menClothing",
+    "subCategory": "shirt",
+    "productId": "PRD-cf068a300c5a352f818f40d1",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/3a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/3b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/3c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 195
+    }
+  },
+  {
+    "title": "Relaxed Fit Comfort Shirt",
+    "price": 25.99,
+    "description": "Comfortable shirt with a relaxed fit that offers plenty of room for ease of movement. Constructed from soft, breathable fabric that feels comfortable all day long. The loose-fitting design provides maximum comfort for various activities. Easy to care for and maintains its softness after washing.",
+    "category": "menClothing",
+    "subCategory": "shirt",
+    "productId": "PRD-e13a488ae90ed3210cee7d6d",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/4a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/4b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/4c.jpg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 167
+    }
+  },
+  {
+    "title": "Standard Fit Everyday Shirt",
+    "price": 24.99,
+    "description": "Dependable everyday shirt with a standard fit that works for most occasions. Made from quality materials that provide both comfort and durability. The balanced fit offers versatility for various settings. A practical choice for regular wear that combines functionality with style.",
+    "category": "menClothing",
+    "subCategory": "shirt",
+    "productId": "PRD-3b61edf11ec6d9a96f5d6fd8",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/5a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/5b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/5c.jpg"
+    ],
+    "rating": {
+      "rate": 4,
+      "count": 182
+    }
+  },
+  {
+    "title": "Premium Quality Dress Shirt",
+    "price": 39.99,
+    "description": "High-quality shirt made from premium fabric that offers superior comfort and durability. The fabric maintains its professional appearance and shape over time. Features a well-proportioned fit suitable for both business and casual occasions. A versatile addition to any wardrobe.",
+    "category": "menClothing",
+    "subCategory": "shirt",
+    "productId": "PRD-10fb3d8a6350b65661be939b",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/6a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/6b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/6c.jpg"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 224
+    }
+  },
+  {
+    "title": "Traditional Fit Classic Shirt",
+    "price": 28.99,
+    "description": "Classic shirt featuring a traditional fit that provides a timeless appearance. Made from durable fabric that holds up well to regular use. The classic design offers a traditional look that never goes out of style. Perfect for building a versatile and reliable wardrobe.",
+    "category": "menClothing",
+    "subCategory": "shirt",
+    "productId": "PRD-c552a920ea53ed5c5499bdb1",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/7a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/7b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/7c.jpg"
+    ],
+    "rating": {
+      "rate": 4.1,
+      "count": 158
+    }
+  },
+  {
+    "title": "Comfortable Fit Casual Shirt",
+    "price": 26.99,
+    "description": "Casual shirt designed with comfort in mind, featuring a comfortable fit that allows for easy movement. Constructed from quality materials that feel soft against the skin. The relaxed design works well for everyday activities and casual outings. Easy maintenance and long-lasting construction.",
+    "category": "menClothing",
+    "subCategory": "shirt",
+    "productId": "PRD-998c6a3848c543944e46acb4",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/8a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/8b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/8c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 191
+    }
+  },
+  {
+    "title": "Versatile Fit Business Shirt",
+    "price": 33.99,
+    "description": "Business shirt with a versatile fit that works for multiple occasions. Made from reliable fabric that combines comfort with durability. The professional design ensures it remains stylish while providing practical functionality. Suitable for various settings and activities throughout the day.",
+    "category": "menClothing",
+    "subCategory": "shirt",
+    "productId": "PRD-7fc94a9b187f3cd9fc7e00e8",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/9a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/9b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shirt/9c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 176
+    }
+  },
+  {
+    "title": "Classic Fit Comfortable Shorts",
+    "price": 24.99,
+    "description": "A versatile pair of shorts with a classic fit that offers comfort and style. Made from quality fabric that provides durability and a comfortable feel. The traditional cut ensures they work well for both casual and active occasions. Perfect for everyday wear with a timeless design.",
+    "category": "menClothing",
+    "subCategory": "shorts",
+    "productId": "PRD-6a07e322011e5d92120088d0",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/1a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/1b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/1c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 178
+    }
+  },
+  {
+    "title": "Regular Fit Casual Shorts",
+    "price": 22.99,
+    "description": "Comfortable casual shorts with a regular fit that provides freedom of movement. Crafted from durable materials that maintain their shape throughout the day. The balanced design works well for various activities and occasions. Ideal for those seeking comfort without compromising on style.",
+    "category": "menClothing",
+    "subCategory": "shorts",
+    "productId": "PRD-e38035aab90eecc071671ffd",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/2a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/2b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/2c.jpg"
+    ],
+    "rating": {
+      "rate": 4.5,
+      "count": 203
+    }
+  },
+  {
+    "title": "Slim Fit Modern Shorts",
+    "price": 26.99,
+    "description": "Modern shorts featuring a slim fit design that offers a contemporary silhouette. Made from quality fabric that drapes well and maintains its appearance. The streamlined cut provides a stylish look while ensuring comfort throughout wear. Perfect for those who prefer a more tailored fit.",
+    "category": "menClothing",
+    "subCategory": "shorts",
+    "productId": "PRD-443995c44ec153d72e173de0",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/3a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/3b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/3c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 195
+    }
+  },
+  {
+    "title": "Relaxed Fit Comfort Shorts",
+    "price": 21.99,
+    "description": "Comfortable shorts with a relaxed fit that offers plenty of room for ease of movement. Constructed from soft, breathable fabric that feels comfortable all day long. The loose-fitting design provides maximum comfort for various activities. Easy to care for and maintains its softness after washing.",
+    "category": "menClothing",
+    "subCategory": "shorts",
+    "productId": "PRD-82ee82864d2669d6404ed532",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/4a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/4b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/4c.jpg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 167
+    }
+  },
+  {
+    "title": "Standard Fit Everyday Shorts",
+    "price": 19.99,
+    "description": "Dependable everyday shorts with a standard fit that works for most occasions. Made from quality materials that provide both comfort and durability. The balanced fit offers versatility for various settings. A practical choice for regular wear that combines functionality with style.",
+    "category": "menClothing",
+    "subCategory": "shorts",
+    "productId": "PRD-2f27e5b74cebe9d79ce952de",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/5a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/5b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/5c.jpg"
+    ],
+    "rating": {
+      "rate": 4,
+      "count": 182
+    }
+  },
+  {
+    "title": "Premium Quality Athletic Shorts",
+    "price": 29.99,
+    "description": "High-quality shorts made from premium fabric that offers superior comfort and durability. The fabric maintains its appearance and shape over time. Features a well-proportioned fit suitable for both active and casual occasions. A versatile addition to any wardrobe.",
+    "category": "menClothing",
+    "subCategory": "shorts",
+    "productId": "PRD-2aa7320acd80915ce3d03190",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/6a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/6b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/6c.jpg"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 224
+    }
+  },
+  {
+    "title": "Straight Fit Classic Shorts",
+    "price": 23.99,
+    "description": "Classic shorts featuring a straight fit that provides a timeless appearance. Made from durable fabric that holds up well to regular use. The straight-leg design offers a traditional look that never goes out of style. Perfect for building a versatile and reliable wardrobe.",
+    "category": "menClothing",
+    "subCategory": "shorts",
+    "productId": "PRD-b7d799620ea9c27a5dcc1bb0",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/7a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/7b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/7c.jpg"
+    ],
+    "rating": {
+      "rate": 4.1,
+      "count": 158
+    }
+  },
+  {
+    "title": "Comfortable Fit Casual Shorts",
+    "price": 20.99,
+    "description": "Casual shorts designed with comfort in mind, featuring a comfortable fit that allows for easy movement. Constructed from quality materials that feel soft against the skin. The relaxed design works well for everyday activities and casual outings. Easy maintenance and long-lasting construction.",
+    "category": "menClothing",
+    "subCategory": "shorts",
+    "productId": "PRD-d9cadf0e7a09803357fe8fff",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/8a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/8b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/8c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 191
+    }
+  },
+  {
+    "title": "Versatile Fit Traditional Shorts",
+    "price": 25.99,
+    "description": "Traditional shorts with a versatile fit that works for multiple occasions. Made from reliable fabric that combines comfort with durability. The classic design ensures they remain stylish while providing practical functionality. Suitable for various settings and activities throughout the day.",
+    "category": "menClothing",
+    "subCategory": "shorts",
+    "productId": "PRD-6bb03374c244f5f24b4b2440",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/9a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/9b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menClothing/shorts/9c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 176
+    }
+  },
+  {
+    "title": "Classic Round Neck T-Shirt",
+    "price": 15.99,
+    "description": "A versatile and comfortable round neck t-shirt made from soft, breathable fabric. Perfect for everyday wear, this classic design offers a relaxed fit that works for casual occasions. The fabric is durable and maintains its shape after multiple washes. Ideal for layering or wearing on its own.",
+    "category": "womenClothing",
+    "subCategory": "tShirt",
+    "productId": "PRD-b39b6c10c0ee87d244928b7b",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/1a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/1b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/1c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 156
+    }
+  },
+  {
+    "title": "Regular Fit Casual T-Shirt",
+    "price": 17.99,
+    "description": "A well-fitting casual t-shirt with a comfortable regular fit. Made from quality cotton blend material that offers both comfort and durability. The design features a standard cut that suits most body types. Great for everyday casual wear, whether at home or out and about.",
+    "category": "womenClothing",
+    "subCategory": "tShirt",
+    "productId": "PRD-294e78c114f1f9fb9d0393a5",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/2a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/2b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/2c.jpg"
+    ],
+    "rating": {
+      "rate": 4.5,
+      "count": 203
+    }
+  },
+  {
+    "title": "Slim Fit Cotton T-Shirt",
+    "price": 19.99,
+    "description": "A modern slim fit t-shirt crafted from premium cotton. This style offers a closer fit while maintaining comfort. The fabric is soft against the skin and provides good breathability. Perfect for those who prefer a more fitted silhouette without compromising on comfort.",
+    "category": "womenClothing",
+    "subCategory": "tShirt",
+    "productId": "PRD-2bba51ad787e997efef913dd",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/3a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/3b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/3c.jpg"
+    ],
+    "rating": {
+      "rate": 4,
+      "count": 187
+    }
+  },
+  {
+    "title": "Basic Crew Neck T-Shirt",
+    "price": 13.99,
+    "description": "An essential basic t-shirt with a classic crew neck design. Made from comfortable, easy-care fabric that's perfect for daily wear. This timeless style works well on its own or as an underlayer. The simple design makes it a wardrobe staple that pairs with anything.",
+    "category": "womenClothing",
+    "subCategory": "tShirt",
+    "productId": "PRD-bae04532686c977eba92599a",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/4a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/4b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/4c.jpg"
+    ],
+    "rating": {
+      "rate": 3.8,
+      "count": 142
+    }
+  },
+  {
+    "title": "Premium Cotton Blend T-Shirt",
+    "price": 23.99,
+    "description": "A high-quality t-shirt made from a premium cotton blend that offers superior softness and durability. The fabric maintains its color and shape over time. Features a well-proportioned fit and comfortable feel. Suitable for both casual and semi-casual occasions.",
+    "category": "womenClothing",
+    "subCategory": "tShirt",
+    "productId": "PRD-ca22875bbc9b273f96484475",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/5a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/5b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/5c.jpg"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 234
+    }
+  },
+  {
+    "title": "Relaxed Fit Comfort T-Shirt",
+    "price": 16.99,
+    "description": "A comfortable relaxed fit t-shirt that offers plenty of room for easy movement. Made from soft, breathable material that feels great throughout the day. The loose-fitting design provides maximum comfort for lounging or casual outings. Easy to care for and maintains its softness.",
+    "category": "womenClothing",
+    "subCategory": "tShirt",
+    "productId": "PRD-44a9dcdfa56146a4d99fb012",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/6a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/6b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/6c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 178
+    }
+  },
+  {
+    "title": "Standard Fit Everyday T-Shirt",
+    "price": 14.99,
+    "description": "A dependable everyday t-shirt with a standard fit that works for most occasions. Crafted from quality materials that provide comfort and longevity. The balanced fit offers a versatile look that's neither too loose nor too tight. A practical choice for regular wear.",
+    "category": "womenClothing",
+    "subCategory": "tShirt",
+    "productId": "PRD-48f637d2bd2f9236bed5ebcf",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/7a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/7b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/7c.jpg"
+    ],
+    "rating": {
+      "rate": 3.9,
+      "count": 165
+    }
+  },
+  {
+    "title": "Soft Touch Cotton T-Shirt",
+    "price": 20.99,
+    "description": "An exceptionally soft t-shirt made from premium cotton fabric. The material feels smooth and comfortable against the skin. Features a well-designed fit that flatters without being restrictive. Great for days when comfort is a priority without sacrificing style.",
+    "category": "womenClothing",
+    "subCategory": "tShirt",
+    "productId": "PRD-8fcf30430cabe69086ac14ab",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/8a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/8b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/8c.jpg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 198
+    }
+  },
+  {
+    "title": "Classic Fit Comfortable T-Shirt",
+    "price": 18.99,
+    "description": "A classic fit t-shirt that combines traditional styling with modern comfort. Made from durable, comfortable fabric that holds up well to regular wear and washing. The timeless design ensures it stays in style. Perfect for building a versatile casual wardrobe.",
+    "category": "womenClothing",
+    "subCategory": "tShirt",
+    "productId": "PRD-f0f5fe6cc22f23cca3ae7964",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/9a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/9b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/tShirt/9c.jpg"
+    ],
+    "rating": {
+      "rate": 4.1,
+      "count": 189
+    }
+  },
+  {
+    "title": "Classic Fit Comfortable Pants",
+    "price": 33.99,
+    "description": "A versatile pair of pants with a classic fit that offers comfort and style. Made from quality fabric that provides durability and a comfortable feel. The traditional cut ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless design.",
+    "category": "womenClothing",
+    "subCategory": "pant",
+    "productId": "PRD-769c2bf2be5b623778abef48",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/1a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/1b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/1c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 178
+    }
+  },
+  {
+    "title": "Regular Fit Casual Pants",
+    "price": 37.99,
+    "description": "Comfortable casual pants with a regular fit that provides freedom of movement. Crafted from durable materials that maintain their shape throughout the day. The balanced design works well for various activities and occasions. Ideal for those seeking comfort without compromising on style.",
+    "category": "womenClothing",
+    "subCategory": "pant",
+    "productId": "PRD-f94d77edaf7bf9524d99c27d",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/2a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/2b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/2c.jpg"
+    ],
+    "rating": {
+      "rate": 4.5,
+      "count": 203
+    }
+  },
+  {
+    "title": "Slim Fit Modern Pants",
+    "price": 40.99,
+    "description": "Modern pants featuring a slim fit design that offers a contemporary silhouette. Made from quality fabric that drapes well and maintains its appearance. The streamlined cut provides a stylish look while ensuring comfort throughout wear. Perfect for those who prefer a more tailored fit.",
+    "category": "womenClothing",
+    "subCategory": "pant",
+    "productId": "PRD-8856b622a62be7572a6a3981",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/3a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/3b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/3c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 195
+    }
+  },
+  {
+    "title": "Relaxed Fit Comfort Pants",
+    "price": 34.99,
+    "description": "Comfortable pants with a relaxed fit that offers plenty of room for ease of movement. Constructed from soft, breathable fabric that feels comfortable all day long. The loose-fitting design provides maximum comfort for various activities. Easy to care for and maintains its softness after washing.",
+    "category": "womenClothing",
+    "subCategory": "pant",
+    "productId": "PRD-189de293a72fb338d3db6341",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/4a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/4b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/4c.jpg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 167
+    }
+  },
+  {
+    "title": "Standard Fit Everyday Pants",
+    "price": 31.99,
+    "description": "Dependable everyday pants with a standard fit that works for most occasions. Made from quality materials that provide both comfort and durability. The balanced fit offers versatility for various settings. A practical choice for regular wear that combines functionality with style.",
+    "category": "womenClothing",
+    "subCategory": "pant",
+    "productId": "PRD-a5a5f1cd0ad6bdf44ae51d42",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/5a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/5b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/5c.jpg"
+    ],
+    "rating": {
+      "rate": 4,
+      "count": 182
+    }
+  },
+  {
+    "title": "Premium Quality Dress Pants",
+    "price": 47.99,
+    "description": "High-quality pants made from premium fabric that offers superior comfort and durability. The fabric maintains its professional appearance and shape over time. Features a well-proportioned fit suitable for both business and casual occasions. A versatile addition to any wardrobe.",
+    "category": "womenClothing",
+    "subCategory": "pant",
+    "productId": "PRD-f2d7ecd62cb00c37fd135e27",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/6a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/6b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/6c.jpg"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 224
+    }
+  },
+  {
+    "title": "Straight Fit Classic Pants",
+    "price": 35.99,
+    "description": "Classic pants featuring a straight fit that provides a timeless appearance. Made from durable fabric that holds up well to regular use. The straight-leg design offers a traditional look that never goes out of style. Perfect for building a versatile and reliable wardrobe.",
+    "category": "womenClothing",
+    "subCategory": "pant",
+    "productId": "PRD-f7f5ece041b3763e137f0d80",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/7a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/7b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/7c.jpg"
+    ],
+    "rating": {
+      "rate": 4.1,
+      "count": 158
+    }
+  },
+  {
+    "title": "Comfortable Fit Casual Pants",
+    "price": 33.99,
+    "description": "Casual pants designed with comfort in mind, featuring a comfortable fit that allows for easy movement. Constructed from quality materials that feel soft against the skin. The relaxed design works well for everyday activities and casual outings. Easy maintenance and long-lasting construction.",
+    "category": "womenClothing",
+    "subCategory": "pant",
+    "productId": "PRD-2dda81ac039691e1b07c9a22",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/8a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/8b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/8c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 191
+    }
+  },
+  {
+    "title": "Versatile Fit Traditional Pants",
+    "price": 36.99,
+    "description": "Traditional pants with a versatile fit that works for multiple occasions. Made from reliable fabric that combines comfort with durability. The classic design ensures they remain stylish while providing practical functionality. Suitable for various settings and activities throughout the day.",
+    "category": "womenClothing",
+    "subCategory": "pant",
+    "productId": "PRD-234522161059cb777e826458",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/9a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/9b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/pant/9c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 176
+    }
+  },
+  {
+    "title": "Classic Traditional Saree",
+    "price": 49.99,
+    "description": "A versatile and elegant saree featuring a classic design that offers timeless beauty. Made from quality fabric that drapes beautifully and maintains its appearance. The traditional style ensures it works well for both formal and festive occasions. Perfect for special events with a graceful look.",
+    "category": "womenClothing",
+    "subCategory": "saree",
+    "productId": "PRD-1f81bd383ea4fd26cba1b00e",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/1a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/1b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/1c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 178
+    }
+  },
+  {
+    "title": "Elegant Silk Saree",
+    "price": 69.99,
+    "description": "An elegant silk saree with a luxurious feel that offers superior comfort and style. Made from premium silk fabric that drapes beautifully and maintains its sheen. The classic design ensures it works well for weddings and special occasions. Perfect for formal events with a sophisticated look.",
+    "category": "womenClothing",
+    "subCategory": "saree",
+    "productId": "PRD-fb15acdf673b30a18ee37b6c",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/2a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/2b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/2c.jpg"
+    ],
+    "rating": {
+      "rate": 4.5,
+      "count": 203
+    }
+  },
+  {
+    "title": "Premium Cotton Saree",
+    "price": 42.99,
+    "description": "A comfortable cotton saree featuring a traditional design that offers everyday elegance. Made from quality cotton fabric that feels soft against the skin and is easy to care for. The classic style works well for both casual and semi-formal occasions. Perfect for regular wear with comfort.",
+    "category": "womenClothing",
+    "subCategory": "saree",
+    "productId": "PRD-d352b83b1ab05f688c8389ff",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/3a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/3b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/3c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 195
+    }
+  },
+  {
+    "title": "Traditional Festive Saree",
+    "price": 59.99,
+    "description": "A beautiful festive saree with traditional motifs that offers timeless elegance. Made from quality fabric that drapes gracefully and maintains its appearance. The festive design ensures it works well for celebrations and special events. Perfect for occasions that call for traditional elegance.",
+    "category": "womenClothing",
+    "subCategory": "saree",
+    "productId": "PRD-af7045816b30d84870f177e5",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/4a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/4b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/4c.jpg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 167
+    }
+  },
+  {
+    "title": "Classic Everyday Saree",
+    "price": 39.99,
+    "description": "A dependable everyday saree with a classic design that works for most occasions. Made from quality materials that provide both comfort and durability. The traditional style offers versatility for various settings. A practical choice for regular wear that combines functionality with elegance.",
+    "category": "womenClothing",
+    "subCategory": "saree",
+    "productId": "PRD-b72d1124288acf46b2d05bf2",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/5a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/5b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/5c.jpg"
+    ],
+    "rating": {
+      "rate": 4,
+      "count": 182
+    }
+  },
+  {
+    "title": "Premium Quality Designer Saree",
+    "price": 79.99,
+    "description": "High-quality designer saree made from premium fabric that offers superior elegance and durability. The fabric maintains its luxurious appearance and shape over time. Features a well-crafted design suitable for both formal and special occasions. A versatile addition to any traditional wardrobe.",
+    "category": "womenClothing",
+    "subCategory": "saree",
+    "productId": "PRD-66992966183067d50c7ad1af",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/6a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/6b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/6c.jpg"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 224
+    }
+  },
+  {
+    "title": "Traditional Wedding Saree",
+    "price": 89.99,
+    "description": "A stunning wedding saree featuring traditional design elements that offers timeless beauty. Made from luxurious fabric that drapes exquisitely and maintains its elegance. The classic design offers a traditional look that never goes out of style. Perfect for weddings and grand celebrations.",
+    "category": "womenClothing",
+    "subCategory": "saree",
+    "productId": "PRD-17ce71952f2cab5ee7ccd95a",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/7a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/7b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/7c.jpg"
+    ],
+    "rating": {
+      "rate": 4.1,
+      "count": 158
+    }
+  },
+  {
+    "title": "Comfortable Cotton Blend Saree",
+    "price": 44.99,
+    "description": "A comfortable cotton blend saree designed with everyday wear in mind, featuring a comfortable drape that allows for easy movement. Constructed from quality materials that feel soft against the skin. The traditional design works well for various activities and casual outings. Easy maintenance and long-lasting construction.",
+    "category": "womenClothing",
+    "subCategory": "saree",
+    "productId": "PRD-773fa59593d5d829bd4d90ed",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/8a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/8b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/8c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 191
+    }
+  },
+  {
+    "title": "Versatile Traditional Saree",
+    "price": 54.99,
+    "description": "A versatile traditional saree with a classic design that works for multiple occasions. Made from reliable fabric that combines comfort with elegance. The traditional design ensures it remains stylish while providing practical functionality. Suitable for various settings and activities throughout the day.",
+    "category": "womenClothing",
+    "subCategory": "saree",
+    "productId": "PRD-9e5c1e3fedbd9ffd125482de",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/9a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/9b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenClothing/saree/9c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 176
+    }
+  },
+  {
+    "title": "Classic Comfortable Shoes",
+    "price": 49.99,
+    "description": "A versatile pair of shoes with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "menFootware",
+    "subCategory": "shoes",
+    "productId": "PRD-b22fad3e6417a786181538cb",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/1a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/1b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/1c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 178
+    }
+  },
+  {
+    "title": "Regular Fit Casual Shoes",
+    "price": 54.99,
+    "description": "Comfortable casual shoes with a regular fit that provides freedom of movement. Crafted from durable materials that maintain their shape throughout the day. The balanced design works well for various activities and occasions. Ideal for those seeking comfort without compromising on style.",
+    "category": "menFootware",
+    "subCategory": "shoes",
+    "productId": "PRD-042e5f3caad5fbf7e9bd5441",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/2a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/2b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/2c.jpg"
+    ],
+    "rating": {
+      "rate": 4.5,
+      "count": 203
+    }
+  },
+  {
+    "title": "Slim Fit Modern Shoes",
+    "price": 59.99,
+    "description": "Modern shoes featuring a sleek design that offers a contemporary look. Made from quality materials that provide both comfort and durability. The streamlined design provides a stylish appearance while ensuring comfort throughout wear. Perfect for those who prefer a more refined silhouette.",
+    "category": "menFootware",
+    "subCategory": "shoes",
+    "productId": "PRD-6b4ea7ae7eb17078dc3c3a82",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/3a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/3b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/3c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 195
+    }
+  },
+  {
+    "title": "Relaxed Fit Comfort Shoes",
+    "price": 47.99,
+    "description": "Comfortable shoes with a relaxed fit that offers plenty of room for ease of movement. Constructed from soft, breathable materials that feel comfortable all day long. The spacious design provides maximum comfort for various activities. Easy to care for and maintains its appearance after use.",
+    "category": "menFootware",
+    "subCategory": "shoes",
+    "productId": "PRD-0dccb9a807e31cb892e61331",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/4a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/4b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/4c.jpg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 167
+    }
+  },
+  {
+    "title": "Standard Fit Everyday Shoes",
+    "price": 44.99,
+    "description": "Dependable everyday shoes with a standard fit that works for most occasions. Made from quality materials that provide both comfort and durability. The balanced design offers versatility for various settings. A practical choice for regular wear that combines functionality with style.",
+    "category": "menFootware",
+    "subCategory": "shoes",
+    "productId": "PRD-3bb578ae5e49435a0f316815",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/5a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/5b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/5c.jpg"
+    ],
+    "rating": {
+      "rate": 4,
+      "count": 182
+    }
+  },
+  {
+    "title": "Premium Quality Dress Shoes",
+    "price": 79.99,
+    "description": "High-quality shoes made from premium materials that offers superior comfort and durability. The materials maintain their professional appearance and shape over time. Features a well-proportioned fit suitable for both business and casual occasions. A versatile addition to any wardrobe.",
+    "category": "menFootware",
+    "subCategory": "shoes",
+    "productId": "PRD-e5506053c540cbecfdfd7e72",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/6a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/6b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/6c.jpg"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 224
+    }
+  },
+  {
+    "title": "Straight Fit Classic Shoes",
+    "price": 52.99,
+    "description": "Classic shoes featuring a traditional design that provides a timeless appearance. Made from durable materials that hold up well to regular use. The classic design offers a traditional look that never goes out of style. Perfect for building a versatile and reliable wardrobe.",
+    "category": "menFootware",
+    "subCategory": "shoes",
+    "productId": "PRD-a31fe5f1cb24ff8f51f18e3f",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/7a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/7b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/7c.jpg"
+    ],
+    "rating": {
+      "rate": 4.1,
+      "count": 158
+    }
+  },
+  {
+    "title": "Comfortable Fit Athletic Shoes",
+    "price": 64.99,
+    "description": "Athletic shoes designed with comfort in mind, featuring a comfortable fit that allows for easy movement. Constructed from quality materials that provide support and cushioning. The ergonomic design works well for various activities and workouts. Easy maintenance and long-lasting construction.",
+    "category": "menFootware",
+    "subCategory": "shoes",
+    "productId": "PRD-97c6f1df0a0a9b53345d064c",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/8a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/8b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/8c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 191
+    }
+  },
+  {
+    "title": "Versatile Fit Traditional Shoes",
+    "price": 57.99,
+    "description": "Traditional shoes with a versatile design that works for multiple occasions. Made from reliable materials that combine comfort with durability. The classic design ensures they remain stylish while providing practical functionality. Suitable for various settings and activities throughout the day.",
+    "category": "menFootware",
+    "subCategory": "shoes",
+    "productId": "PRD-33d3d152f8bfff98550ccd1b",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/9a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/9b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/shoes/9c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 176
+    }
+  },
+  {
+    "title": "Classic Comfortable Sandals",
+    "price": 24.99,
+    "description": "A versatile pair of sandals with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "menFootware",
+    "subCategory": "sandals",
+    "productId": "PRD-67f2f91c3837e2378ecfdfa7",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/1a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/1b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/1c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 178
+    }
+  },
+  {
+    "title": "Regular Fit Casual Sandals",
+    "price": 27.99,
+    "description": "A versatile pair of sandals with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "menFootware",
+    "subCategory": "sandals",
+    "productId": "PRD-9f91e8ef7047fa838bf1e035",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/2a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/2b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/2c.jpg"
+    ],
+    "rating": {
+      "rate": 4.5,
+      "count": 203
+    }
+  },
+  {
+    "title": "Slim Fit Modern Sandals",
+    "price": 29.99,
+    "description": "A versatile pair of sandals with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "menFootware",
+    "subCategory": "sandals",
+    "productId": "PRD-275a939288678101795b880e",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/3a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/3b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/3c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 195
+    }
+  },
+  {
+    "title": "Relaxed Fit Comfort Sandals",
+    "price": 22.99,
+    "description": "A versatile pair of sandals with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "menFootware",
+    "subCategory": "sandals",
+    "productId": "PRD-256f23f95428dec17315a57d",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/4a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/4b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/4c.jpg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 167
+    }
+  },
+  {
+    "title": "Standard Fit Everyday Sandals",
+    "price": 19.99,
+    "description": "A versatile pair of sandals with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "menFootware",
+    "subCategory": "sandals",
+    "productId": "PRD-209e921490ec9f1118951326",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/5a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/5b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/5c.jpg"
+    ],
+    "rating": {
+      "rate": 4,
+      "count": 182
+    }
+  },
+  {
+    "title": "Premium Quality Dress Sandals",
+    "price": 34.99,
+    "description": "A versatile pair of sandals with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "menFootware",
+    "subCategory": "sandals",
+    "productId": "PRD-d5c912210b83ffad79397fdd",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/6a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/6b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/6c.jpg"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 224
+    }
+  },
+  {
+    "title": "Straight Fit Classic Sandals",
+    "price": 26.99,
+    "description": "A versatile pair of sandals with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "menFootware",
+    "subCategory": "sandals",
+    "productId": "PRD-659c376fb00ea74bb19c94f7",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/7a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/7b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/7c.jpg"
+    ],
+    "rating": {
+      "rate": 4.1,
+      "count": 158
+    }
+  },
+  {
+    "title": "Comfortable Fit Athletic Sandals",
+    "price": 31.99,
+    "description": "A versatile pair of sandals with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "menFootware",
+    "subCategory": "sandals",
+    "productId": "PRD-41bab60cdccff3be3618600d",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/8a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/8b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/8c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 191
+    }
+  },
+  {
+    "title": "Versatile Fit Traditional Sandals",
+    "price": 28.99,
+    "description": "A versatile pair of sandals with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "menFootware",
+    "subCategory": "sandals",
+    "productId": "PRD-ae5b5ec58bba4f6483a4447b",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/9a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/9b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/sandals/9c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 176
+    }
+  },
+  {
+    "title": "Classic Comfortable Flipflops",
+    "price": 12.99,
+    "description": "A versatile pair of flipflops with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and beach occasions. Perfect for everyday wear with a timeless look.",
+    "category": "menFootware",
+    "subCategory": "flipflops",
+    "productId": "PRD-14965df7ae12b86ceda98ab5",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/1a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/1b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/1c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 178
+    }
+  },
+  {
+    "title": "Regular Fit Casual Flipflops",
+    "price": 14.99,
+    "description": "A versatile pair of flipflops with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and beach occasions. Perfect for everyday wear with a timeless look.",
+    "category": "menFootware",
+    "subCategory": "flipflops",
+    "productId": "PRD-7504aa69c74c76b8ec0b3ac2",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/2a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/2b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/2c.jpg"
+    ],
+    "rating": {
+      "rate": 4.5,
+      "count": 203
+    }
+  },
+  {
+    "title": "Slim Fit Modern Flipflops",
+    "price": 16.99,
+    "description": "A versatile pair of flipflops with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and beach occasions. Perfect for everyday wear with a timeless look.",
+    "category": "menFootware",
+    "subCategory": "flipflops",
+    "productId": "PRD-03b2c92b587ba27b9ae0af18",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/3a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/3b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/3c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 195
+    }
+  },
+  {
+    "title": "Relaxed Fit Comfort Flipflops",
+    "price": 11.99,
+    "description": "A versatile pair of flipflops with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and beach occasions. Perfect for everyday wear with a timeless look.",
+    "category": "menFootware",
+    "subCategory": "flipflops",
+    "productId": "PRD-bdced908a1f23ad4f3877067",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/4a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/4b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/4c.jpg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 167
+    }
+  },
+  {
+    "title": "Standard Fit Everyday Flipflops",
+    "price": 9.99,
+    "description": "A versatile pair of flipflops with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and beach occasions. Perfect for everyday wear with a timeless look.",
+    "category": "menFootware",
+    "subCategory": "flipflops",
+    "productId": "PRD-b7c8f2b7f812514507ce7605",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/5a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/5b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/5c.jpg"
+    ],
+    "rating": {
+      "rate": 4,
+      "count": 182
+    }
+  },
+  {
+    "title": "Premium Quality Designer Flipflops",
+    "price": 19.99,
+    "description": "A versatile pair of flipflops with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and beach occasions. Perfect for everyday wear with a timeless look.",
+    "category": "menFootware",
+    "subCategory": "flipflops",
+    "productId": "PRD-ec9424c3b379fa805a6c7f8c",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/6a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/6b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/6c.jpg"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 224
+    }
+  },
+  {
+    "title": "Straight Fit Classic Flipflops",
+    "price": 13.99,
+    "description": "A versatile pair of flipflops with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and beach occasions. Perfect for everyday wear with a timeless look.",
+    "category": "menFootware",
+    "subCategory": "flipflops",
+    "productId": "PRD-7b0a44d234285aede95a5c6f",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/7a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/7b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/7c.jpg"
+    ],
+    "rating": {
+      "rate": 4.1,
+      "count": 158
+    }
+  },
+  {
+    "title": "Comfortable Fit Athletic Flipflops",
+    "price": 17.99,
+    "description": "A versatile pair of flipflops with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and beach occasions. Perfect for everyday wear with a timeless look.",
+    "category": "menFootware",
+    "subCategory": "flipflops",
+    "productId": "PRD-b603cf8c831d1d93825f6e5c",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/8a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/8b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/8c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 191
+    }
+  },
+  {
+    "title": "Versatile Fit Traditional Flipflops",
+    "price": 15.99,
+    "description": "A versatile pair of flipflops with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and beach occasions. Perfect for everyday wear with a timeless look.",
+    "category": "menFootware",
+    "subCategory": "flipflops",
+    "productId": "PRD-591cd048728204c1ac3f4a93",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/9a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/9b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/menFootware/flipflops/9c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 176
+    }
+  },
+  {
+    "title": "Classic Comfortable Shoes",
+    "price": 47.99,
+    "description": "A versatile pair of shoes with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "shoes",
+    "productId": "PRD-57220a16d19fb4ead544f8c5",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/1a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/1b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/1c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 178
+    }
+  },
+  {
+    "title": "Regular Fit Casual Shoes",
+    "price": 52.99,
+    "description": "A versatile pair of shoes with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "shoes",
+    "productId": "PRD-9f8600ad12ab695e9405839c",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/2a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/2b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/2c.jpg"
+    ],
+    "rating": {
+      "rate": 4.5,
+      "count": 203
+    }
+  },
+  {
+    "title": "Slim Fit Modern Shoes",
+    "price": 57.99,
+    "description": "A versatile pair of shoes with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "shoes",
+    "productId": "PRD-ac30777d8686be1e2a735add",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/3a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/3b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/3c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 195
+    }
+  },
+  {
+    "title": "Relaxed Fit Comfort Shoes",
+    "price": 45.99,
+    "description": "A versatile pair of shoes with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "shoes",
+    "productId": "PRD-ee75de9ea2660b03d50eb29d",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/4a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/4b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/4c.jpg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 167
+    }
+  },
+  {
+    "title": "Standard Fit Everyday Shoes",
+    "price": 42.99,
+    "description": "A versatile pair of shoes with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "shoes",
+    "productId": "PRD-54fac5e80916c4b792ec35e6",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/5a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/5b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/5c.jpg"
+    ],
+    "rating": {
+      "rate": 4,
+      "count": 182
+    }
+  },
+  {
+    "title": "Premium Quality Dress Shoes",
+    "price": 74.99,
+    "description": "A versatile pair of shoes with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "shoes",
+    "productId": "PRD-3ee0a9036b0227574de4b546",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/6a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/6b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/6c.jpg"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 224
+    }
+  },
+  {
+    "title": "Straight Fit Classic Shoes",
+    "price": 49.99,
+    "description": "A versatile pair of shoes with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "shoes",
+    "productId": "PRD-492733f3cff4c317dc0fa306",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/7a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/7b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/7c.jpg"
+    ],
+    "rating": {
+      "rate": 4.1,
+      "count": 158
+    }
+  },
+  {
+    "title": "Comfortable Fit Athletic Shoes",
+    "price": 61.99,
+    "description": "A versatile pair of shoes with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "shoes",
+    "productId": "PRD-482552231291da5e9d7908b7",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/8a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/8b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/8c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 191
+    }
+  },
+  {
+    "title": "Versatile Fit Traditional Shoes",
+    "price": 54.99,
+    "description": "A versatile pair of shoes with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "shoes",
+    "productId": "PRD-ab3882c06a3bc3fb3195bd15",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/9a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/9b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/shoes/9c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 176
+    }
+  },
+  {
+    "title": "Classic Comfortable Sandals",
+    "price": 22.99,
+    "description": "A versatile pair of sandals with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "sandals",
+    "productId": "PRD-6430d63f0a2e0c86ce9a6e8c",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/1a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/1b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/1c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 178
+    }
+  },
+  {
+    "title": "Regular Fit Casual Sandals",
+    "price": 25.99,
+    "description": "A versatile pair of sandals with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "sandals",
+    "productId": "PRD-3677df5689035551c33df6a8",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/2a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/2b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/2c.jpg"
+    ],
+    "rating": {
+      "rate": 4.5,
+      "count": 203
+    }
+  },
+  {
+    "title": "Slim Fit Modern Sandals",
+    "price": 27.99,
+    "description": "A versatile pair of sandals with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "sandals",
+    "productId": "PRD-829370bea62a8ae4124f20ca",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/3a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/3b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/3c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 195
+    }
+  },
+  {
+    "title": "Relaxed Fit Comfort Sandals",
+    "price": 20.99,
+    "description": "A versatile pair of sandals with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "sandals",
+    "productId": "PRD-73ca5a3056ada240cbbbb4e1",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/4a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/4b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/4c.jpg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 167
+    }
+  },
+  {
+    "title": "Standard Fit Everyday Sandals",
+    "price": 18.99,
+    "description": "A versatile pair of sandals with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "sandals",
+    "productId": "PRD-e4fe26b1ab613056a8e89fcd",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/5a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/5b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/5c.jpg"
+    ],
+    "rating": {
+      "rate": 4,
+      "count": 182
+    }
+  },
+  {
+    "title": "Premium Quality Dress Sandals",
+    "price": 32.99,
+    "description": "A versatile pair of sandals with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "sandals",
+    "productId": "PRD-f98ed1b3824cd35265f1ec7d",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/6a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/6b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/6c.jpg"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 224
+    }
+  },
+  {
+    "title": "Straight Fit Classic Sandals",
+    "price": 24.99,
+    "description": "A versatile pair of sandals with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "sandals",
+    "productId": "PRD-e932cf9e9874a7970bdc4fcb",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/7a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/7b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/7c.jpg"
+    ],
+    "rating": {
+      "rate": 4.1,
+      "count": 158
+    }
+  },
+  {
+    "title": "Comfortable Fit Athletic Sandals",
+    "price": 29.99,
+    "description": "A versatile pair of sandals with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "sandals",
+    "productId": "PRD-5a8b34e803df8bc706dbfd9b",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/8a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/8b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/8c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 191
+    }
+  },
+  {
+    "title": "Versatile Fit Traditional Sandals",
+    "price": 26.99,
+    "description": "A versatile pair of sandals with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and semi-formal occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "sandals",
+    "productId": "PRD-50716e8aad911cb65d8109b6",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/9a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/9b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/sandals/9c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 176
+    }
+  },
+  {
+    "title": "Classic Comfortable Flipflops",
+    "price": 11.99,
+    "description": "A versatile pair of flipflops with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and beach occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "flipflops",
+    "productId": "PRD-11ec131b43c5e9559a7c953c",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/1a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/1b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/1c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 178
+    }
+  },
+  {
+    "title": "Regular Fit Casual Flipflops",
+    "price": 13.99,
+    "description": "A versatile pair of flipflops with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and beach occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "flipflops",
+    "productId": "PRD-fd7d7b0a72ba8a9b9d6644c3",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/2a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/2b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/2c.jpg"
+    ],
+    "rating": {
+      "rate": 4.5,
+      "count": 203
+    }
+  },
+  {
+    "title": "Slim Fit Modern Flipflops",
+    "price": 15.99,
+    "description": "A versatile pair of flipflops with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and beach occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "flipflops",
+    "productId": "PRD-def0d7a7c0115a2f24e57e17",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/3a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/3b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/3c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 195
+    }
+  },
+  {
+    "title": "Relaxed Fit Comfort Flipflops",
+    "price": 10.99,
+    "description": "A versatile pair of flipflops with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and beach occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "flipflops",
+    "productId": "PRD-c6fda004b620fab688178d63",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/4a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/4b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/4c.jpg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 167
+    }
+  },
+  {
+    "title": "Standard Fit Everyday Flipflops",
+    "price": 8.99,
+    "description": "A versatile pair of flipflops with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and beach occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "flipflops",
+    "productId": "PRD-a22f7d564635e889fc8a36ed",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/5a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/5b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/5c.jpg"
+    ],
+    "rating": {
+      "rate": 4,
+      "count": 182
+    }
+  },
+  {
+    "title": "Premium Quality Designer Flipflops",
+    "price": 18.99,
+    "description": "A versatile pair of flipflops with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and beach occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "flipflops",
+    "productId": "PRD-0c7a6cc7c08ddb996f9a3b17",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/6a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/6b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/6c.jpg"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 224
+    }
+  },
+  {
+    "title": "Straight Fit Classic Flipflops",
+    "price": 12.99,
+    "description": "A versatile pair of flipflops with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and beach occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "flipflops",
+    "productId": "PRD-423758d4ba9d7b465c372bc0",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/7a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/7b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/7c.jpg"
+    ],
+    "rating": {
+      "rate": 4.1,
+      "count": 158
+    }
+  },
+  {
+    "title": "Comfortable Fit Athletic Flipflops",
+    "price": 16.99,
+    "description": "A versatile pair of flipflops with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and beach occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "flipflops",
+    "productId": "PRD-a9150cc01d44d5abfb873a2d",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/8a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/8b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/8c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 191
+    }
+  },
+  {
+    "title": "Versatile Fit Traditional Flipflops",
+    "price": 14.99,
+    "description": "A versatile pair of flipflops with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable fit. The traditional style ensures they work well for both casual and beach occasions. Perfect for everyday wear with a timeless look.",
+    "category": "womenFootware",
+    "subCategory": "flipflops",
+    "productId": "PRD-0a00c510edb306d053593c2e",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/9a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/9b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/womenFootware/flipflops/9c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 176
+    }
+  },
+  {
+    "title": "Classic Comfortable Bed",
+    "price": 299.99,
+    "description": "A versatile bed frame with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable foundation. The traditional style ensures it works well for both modern and classic bedroom settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "bed",
+    "productId": "PRD-213955885f1ec57c765f3ce7",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/1a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/1b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/1c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 178
+    }
+  },
+  {
+    "title": "Regular Size Standard Bed",
+    "price": 349.99,
+    "description": "A versatile bed frame with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable foundation. The traditional style ensures it works well for both modern and classic bedroom settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "bed",
+    "productId": "PRD-2a4289bc7622ba2a016e2efd",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/2a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/2b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/2c.jpg"
+    ],
+    "rating": {
+      "rate": 4.5,
+      "count": 203
+    }
+  },
+  {
+    "title": "Modern Design Contemporary Bed",
+    "price": 399.99,
+    "description": "A versatile bed frame with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable foundation. The traditional style ensures it works well for both modern and classic bedroom settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "bed",
+    "productId": "PRD-7f8eb7b5aca2986530ee2823",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/3a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/3b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/3c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 195
+    }
+  },
+  {
+    "title": "Relaxed Style Comfort Bed",
+    "price": 279.99,
+    "description": "A versatile bed frame with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable foundation. The traditional style ensures it works well for both modern and classic bedroom settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "bed",
+    "productId": "PRD-a8e75a3dfd6e4e6e95e7f8c1",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/4a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/4b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/4c.jpg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 167
+    }
+  },
+  {
+    "title": "Standard Size Everyday Bed",
+    "price": 249.99,
+    "description": "A versatile bed frame with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable foundation. The traditional style ensures it works well for both modern and classic bedroom settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "bed",
+    "productId": "PRD-d174b9b20e410f5cdb681378",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/5a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/5b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/5c.jpg"
+    ],
+    "rating": {
+      "rate": 4,
+      "count": 182
+    }
+  },
+  {
+    "title": "Premium Quality Luxury Bed",
+    "price": 499.99,
+    "description": "A versatile bed frame with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable foundation. The traditional style ensures it works well for both modern and classic bedroom settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "bed",
+    "productId": "PRD-24fa55cd5787e236b47dd8a7",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/6a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/6b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/6c.jpg"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 224
+    }
+  },
+  {
+    "title": "Traditional Design Classic Bed",
+    "price": 329.99,
+    "description": "A versatile bed frame with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable foundation. The traditional style ensures it works well for both modern and classic bedroom settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "bed",
+    "productId": "PRD-2c08773a1f0b98e5f6351ab7",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/7a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/7b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/7c.jpg"
+    ],
+    "rating": {
+      "rate": 4.1,
+      "count": 158
+    }
+  },
+  {
+    "title": "Comfortable Frame Spacious Bed",
+    "price": 379.99,
+    "description": "A versatile bed frame with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable foundation. The traditional style ensures it works well for both modern and classic bedroom settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "bed",
+    "productId": "PRD-1772bf233864b28bba6a228a",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/8a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/8b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/8c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 191
+    }
+  },
+  {
+    "title": "Versatile Style Functional Bed",
+    "price": 359.99,
+    "description": "A versatile bed frame with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable foundation. The traditional style ensures it works well for both modern and classic bedroom settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "bed",
+    "productId": "PRD-9b802508022ff0a47ef8ac3f",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/9a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/9b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/bed/9c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 176
+    }
+  },
+  {
+    "title": "Classic Comfortable Chair",
+    "price": 89.99,
+    "description": "A versatile chair with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable seating experience. The traditional style ensures it works well for both modern and classic room settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "chair",
+    "productId": "PRD-a10450110f601d20625de3c9",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/1a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/1b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/1c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 178
+    }
+  },
+  {
+    "title": "Regular Size Standard Chair",
+    "price": 99.99,
+    "description": "A versatile chair with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable seating experience. The traditional style ensures it works well for both modern and classic room settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "chair",
+    "productId": "PRD-b84f65326df2608c36a3a988",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/2a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/2b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/2c.jpg"
+    ],
+    "rating": {
+      "rate": 4.5,
+      "count": 203
+    }
+  },
+  {
+    "title": "Modern Design Contemporary Chair",
+    "price": 119.99,
+    "description": "A versatile chair with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable seating experience. The traditional style ensures it works well for both modern and classic room settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "chair",
+    "productId": "PRD-5281fce83bd342b9f43df1ef",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/3a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/3b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/3c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 195
+    }
+  },
+  {
+    "title": "Relaxed Style Comfort Chair",
+    "price": 79.99,
+    "description": "A versatile chair with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable seating experience. The traditional style ensures it works well for both modern and classic room settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "chair",
+    "productId": "PRD-d9eb1802004408fd13d60524",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/4a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/4b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/4c.jpg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 167
+    }
+  },
+  {
+    "title": "Standard Size Everyday Chair",
+    "price": 69.99,
+    "description": "A versatile chair with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable seating experience. The traditional style ensures it works well for both modern and classic room settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "chair",
+    "productId": "PRD-a73d3e48d0283f75326c09f9",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/5a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/5b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/5c.jpg"
+    ],
+    "rating": {
+      "rate": 4,
+      "count": 182
+    }
+  },
+  {
+    "title": "Premium Quality Luxury Chair",
+    "price": 149.99,
+    "description": "A versatile chair with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable seating experience. The traditional style ensures it works well for both modern and classic room settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "chair",
+    "productId": "PRD-d09358601fb2966686f0dde6",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/6a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/6b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/6c.jpg"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 224
+    }
+  },
+  {
+    "title": "Traditional Design Classic Chair",
+    "price": 94.99,
+    "description": "A versatile chair with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable seating experience. The traditional style ensures it works well for both modern and classic room settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "chair",
+    "productId": "PRD-f76154f300fdc73434349f57",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/7a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/7b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/7c.jpg"
+    ],
+    "rating": {
+      "rate": 4.1,
+      "count": 158
+    }
+  },
+  {
+    "title": "Comfortable Frame Ergonomic Chair",
+    "price": 109.99,
+    "description": "A versatile chair with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable seating experience. The traditional style ensures it works well for both modern and classic room settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "chair",
+    "productId": "PRD-ed9bebfbdf6da1a03feb242f",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/8a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/8b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/8c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 191
+    }
+  },
+  {
+    "title": "Versatile Style Functional Chair",
+    "price": 104.99,
+    "description": "A versatile chair with a classic design that offers comfort and style. Made from quality materials that provide durability and a comfortable seating experience. The traditional style ensures it works well for both modern and classic room settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "chair",
+    "productId": "PRD-ddacdc9e6e3be6a88490e773",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/9a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/9b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/chair/9c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 176
+    }
+  },
+  {
+    "title": "Classic Comfortable Table",
+    "price": 149.99,
+    "description": "A versatile table with a classic design that offers functionality and style. Made from quality materials that provide durability and a stable surface. The traditional style ensures it works well for both modern and classic room settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "table",
+    "productId": "PRD-05c1714cff46aa5363415c5c",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/1a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/1b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/1c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 178
+    }
+  },
+  {
+    "title": "Regular Size Standard Table",
+    "price": 169.99,
+    "description": "A versatile table with a classic design that offers functionality and style. Made from quality materials that provide durability and a stable surface. The traditional style ensures it works well for both modern and classic room settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "table",
+    "productId": "PRD-cf64f9dad50b7409c9226289",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/2a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/2b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/2c.jpg"
+    ],
+    "rating": {
+      "rate": 4.5,
+      "count": 203
+    }
+  },
+  {
+    "title": "Modern Design Contemporary Table",
+    "price": 199.99,
+    "description": "A versatile table with a classic design that offers functionality and style. Made from quality materials that provide durability and a stable surface. The traditional style ensures it works well for both modern and classic room settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "table",
+    "productId": "PRD-c81aaaedb11942b0488c7145",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/3a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/3b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/3c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 195
+    }
+  },
+  {
+    "title": "Relaxed Style Comfort Table",
+    "price": 139.99,
+    "description": "A versatile table with a classic design that offers functionality and style. Made from quality materials that provide durability and a stable surface. The traditional style ensures it works well for both modern and classic room settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "table",
+    "productId": "PRD-a013b3fb115c00f1124e2c3a",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/4a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/4b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/4c.jpg"
+    ],
+    "rating": {
+      "rate": 4.4,
+      "count": 167
+    }
+  },
+  {
+    "title": "Standard Size Everyday Table",
+    "price": 119.99,
+    "description": "A versatile table with a classic design that offers functionality and style. Made from quality materials that provide durability and a stable surface. The traditional style ensures it works well for both modern and classic room settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "table",
+    "productId": "PRD-f56f677e87a9f369b62d36b5",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/5a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/5b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/5c.jpg"
+    ],
+    "rating": {
+      "rate": 4,
+      "count": 182
+    }
+  },
+  {
+    "title": "Premium Quality Luxury Table",
+    "price": 249.99,
+    "description": "A versatile table with a classic design that offers functionality and style. Made from quality materials that provide durability and a stable surface. The traditional style ensures it works well for both modern and classic room settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "table",
+    "productId": "PRD-835d48785439409a6f39cb05",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/6a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/6b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/6c.jpg"
+    ],
+    "rating": {
+      "rate": 4.6,
+      "count": 224
+    }
+  },
+  {
+    "title": "Traditional Design Classic Table",
+    "price": 159.99,
+    "description": "A versatile table with a classic design that offers functionality and style. Made from quality materials that provide durability and a stable surface. The traditional style ensures it works well for both modern and classic room settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "table",
+    "productId": "PRD-007bbd60e3ef35ba4e1c9be5",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/7a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/7b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/7c.jpg"
+    ],
+    "rating": {
+      "rate": 4.1,
+      "count": 158
+    }
+  },
+  {
+    "title": "Comfortable Frame Spacious Table",
+    "price": 179.99,
+    "description": "A versatile table with a classic design that offers functionality and style. Made from quality materials that provide durability and a stable surface. The traditional style ensures it works well for both modern and classic room settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "table",
+    "productId": "PRD-430454690c27d0cd0c7a0f0d",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/8a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/8b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/8c.jpg"
+    ],
+    "rating": {
+      "rate": 4.3,
+      "count": 191
+    }
+  },
+  {
+    "title": "Versatile Style Functional Table",
+    "price": 174.99,
+    "description": "A versatile table with a classic design that offers functionality and style. Made from quality materials that provide durability and a stable surface. The traditional style ensures it works well for both modern and classic room settings. Perfect for everyday use with a timeless look.",
+    "category": "furniture",
+    "subCategory": "table",
+    "productId": "PRD-64479861f50c5c727e69d08e",
+    "image": [
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/9a.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/9b.jpg",
+      "https://s3.amazonaws.com/your-s3-bucket-name/furniture/table/9c.jpg"
+    ],
+    "rating": {
+      "rate": 4.2,
+      "count": 176
     }
   }
 ]

@@ -1,6 +1,8 @@
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Ratings from "../general/Ratings";
 import { FaTableList } from "react-icons/fa6";
+import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import ProductQuantity from "../general/ProductQuantity";
 import { updateProductQuantity } from "../../features/productDetailsSlice";
 import AddtoCartBtn from "../general/AddtoCartBtn";
@@ -9,35 +11,105 @@ import AddToCompareBtn from "../general/AddToCompareBtn";
 import SocialMedia from "../general/SocialMedia";
 
 function MainDetails() {
-  // Retrieving product data and quantity from Redux store
   const { productData, quantity } = useSelector(
     (state) => state.productDetails
   );
 
   const dispatch = useDispatch();
-  const { title, price, description, category, image, rating, id } =
+  const { title, price, description, category, image, rating, productId } =
     productData;
 
-  // Determine if the product category is clothing to show size selection
-  const showSize =
-    category === "men's clothing" || category === "women's clothing";
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Preparing product data for adding to cart and wishlist
-  const productToCart = { productId: id, quantity };
-  const productToWishlist = { productId: id };
+  useEffect(() => {
+    setCurrentImageIndex(0);
+  }, [productId]);
+
+  const showSize = category === "menClothing" || category === "womenClothing";
+
+  const productToCart = { productId, quantity };
+  const productToWishlist = { productId };
+
+  const images = image || [];
+  const hasMultipleImages = images.length > 1;
+
+  const handlePrevImage = () => {
+    setCurrentImageIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const handleNextImage = () => {
+    setCurrentImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
 
   return (
-    <div className="upperMd:grid upperMd:grid-cols-10  gap-3 py-6 text-black  ">
+    <div className="upperMd:grid upperMd:grid-cols-10  gap-3 py-6 text-black mb-8 ">
       <div className="upperMd:col-span-5 lg:col-span-4 h-[500px] upperMd:h-[725px] lg:h-[650px] xl:h-[550px] upperMd:mr-4">
-        {/* Product image section */}
-        <img
-          src={image}
-          alt={title}
-          className="bg-secondary w-full h-full object-contain py-4 px-3"
-        />
+        <div className="relative w-full h-full bg-secondary">
+          <img
+            src={images[currentImageIndex]}
+            alt={`${title} - Image ${currentImageIndex + 1}`}
+            className="w-full h-full object-contain py-4 px-3"
+          />
+
+          {hasMultipleImages && (
+            <>
+              <button
+                onClick={handlePrevImage}
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all"
+                aria-label="Previous image"
+              >
+                <MdChevronLeft className="text-2xl text-secondary--shade__2" />
+              </button>
+
+              <button
+                onClick={handleNextImage}
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg transition-all"
+                aria-label="Next image"
+              >
+                <MdChevronRight className="text-2xl text-secondary--shade__2" />
+              </button>
+
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+                {images.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImageIndex(index)}
+                    className={`w-2 h-2 rounded-full transition-all ${
+                      index === currentImageIndex
+                        ? "bg-primary w-6"
+                        : "bg-secondary--shade__1 hover:bg-secondary--shade__2"
+                    }`}
+                    aria-label={`Go to image ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+
+        {hasMultipleImages && (
+          <div className="flex gap-2 mt-3 overflow-x-auto">
+            {images.map((img, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentImageIndex(index)}
+                className={`flex-shrink-0 w-20 h-20 border-2 rounded transition-all ${
+                  index === currentImageIndex
+                    ? "border-primary"
+                    : "border-secondary--shade__0 hover:border-secondary--shade__2"
+                }`}
+              >
+                <img
+                  src={img}
+                  alt={`${title} thumbnail ${index + 1}`}
+                  className="w-full h-full object-contain p-1"
+                />
+              </button>
+            ))}
+          </div>
+        )}
       </div>
 
-      {/* Product details section */}
       <div className="upperMd:col-span-5 lg:col-span-6 upperMd:h-full flex flex-col justify-between py-10 upperMd:py-0">
         <div className=" flex flex-col gap-4">
           <h1 className="text-2xl font-semibold">{title}</h1>
