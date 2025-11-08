@@ -12,7 +12,7 @@ function CategoryList() {
   }, [dispatch]);
 
   return (
-    <div className="md:order-none order-last flex  flex-wrap sm:flex-nowrap gap-4 justify-around items-center py-2 px-2 w-screen md:w-[60%]">
+    <div className="flex gap-2 sm:gap-3 md:gap-4 lg:gap-6 items-center py-3 px-4 flex-1 overflow-x-auto scrollbar-hide">
       {categories.map((category, i) => (
         <Category category={category} key={i} categoryIndex={i} />
       ))}

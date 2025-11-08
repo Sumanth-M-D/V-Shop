@@ -6,14 +6,14 @@ import CartBtn from "./CartBtn";
 
 function Header() {
   return (
-    <header className=" mb-6 ">
+    <header className="shadow-md bg-white">
       <Topactions />
 
-      <div className="flex justify-between items-center gap-y-6 px-2 flex-wrap ">
+      <div className="flex justify-between items-center gap-y-6 px-4 md:px-6 lg:px-8 py-4 flex-wrap">
         <Logo />
         <Searchbar />
 
-        <div className="flex gap-6">
+        <div className="flex gap-4 md:gap-6">
           <WishlistBtn />
           <CartBtn />
         </div>

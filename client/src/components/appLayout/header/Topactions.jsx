@@ -1,5 +1,6 @@
 import { IoCallOutline } from "react-icons/io5";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { FiUser } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../../../features/authenticationSlice";
@@ -10,34 +11,36 @@ function Topactions() {
   const { isAuthenticated } = useSelector((state) => state.authentication);
   const dispatch = useDispatch();
 
-  // Function to handle click events for login/logout button
   function handleClick() {
     if (isAuthenticated) {
-      dispatch(logout()); // Dispatch logout action if the user is authenticated
-      toast("User has been logged out"); // Show a toast notification upon logout
+      dispatch(logout());
+      toast("User has been logged out");
       navigate("/");
     } else {
-      navigate("/authentication"); // Redirect to authentication page if the user is not authenticated
+      navigate("/authentication");
     }
   }
 
   return (
-    <div className="text-xs  text-secondary--shade__2 flex justify-between  border-b-[1px] border-solid border-secondary py-1 px-2 mb-6 ">
-      <div className="flex gap-2 items-center">
-        <IoCallOutline /> <span>Call +0123456789</span>
+    <div className="bg-gradient-to-r from-gray-50 to-gray-100 text-xs text-secondary--shade__2 flex justify-between items-center border-b border-secondary--shade__0 py-2 px-4 md:px-6 lg:px-8">
+      <div className="flex gap-2 items-center hover:text-primary transition-colors">
+        <IoCallOutline className="text-sm" />
+        <span className="hidden sm:inline">Call +0123456789</span>
+        <span className="sm:hidden">+0123456789</span>
       </div>
-      <div className="flex gap-3 xxs:gap-8">
-        <p className="flex items-center">
+      <div className="flex gap-3 sm:gap-6 items-center">
+        <button className="flex items-center hover:text-primary transition-colors">
           USD <RiArrowDropDownLine />
-        </p>
-        <p className="flex items-center">
+        </button>
+        <button className="hidden sm:flex items-center hover:text-primary transition-colors">
           English <RiArrowDropDownLine />
-        </p>
+        </button>
         <button
-          className="font-semibold hover:text-primary--shade__1 hover:scale-105"
+          className="flex items-center gap-1 font-semibold hover:text-primary transition-colors"
           onClick={handleClick}
         >
-          {isAuthenticated ? "Logout" : "Sign in / Sign up"}
+          <FiUser className="text-sm" />
+          <span>{isAuthenticated ? "Logout" : "Sign in"}</span>
         </button>
       </div>
     </div>

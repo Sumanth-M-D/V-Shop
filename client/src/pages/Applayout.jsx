@@ -1,6 +1,5 @@
 import Header from "../components/appLayout/header/Header";
 import Footer from "../components/appLayout/Footer";
-
 import Banner from "../components/appLayout/banner/Banner";
 import { Outlet } from "react-router-dom";
 import { useEffect } from "react";
@@ -15,10 +14,12 @@ function Applayout() {
   }, [dispatch]);
 
   return (
-    <div className="max-w-full">
+    <div className="min-h-screen flex flex-col">
       <Header />
       <Banner />
-      <Outlet /> {/* Home | ProductDetails | login | cart | wishlist */}
+      <main className="flex-1">
+        <Outlet />
+      </main>
       <Footer />
     </div>
   );
