@@ -1,15 +1,15 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "dist/server.js",
+  "main": "dist/server.ts",
   "type": "module",
   "scripts": {
     "build": "tsc --build",
     "dev": "tsx watch src/server.ts",
-    "start": "node dist/server.js",
-    "start:prod": "SET NODE_ENV=production&&node dist/server.js",
-    "importData": "node dist/dev-data/import-dev-data.js --import",
-    "deleteData": "node dist/dev-data/import-dev-data.js --delete",
+    "start": "node dist/server.ts",
+    "start:prod": "SET NODE_ENV=production&&node dist/server.ts",
+    "importData": "node dist/dev-data/import-dev-data.ts --import",
+    "deleteData": "node dist/dev-data/import-dev-data.ts --delete",
     "lint": "eslint --ext .ts src",
     "format": "prettier --check \"src/**/*.ts\"",
     "format:write": "prettier --write \"src/**/*.ts\""
