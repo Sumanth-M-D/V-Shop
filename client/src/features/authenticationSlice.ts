@@ -100,17 +100,17 @@ const authenticationSlice = createSlice({
       .addCase(createUser.fulfilled, (state, action) => {
         state.status = "success";
         state.isAuthenticated = true;
-        state.userId = action.payload?.data?.user?._id ?? "";
+        state.userId = action.payload?.data?.user?.userId ?? "";
       })
       .addCase(login.fulfilled, (state, action) => {
         state.status = action.payload?.status || "success";
         state.isAuthenticated = true;
-        state.userId = action.payload?.data?.user?._id ?? "";
+        state.userId = action.payload?.data?.user?.userId ?? "";
       })
       .addCase(isLoggedin.fulfilled, (state, action) => {
         state.status = action.payload?.status || "success";
         state.isAuthenticated = true;
-        state.userId = action.payload?.data?.user?._id ?? "";
+        state.userId = action.payload?.data?.user?.userId ?? "";
       })
       .addCase(logout.fulfilled, (state, action) => {
         state.status = action.payload?.status || "success";

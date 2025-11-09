@@ -1,36 +1,36 @@
 // Cart and Wishlist types
 
-import { Product } from './product.types';
+import { Product } from "./product.types";
 
 export interface CartItem {
   product: Product;
   quantity: number;
-  _id?: string;
 }
 
 export interface Cart {
-  _id: string;
+  cartId: string;
   userId: string;
   cartItems: CartItem[];
 }
 
 export interface CartData {
-  cart: Cart;
+  cart: CartItem[];
+  cartId?: string;
 }
 
 export interface WishlistItem {
   product: Product;
-  _id?: string;
 }
 
 export interface Wishlist {
-  _id: string;
+  wishlistId: string;
   userId: string;
   wishlistItems: WishlistItem[];
 }
 
 export interface WishlistData {
-  wishlist: Wishlist;
+  wishlist: WishlistItem[];
+  wishlistId?: string;
 }
 
 export interface AddToCartPayload {
@@ -41,4 +41,3 @@ export interface AddToCartPayload {
 export interface AddToWishlistPayload {
   productId: string;
 }
-

@@ -78,19 +78,22 @@ const wishlistSlice = createSlice({
     builder
       .addCase(loadWishlist.fulfilled, (state, action) => {
         state.status = "success";
-        const wishlist = action.payload?.data?.wishlist;
-        state.wishlistId = wishlist?._id ?? "";
-        state.wishlistProducts = wishlist?.wishlistItems ?? [];
+        const wishlistItems = action.payload?.data?.wishlist ?? [];
+        state.wishlistProducts = wishlistItems;
+        const wishlistId = action.payload?.data?.wishlistId;
+        if (typeof wishlistId === "string") {
+          state.wishlistId = wishlistId;
+        }
       })
       .addCase(addProductToWishlist.fulfilled, (state, action) => {
         state.status = action.payload?.status || "success";
-        const wishlist = action.payload?.data?.wishlist;
-        state.wishlistProducts = wishlist?.wishlistItems ?? [];
+        const wishlistItems = action.payload?.data?.wishlist ?? [];
+        state.wishlistProducts = wishlistItems;
       })
       .addCase(removeProduct.fulfilled, (state, action) => {
         state.status = action.payload?.status || "success";
-        const wishlist = action.payload?.data?.wishlist;
-        state.wishlistProducts = wishlist?.wishlistItems ?? [];
+        const wishlistItems = action.payload?.data?.wishlist ?? [];
+        state.wishlistProducts = wishlistItems;
       })
       .addMatcher(
         (action) => action.type.endsWith("/pending"),

@@ -106,24 +106,27 @@ const shoppingCartSlice = createSlice({
     builder
       .addCase(loadCart.fulfilled, (state, action) => {
         state.status = "success";
-        const cart = action.payload?.data?.cart;
-        state.cartId = cart?._id ?? "";
-        state.cartProducts = cart?.cartItems ?? [];
+        const cartItems = action.payload?.data?.cart ?? [];
+        state.cartProducts = cartItems;
+        const cartId = action.payload?.data?.cartId;
+        if (typeof cartId === "string") {
+          state.cartId = cartId;
+        }
       })
       .addCase(addProductToCart.fulfilled, (state, action) => {
         state.status = action.payload?.status || "success";
-        const cart = action.payload?.data?.cart;
-        state.cartProducts = cart?.cartItems ?? [];
+        const cartItems = action.payload?.data?.cart ?? [];
+        state.cartProducts = cartItems;
       })
       .addCase(removeProduct.fulfilled, (state, action) => {
         state.status = action.payload?.status || "success";
-        const cart = action.payload?.data?.cart;
-        state.cartProducts = cart?.cartItems ?? [];
+        const cartItems = action.payload?.data?.cart ?? [];
+        state.cartProducts = cartItems;
       })
       .addCase(updateProductQuantity.fulfilled, (state, action) => {
         state.status = action.payload?.status || "success";
-        const cart = action.payload?.data?.cart;
-        state.cartProducts = [...(cart?.cartItems ?? [])];
+        const cartItems = action.payload?.data?.cart ?? [];
+        state.cartProducts = cartItems;
       })
       .addMatcher(
         (action) => action.type.endsWith("/pending"),

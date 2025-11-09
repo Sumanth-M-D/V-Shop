@@ -9,6 +9,7 @@ server/.env
 
 # Ignore build artifacts
 */dist/
+server/tsconfig.tsbuildinfo
 
 # Ignore log files
 *.log

@@ -58,15 +58,18 @@ V-Shop is a modern e-commerce web application that allows users to browse produc
 |   └── package.json           # Project metadata and dependencies
 |
 |
-├── backend
-|   ├── controllers            # Business logic -> handling requests & responses.
-|   ├── dev-data               # Sample data for development and testing.
-|   ├── models                 # Mongoose shema and models.
-|   ├── routers                # API routers
-|   ├── utils                  # Utility functions
-|   ├── app.js                 # Main Express application setup
-|   ├── server.js              # Entry point to start the server & connect to DB.
-|   └── package.json           # Project metadata, scripts, and dependencies.
+├── server
+|   ├── src                    # TypeScript source for the Express API
+|   │   ├── controllers        # Business logic: handling requests & responses
+|   │   ├── dev-data           # Data management scripts
+|   │   ├── middlewares        # Authentication and shared middleware
+|   │   ├── models             # Mongoose schemas and models
+|   │   ├── routers            # API routes
+|   │   ├── utils              # Utility functions
+|   │   └── server.ts          # Entry point wiring app + database
+|   ├── dev-data               # Seed JSON files
+|   ├── dist                   # Compiled JavaScript output (generated)
+|   └── package.json           # Project metadata, scripts, and dependencies
 |
 ├── readme.md                  # Project documentation & setup instructions
 ```
@@ -114,11 +117,21 @@ JWT_COOKIE_EXPIRES_IN=10
 SALT_ROUNDS=12
 ```
 
-### 3. Start clent and server:
+### 3. Start client and server:
 
 ```bash
-npm start:prod //server
-npm reun dev //client
+npm run dev           # client
+
+cd ../server
+npm run dev           # starts ts-node-dev watcher
 ```
 
-### 4. Navigate to http://localhost:5173 in your browser to access the application.
+### 4. Backend scripts
+
+- `npm run build` – compile TypeScript to `dist/`
+- `npm start` – run compiled server (`dist/server.js`)
+- `npm run lint` – run ESLint with TypeScript configuration
+- `npm run format` / `npm run format:write` – check or apply Prettier formatting
+- `npm run importData` / `npm run deleteData` – seed or clear development data
+
+### 5. Navigate to http://localhost:5173 in your browser to access the application.

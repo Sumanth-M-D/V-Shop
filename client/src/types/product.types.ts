@@ -6,7 +6,6 @@ export interface Rating {
 }
 
 export interface Product {
-  _id: string;
   productId: string;
   title: string;
   price: number;
@@ -26,4 +25,3 @@ export interface ProductsData {
 export interface ProductData {
   product: Product;
 }
-

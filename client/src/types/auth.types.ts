@@ -1,8 +1,10 @@
 // Authentication types
 
 export interface User {
-  _id: string;
+  userId: string;
   email: string;
+  cartId: string;
+  wishlistId: string;
   name?: string;
 }
 
