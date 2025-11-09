@@ -19,7 +19,7 @@ type AuthCookies = {
 const cookieOptions: Pick<CookieOptions, "httpOnly" | "secure" | "sameSite"> = {
   httpOnly: true,
   secure: isProduction,
-  sameSite: "strict",
+  sameSite: isProduction ? "none" : "lax",
 };
 
 function sanitizeUser(user: UserDocument | UserSafe): UserSafe {
@@ -106,8 +106,8 @@ async function login(req: Request, res: Response, next: NextFunction): Promise<v
 
 async function logout(req: Request, res: Response, next: NextFunction): Promise<void> {
   try {
-    res.clearCookie("accessToken");
-    res.clearCookie("refreshToken");
+    res.clearCookie("accessToken", cookieOptions);
+    res.clearCookie("refreshToken", cookieOptions);
     res.status(200).json({ status: "success" });
   } catch (err) {
     next(err);
