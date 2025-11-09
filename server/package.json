@@ -6,8 +6,7 @@
   "scripts": {
     "build": "tsc --build",
     "dev": "tsx watch src/server.ts",
-    "start": "node dist/server.ts",
-    "start:prod": "SET NODE_ENV=production&&node dist/server.ts",
+    "start": "node dist/server.js",
     "importData": "node dist/dev-data/import-dev-data.ts --import",
     "deleteData": "node dist/dev-data/import-dev-data.ts --delete",
     "lint": "eslint --ext .ts src",
