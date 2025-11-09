@@ -31,7 +31,7 @@ async function getProducts(req: Request, res: Response, next: NextFunction): Pro
       ...(subCategory ? { subCategory } : {}),
       ...(search ? { $text: { $search: search } } : {}),
     };
-    const projection: Record<string, unknown> = search ? { score: { $meta: "textScore" } } : {};
+    const projection = search ? ({ score: { $meta: "textScore" } } as const) : undefined;
 
     const productQuery = Product.find(query, projection);
 
