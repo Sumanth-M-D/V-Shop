@@ -1,9 +1,9 @@
 // Cart and Wishlist types
-
-import { Product } from "./product.types";
-
 export interface CartItem {
-  product: Product;
+  productId: string;
+  image?: string;
+  price?: number;
+  title?: string;
   quantity: number;
 }
 
@@ -19,7 +19,10 @@ export interface CartData {
 }
 
 export interface WishlistItem {
-  product: Product;
+  productId: string;
+  image?: string;
+  price?: number;
+  title?: string;
 }
 
 export interface Wishlist {

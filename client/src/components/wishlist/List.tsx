@@ -11,7 +11,7 @@ function List() {
       <ListHeader />
       <div className="flex flex-col gap-5">
         {wishlistProducts.map((ele: WishlistItem) => (
-          <ListItem product={ele} key={ele.product.productId} />
+          <ListItem product={ele} key={ele.productId} />
         ))}
       </div>
     </div>
