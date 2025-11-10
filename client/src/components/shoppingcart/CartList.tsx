@@ -10,10 +10,7 @@ function CartList() {
       <CartListHeader />
       <div className="flex flex-col gap-5">
         {cartProducts.map((product: CartItem) => (
-          <CartListItem
-            product={product}
-            key={product.product.productId}
-          />
+          <CartListItem product={product} key={product.productId} />
         ))}
       </div>
     </div>

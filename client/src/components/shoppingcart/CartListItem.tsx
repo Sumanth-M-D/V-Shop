@@ -12,10 +12,7 @@ interface CartListItemProps {
 }
 
 function CartListItem({ product }: CartListItemProps) {
-  const {
-    product: { productId, title, image, price },
-    quantity,
-  } = product;
+  const { productId, title, image, price = 0, quantity } = product;
 
   const dispatch = useAppDispatch();
   const navigate = useNavigate();

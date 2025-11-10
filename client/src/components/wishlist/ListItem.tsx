@@ -9,7 +9,7 @@ interface ListItemProps {
 }
 
 function ListItem({ product }: ListItemProps) {
-  const { productId, title, image, price } = product.product;
+  const { productId, title, image, price = 0 } = product;
 
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
