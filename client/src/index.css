@@ -4,6 +4,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 @layer components {
@@ -61,5 +62,40 @@ html {
 
   .listItem__detail {
     @apply w-8 xs:w-12 mx-1 xxs:mx-2 text-[10px] xxs:text-xs sm:text-sm;
+  }
+}
+
+@layer utilities {
+  .animate-pageFade {
+    animation: pageFade 0.45s ease-out both;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.55s ease-out both;
+  }
+}
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  60% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

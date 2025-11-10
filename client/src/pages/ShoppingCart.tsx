@@ -13,7 +13,7 @@ function ShoppingCart() {
   ];
 
   return (
-    <div className="mb-16 ">
+    <div className="mb-16 animate-pageFade">
       <Cart_Wishlist_Title title={"Shopping Cart"} />
       <div className="px-3 xs:px-10 sm:px-20  md:px-0 md:w-[750px] upperMd:w-[800px] lg:w-[900px] 2xl:w-[1000px] mx-auto mt-2 ">
         <BreadCrumb elements={breadCrumbElements} />

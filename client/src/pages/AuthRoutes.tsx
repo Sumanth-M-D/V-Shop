@@ -54,7 +54,7 @@ function AuthRoutes() {
   }, [isAuthenticated, navigate]);
 
   return (
-    <div className="flex justify-center px-2 py-16 sm:py-32  mx-5">
+    <div className="flex justify-center px-2 py-16 sm:py-32  mx-5 animate-pageFade">
       <div className="">
         {/* Authentication type selection (Login/Signup) */}
         <div className="flex gap-1 justify-center rounded-top">

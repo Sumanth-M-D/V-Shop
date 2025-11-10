@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, TouchEvent } from "react";
 import Ratings from "../general/Ratings";
 import { FaTableList } from "react-icons/fa6";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
@@ -18,15 +18,8 @@ function MainDetails() {
   );
 
   const dispatch = useAppDispatch();
-  const {
-    title,
-    price,
-    description,
-    category,
-    image,
-    rating,
-    productId,
-  } = productData;
+  const { title, price, description, category, image, rating, productId } =
+    productData;
 
   const productTitle = title ?? "Product";
   const productPrice = price ?? 0;
@@ -34,6 +27,7 @@ function MainDetails() {
   const productCategory = category ?? "";
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const touchStartX = useRef<number | null>(null);
 
   useEffect(() => {
     setCurrentImageIndex(0);
@@ -62,10 +56,34 @@ function MainDetails() {
     setCurrentImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
+  const handleTouchStart = (event: TouchEvent<HTMLDivElement>) => {
+    touchStartX.current = event.touches[0]?.clientX ?? null;
+  };
+
+  const handleTouchEnd = (event: TouchEvent<HTMLDivElement>) => {
+    if (touchStartX.current === null) return;
+
+    const endX = event.changedTouches[0]?.clientX ?? touchStartX.current;
+    const deltaX = touchStartX.current - endX;
+    const swipeThreshold = 40;
+
+    if (deltaX > swipeThreshold) {
+      handleNextImage();
+    } else if (deltaX < -swipeThreshold) {
+      handlePrevImage();
+    }
+
+    touchStartX.current = null;
+  };
+
   return (
     <div className="upperMd:grid upperMd:grid-cols-10  gap-3 py-6 text-black mb-8 ">
       <div className="upperMd:col-span-5 lg:col-span-4 h-[500px] upperMd:h-[725px] lg:h-[650px] xl:h-[550px] upperMd:mr-4">
-        <div className="relative w-full h-full bg-secondary">
+        <div
+          className="relative w-full h-full bg-secondary"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           <img
             src={currentImage}
             alt={`${productTitle} - Image ${currentImageIndex + 1}`}
