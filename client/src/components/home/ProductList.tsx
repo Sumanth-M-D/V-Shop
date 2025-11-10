@@ -4,7 +4,10 @@ import { FiSearch } from "react-icons/fi";
 import ProductCard from "./ProductCard";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import EmptyState from "../general/EmptyState";
-import { setSearchText, updateActiveCategory } from "../../features/categoriesSlice";
+import {
+  setSearchText,
+  updateActiveCategory,
+} from "../../features/categoriesSlice";
 import { resetCurrentPage, fetchProducts } from "../../features/productSlice";
 
 function ProductList() {

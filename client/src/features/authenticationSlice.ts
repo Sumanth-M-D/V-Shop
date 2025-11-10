@@ -30,8 +30,10 @@ export const createUser = createAsyncThunk<
       await dispatch(loadCart());
       await dispatch(loadWishlist());
       return data;
-    } catch (err: any) {
-      return rejectWithValue(err.message);
+    } catch (err) {
+      const message =
+        err instanceof Error ? err.message : "Unable to create account.";
+      return rejectWithValue(message);
     }
   }
 );
@@ -51,8 +53,9 @@ export const login = createAsyncThunk<
       await dispatch(loadCart());
       await dispatch(loadWishlist());
       return data;
-    } catch (err: any) {
-      return rejectWithValue(err.message);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "Unable to login.";
+      return rejectWithValue(message);
     }
   }
 );
@@ -67,8 +70,10 @@ export const isLoggedin = createAsyncThunk<
     await dispatch(loadCart());
     await dispatch(loadWishlist());
     return data;
-  } catch (err: any) {
-    return rejectWithValue(err.message);
+  } catch (err) {
+    const message =
+      err instanceof Error ? err.message : "Unable to verify authentication.";
+    return rejectWithValue(message);
   }
 });
 
@@ -82,10 +87,20 @@ export const logout = createAsyncThunk<
     dispatch(resetCart());
     dispatch(resetWishlist());
     return data;
-  } catch (err: any) {
-    return rejectWithValue(err.message);
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "Unable to logout.";
+    return rejectWithValue(message);
   }
 });
+
+type CreateUserFulfilledAction = ReturnType<typeof createUser.fulfilled>;
+type CreateUserRejectedAction = ReturnType<typeof createUser.rejected>;
+type LoginFulfilledAction = ReturnType<typeof login.fulfilled>;
+type LoginRejectedAction = ReturnType<typeof login.rejected>;
+type IsLoggedInFulfilledAction = ReturnType<typeof isLoggedin.fulfilled>;
+type IsLoggedInRejectedAction = ReturnType<typeof isLoggedin.rejected>;
+type LogoutFulfilledAction = ReturnType<typeof logout.fulfilled>;
+type LogoutRejectedAction = ReturnType<typeof logout.rejected>;
 
 const authenticationSlice = createSlice({
   name: "authentication",
@@ -93,51 +108,91 @@ const authenticationSlice = createSlice({
   reducers: {
     setAuthType(state, action: PayloadAction<AuthType>) {
       state.authType = action.payload;
+      state.error = "";
+      state.status = "";
     },
   },
   extraReducers: (builder) => {
     builder
-      .addCase(createUser.fulfilled, (state, action) => {
-        state.status = "success";
-        state.isAuthenticated = true;
-        state.userId = action.payload?.data?.user?.userId ?? "";
+      .addCase(createUser.pending, (state) => {
+        state.status = "loading";
+        state.error = "";
       })
-      .addCase(login.fulfilled, (state, action) => {
+      .addCase(
+        createUser.fulfilled,
+        (state, action: CreateUserFulfilledAction) => {
+          state.status = "success";
+          state.isAuthenticated = true;
+          state.userId = action.payload?.data?.user?.userId ?? "";
+        }
+      )
+      .addCase(
+        createUser.rejected,
+        (state, action: CreateUserRejectedAction) => {
+          state.status = "fail";
+          state.error =
+            action.payload ??
+            action.error?.message ??
+            "Failed to create account.";
+        }
+      )
+      .addCase(login.pending, (state) => {
+        state.status = "loading";
+        state.error = "";
+      })
+      .addCase(login.fulfilled, (state, action: LoginFulfilledAction) => {
         state.status = action.payload?.status || "success";
         state.isAuthenticated = true;
         state.userId = action.payload?.data?.user?.userId ?? "";
       })
-      .addCase(isLoggedin.fulfilled, (state, action) => {
-        state.status = action.payload?.status || "success";
-        state.isAuthenticated = true;
-        state.userId = action.payload?.data?.user?.userId ?? "";
+      .addCase(login.rejected, (state, action: LoginRejectedAction) => {
+        state.status = "fail";
+        state.error =
+          action.payload ?? action.error?.message ?? "Failed to login.";
       })
-      .addCase(logout.fulfilled, (state, action) => {
+      .addCase(isLoggedin.pending, (state) => {
+        state.error = "";
+        if (state.status === "loading") {
+          return;
+        }
+      })
+      .addCase(
+        isLoggedin.fulfilled,
+        (state, action: IsLoggedInFulfilledAction) => {
+          state.status = action.payload?.status || "success";
+          state.isAuthenticated = true;
+          state.userId = action.payload?.data?.user?.userId ?? "";
+        }
+      )
+      .addCase(
+        isLoggedin.rejected,
+        (state, action: IsLoggedInRejectedAction) => {
+          state.status = "";
+          if (action.payload?.startsWith("You are not logged in.")) {
+            state.error = "";
+          } else {
+            state.error =
+              action.payload ??
+              action.error?.message ??
+              "Authentication check failed.";
+          }
+        }
+      )
+      .addCase(logout.pending, (state) => {
+        state.error = "";
+      })
+      .addCase(logout.fulfilled, (state, action: LogoutFulfilledAction) => {
         state.status = action.payload?.status || "success";
-        state.status = "success";
         state.isAuthenticated = false;
         state.userId = "";
         state.error = "";
         state.authType = "login";
       })
-      .addMatcher(
-        (action) => action.type.endsWith("/pending"),
-        (state) => {
-          state.status = "loading";
-          state.error = "";
-        }
-      )
-      .addMatcher(
-        (action) => action.type.endsWith("/rejected"),
-        (state, action: any) => {
-          state.status = "fail";
-          if (action.payload?.startsWith("You are not logged in.")) {
-            state.error = "";
-          } else {
-            state.error = action.payload || action.error?.message || "";
-          }
-        }
-      );
+      .addCase(logout.rejected, (state, action: LogoutRejectedAction) => {
+        state.status = "fail";
+        state.error =
+          action.payload ?? action.error?.message ?? "Failed to logout.";
+      });
   },
 });
 

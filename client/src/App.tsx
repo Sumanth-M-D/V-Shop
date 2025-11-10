@@ -7,6 +7,7 @@ import ShoppingCart from "./pages/ShoppingCart";
 import Wishlist from "./pages/Wishlist";
 import PageNotFound from "./pages/PageNotFound";
 import ProtectedRoutes from "./components/general/ProtectedRoutes";
+import User from "./pages/User";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -24,6 +25,14 @@ function App() {
             element={
               <ProtectedRoutes>
                 <ShoppingCart />
+              </ProtectedRoutes>
+            }
+          />
+          <Route
+            path="user"
+            element={
+              <ProtectedRoutes>
+                <User />
               </ProtectedRoutes>
             }
           />
