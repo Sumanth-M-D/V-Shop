@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import { fetchProducts } from "../features/productSlice";
 import Pagination from "../components/home/Pagination";
 import ProductList from "../components/home/ProductList";
-import Loading from "../components/general/Laoding";
 import Error from "../components/general/Error";
 import WhatWeProvide from "../components/home/WhatWeProvide";
+import ProductGridSkeleton from "../components/general/skeletons/ProductGridSkeleton";
 import { updateActiveCategory } from "../features/categoriesSlice";
 import { useAppDispatch, useAppSelector } from "../hooks/redux";
 
@@ -28,22 +28,26 @@ function Home() {
     }
   }, [dispatch, activeCategoryIndex, categoryStatus]);
 
-  if (productStatus === "loading") {
-    return <Loading />;
-  }
-
   if (categoryStatus === "fail") {
     return <Error errorMessage={categoryError} />;
   }
 
   if (productStatus === "fail") {
-    return <Error errorMessage={productError} />;
+    return (
+      <Error
+        errorMessage={productError}
+        ctaLabel="Try again"
+        onRetry={() => dispatch(fetchProducts())}
+      />
+    );
   }
 
+  const showSkeleton = productStatus === "loading";
+
   return (
-    <main>
-      <ProductList />
-      <Pagination />
+    <main className="animate-pageFade">
+      {showSkeleton ? <ProductGridSkeleton /> : <ProductList />}
+      {!showSkeleton && <Pagination />}
       <WhatWeProvide />
     </main>
   );

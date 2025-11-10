@@ -11,7 +11,7 @@ function Wishlist() {
   ];
 
   return (
-    <div className="mb-16 ">
+    <div className="mb-16 animate-pageFade">
       <Cart_Wishlist_Title title={"Wishlist"} />
       <div className="px-3 xs:px-5 sm:px-16  md:px-20 md:w-[750px] upperMd:w-[800px] lg:w-[900px] 2xl:w-[1000px] mx-auto mt-2 ">
         <BreadCrumb elements={breadCrumbElements} />

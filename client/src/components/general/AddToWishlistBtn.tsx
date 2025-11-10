@@ -7,14 +7,13 @@ import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 
 interface AddToWishlistBtnProps {
   product: AddToWishlistPayload;
+  extraClass?: string;
 }
 
-function AddToWishlistBtn({ product }: AddToWishlistBtnProps) {
+function AddToWishlistBtn({ product, extraClass = "" }: AddToWishlistBtnProps) {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  const { isAuthenticated } = useAppSelector(
-    (state) => state.authentication
-  );
+  const { isAuthenticated } = useAppSelector((state) => state.authentication);
 
   function handleAddtoWishlist() {
     if (isAuthenticated) {
@@ -27,7 +26,7 @@ function AddToWishlistBtn({ product }: AddToWishlistBtnProps) {
   }
 
   return (
-    <button className="cta" onClick={handleAddtoWishlist}>
+    <button className={`cta ${extraClass}`} onClick={handleAddtoWishlist}>
       <FaRegHeart />
       <span> Add to wishList</span>
     </button>

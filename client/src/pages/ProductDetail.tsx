@@ -11,10 +11,10 @@ import {
 } from "../features/productDetailsSlice";
 
 import ProductNav from "../components/productDetails/ProductNav";
-import Loading from "../components/general/Laoding";
 import Error from "../components/general/Error";
 import MainDetails from "../components/productDetails/MainDetails";
 import AdditionalDetails from "../components/productDetails/additinalDetails/AdditionalDetails";
+import ProductDetailsSkeleton from "../components/general/skeletons/ProductDetailsSkeleton";
 import { useAppDispatch, useAppSelector } from "../hooks/redux";
 import { Product } from "../types/product.types";
 
@@ -73,27 +73,42 @@ function ProductDetail() {
     }
   }, [productData.category, categories, dispatch, activeCategoryIndex]);
 
-  if (productsStatus === "loading" || productDetailsStatus === "loading") {
-    return <Loading />;
-  }
+  const showSkeleton =
+    productsStatus === "loading" || productDetailsStatus === "loading";
 
   if (productDetailsStatus === "fail") {
-    return <Error errorMessage={productDetailsError} />;
+    return (
+      <Error
+        errorMessage={productDetailsError}
+        ctaLabel="Retry loading product"
+        onRetry={() => dispatch(fetchProductDetails(id))}
+      />
+    );
   }
 
   if (productsStatus === "fail") {
-    return <Error errorMessage={productsError} />;
+    return (
+      <Error
+        errorMessage={productsError}
+        ctaLabel="Refresh products"
+        onRetry={() => dispatch(fetchProducts())}
+      />
+    );
   }
 
   return (
     <>
-      {showProductDetails && (
-        <main className="py-8 px-10">
-          <ProductNav id={id} />
-          <MainDetails />
-          <AdditionalDetails rating={productData.rating} />
-        </main>
-      )}
+      <main className="animate-pageFade py-8 px-10">
+        {showSkeleton && <ProductDetailsSkeleton />}
+
+        {showProductDetails && (
+          <>
+            <ProductNav id={id} />
+            <MainDetails />
+            <AdditionalDetails rating={productData.rating} />
+          </>
+        )}
+      </main>
     </>
   );
 }
