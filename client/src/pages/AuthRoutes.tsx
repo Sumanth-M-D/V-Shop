@@ -38,6 +38,7 @@ function AuthRoutes() {
     register,
     handleSubmit,
     reset,
+    setValue,
     formState: { errors },
   } = useForm<AuthFormInputs>({
     mode: "onChange",
@@ -56,6 +57,13 @@ function AuthRoutes() {
         : "We just need a few details to set up your account.",
     [authType]
   );
+
+  const quickLoginHandler = () => {
+    setValue("email", "test@gmail.com");
+    setValue("password", "Test12345@");
+    // Auto-submit the form after setting values
+    dispatch(login({ email: "test@gmail.com", password: "Test12345@" }));
+  };
 
   const onSubmit = (data: AuthFormInputs) => {
     const { email, password } = data;
@@ -258,6 +266,22 @@ function AuthRoutes() {
                       Forgot password?
                     </button>
                   </div>
+
+                  {authType === "login" && (
+                    <div className="mt-2">
+                      <button
+                        type="button"
+                        onClick={quickLoginHandler}
+                        disabled={status === "loading"}
+                        className="flex w-full items-center justify-center gap-2 rounded-full border-2 border-primary/30 bg-primary/5 px-5 py-3 text-sm font-semibold text-primary transition hover:border-primary/50 hover:bg-primary/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:cursor-not-allowed disabled:opacity-50"
+                      >
+                        <span>Quick Login with Demo Account</span>
+                      </button>
+                      <p className="mt-2 text-center text-xs text-secondary--shade__3">
+                        Use demo credentials to explore protected pages
+                      </p>
+                    </div>
+                  )}
 
                   <div className="mt-4 flex flex-col gap-4">
                     <button
