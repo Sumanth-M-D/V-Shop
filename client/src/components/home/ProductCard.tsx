@@ -80,7 +80,7 @@ function ProductCard({ product }: ProductCardProps) {
           </span>
           <button
             type="button"
-            className="line-clamp-2 text-left text-sm font-semibold text-secondary transition-colors hover:text-primary--shade__1"
+            className="line-clamp-2 text-left text-sm font-semibold text-black transition-colors hover:text-primary--shade__1"
             onClick={navigateToProductDetail}
           >
             {title}
